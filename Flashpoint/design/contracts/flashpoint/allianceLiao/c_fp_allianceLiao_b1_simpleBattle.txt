@@ -1,0 +1,217 @@
+// Contract SimpleBattle_Template 
+
+		
+[ID]c_fp_allianceLiao_b1_simpleBattle
+[Name]Liao Alliance III
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]Before the Maskirovka team can transport the scientists to the extraction point, we need to deal with the Davion forces that are closing on our position. We've located two lances of 'Mechs that are inbound, and I need you to intercept them before they get here. Once they're dealt with, we can start moving the team, and the scientists, to the extraction point. And Commander… I apologize for my curt tone earlier. I didn't brief you fully, and that was unprofessional of me.
+[LongDesc]The FedSuns are going to assume we're still back at the base getting things loaded up and ready to go, Commander. Let's give them a surprise.
+[Salvage]28
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Destroy the Davion Lances
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy the First Davion Lance
+		[Description]The primary objective to destroy the enemy lance. 
+
+	// Primary Objective
+	[Objective]Destroy the Second Davion Lance
+		[Description]An OPTIONAL primary objective to destroy the second enemy lance. 
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_Ambushers
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]We've located one of the Federated Suns lances, Commander. No sign of the other one.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Radar puts them in this vicinity. Move forward and clear them out, but keep your eyes open for that second lance.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_OpposingForce
+	[Content]Good luck, Commander. Liao out.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]That's the last of them, Commander. The field is clear. I'll signal to my Maskirovka liaison that she can start moving the scientists. We'll need to field another lance immediately as an escort for them; there's no time for resupply.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]That's it, Commander. The Maskirovka team is reporting they're under fire from Davion forces. They'll be able to extract on their own, but not with the scientists. We've failed.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+
+

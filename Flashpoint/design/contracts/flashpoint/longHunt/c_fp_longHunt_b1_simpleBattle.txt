@@ -1,0 +1,201 @@
+// Contract c_fp_longHunt_b1_simpleBattle
+
+
+[ID]c_fp_longHunt_b1_simpleBattle
+[Name]The Long Hunt II
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]My people on the ground have picked up a lance of Davion BattleMechs on their sensors, Commander. If you move on Lees without dealing with them, they'll be in position to outflank you.
+[LongDesc]This is a bit of a Catch-22 situation, Commander… we can't afford to leave these jokers standing, but I'll bet you anything that Lees sent them here to soften us up before our attack on the base.
+[Salvage]16
+[FOW]Surveyed
+[DifficultyUIMod]1
+
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+
+// Contract Objectives
+[ContractObjective]Eliminate the Davion Hostiles
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Eliminate the Davion Hostiles
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy the Davion Reinforcements
+		[Description]
+		[OnSuccess]Company|stat|ContractBonusRewardPct|0.3
+
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Ah, Commander {COMMANDER.LastName}. You've accepted my challenge, then? Good. It would have been terribly anticlimactic if you'd fled.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_LeesDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]My mercenaries will punish you for the butchery you committed on Shaul Khala, Lees. You will die in disgrace.
+		[Color]1|1|1|1
+		[Cast]castDef_KuritaRepDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]Shugo Yamaguchi. The drunk. I can't tell you how happy I am to see you here, in the flesh. Tearing your lance apart will be so much more satisfying now that I know you're here to watch. All units, converge on our guests and destroy them. Show them no mercy.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_LeesDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]Acknowledged, Colonel Lees. It will be our pleasure.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_DavionCommanderDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Your hirelings performed well, Shugo Yamaguchi. Now come for me. Let's put your mercenaries to the test.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_LeesDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]A performance as pathetic as it was disappointing. Bask in your shame, Reynauld! Your attempt on my life has failed.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_LeesDefault
+		[Emote]Default
+		[Audio]NONE
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Lance Def: the specified lance def will be used to spawn units
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_hatchetman_HCT-3F
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

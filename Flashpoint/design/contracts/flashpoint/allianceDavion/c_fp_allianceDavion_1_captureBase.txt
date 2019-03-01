@@ -1,0 +1,330 @@
+// Contract CaptureBase_Template 
+
+		
+[ID]c_fp_allianceDavion_1_captureBase
+[Name]Davion Alliance
+[Template]CaptureBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]As I mentioned, Commander {COMMANDER.LastName}, before we can begin operations on the planet, we need to neutralize an observation post. Conveniently, we can then use the facility's resources to stage further assaults. Our information suggests the base is quite well defended, which is unsurprising, given the planet's location on multiple potentially hostile borders. Once the base is taken, we won't have to worry about errant calls for reinforcements, but to be safe, it would be best for you to hunt down all enemy forces to prevent them from retreating and spreading word of the attack.
+[LongDesc]It's not for nothing that Liao is known for being unpredictable and cunning. Let's keep our eyes open for any surprises, Commander.
+[Salvage]24
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Capture the Observation Post
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Scout the Facility
+		[Description]The objective to scout the base that is being captured. Must be completed before the actual capture of the base.
+
+	// Optional Objective
+	[Objective]Destroy the Liao Defenders
+		[Description]The objective to optionally destroy the defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Capture the Base with Friendly 'Mechs
+		[Description]The objective for the player to move into and capture the base.
+
+	// Primary Objective
+	[Objective]Hold Out as Enemies Counter-Attack
+		[Description]HIDDEN TIMER, NO NEED TO EDIT: This is the hidden timer objective that will trigger the enemy reinforcements.
+
+	// Primary Objective
+	[Objective]Pacify the Area around the Base 
+		[Description]This is a general objective to indicate the player must keep playing and eliminate enemies as they come.
+
+	// Primary Objective
+	[Objective]Destroy the Enemy Reinforcements
+		[Description]The primary objective to destroy the force that tries to remove the player from the captured base.
+
+	// Optional Objective
+	[Objective]Eliminate Base Turrets
+		[Description]The chunk controlled objective to destroy the turrets for the base, if the chunk is active.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_DestroyLance_Defenders (Bonus)|on
+[OptionalChunk]Chunk_BaseDefense_Turrets (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BaseDefenders
+//		Lance_Enemy_Reinforcements
+//		Lance_Enemy_BaseTurrets
+//		Region_GoTo
+//		Region_Occupy
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]This is the target area, Commander. The facility is just beyond the rock formations, along the river.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Use the trees to move up under cover to the cliffs overlooking the base. We're expecting heavy defenses, including fixed gun emplacements. 
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_GoTo
+	[Content]Occupy the facility and destroy any Liao forces you encounter. Good luck, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Well done, Commander—the base is ours. I've already instructed Ms. Meyer to deliver you any replacement BattleMechs or personnel that you may need before we continue our advance.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I take it that means we aren't returning to the <i>Argo</i>.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]There isn't enough time. It won't take long for the CCAF to notice that their observation post has been compromised.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Understood, Lady Cunningham. I'll inform the rest of the crew.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]They were able to broadcast a distress signal, Commander. We have to scrub the mission. Dammit.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropshipLanding
+	[Content]I'm landing a team of technicians at your location, Commander. They'll pull battlefield intelligence from the observation post's computers after the AO is clear.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretWarning
+	[Content]As expected, the facility has operational turrets. Move cautiously, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_BaseTurrets
+
+[Dialogue]Dialogue_Interrupt_GoToComplete
+	[Content]Looks like our intel was accurate. The base is heavily defended and prepared for an assault.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]We're also tracking additional enemy forces; expect them to fall back to the facility once they get word of the attack.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BaseDefenders
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]Tagged
+			// Tagged: unit def will be chosen randomly using tags field
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]Tagged
+			// Tagged: unit def will be chosen randomly using tags field
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcements
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_cavalry|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

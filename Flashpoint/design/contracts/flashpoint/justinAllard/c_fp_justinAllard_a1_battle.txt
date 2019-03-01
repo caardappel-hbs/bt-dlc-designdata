@@ -1,0 +1,248 @@
+// Contract c_fp_justinAllard_a1_battle 
+
+		
+[ID]c_fp_justinAllard_a1_battle
+[Name]Bourbon & BattleMechs II
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Medium
+[RepresentativeCastDefIdOverride]castDef_FP_justinAllard_AllardDefault
+[ShortDesc]Garrilac's lance is on the ground and waiting for you. Destroy them.
+[LongDesc]Garrilac may seem like kind of a joke, but you shouldn't underestimate Mason's Marauders. I've heard stories about their effectiveness on the field.
+[Salvage]8
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]UNKNOWN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]230
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]-1|-1|-1|-1
+			
+// Contract Objectives
+[ContractObjective]Defeat Mason's Marauders
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Defeat Mason's Marauders
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy the Marauder Reinforcements
+		[Description]
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_Ambushers
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]So. You're {COMMANDER.Callsign}. I hope you're ready to get your teeth kicked in, because that's what's about to happen.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_justinAllard_TalonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_OpposingForce
+	[Content]Keep talking, hotshot. Our lance will take you down first.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_OpposingForce
+	[Content]You can't kill me, Oliveira. But your people are about to learn that. Mount up, Marauders… let's show these punks who they're dealing with.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_justinAllard_TalonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_OpposingForce
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Whoa there, {COMMANDER.LastName}—you win. Let me collect what's left of my lance and I'll get out of Allard's hair.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_justinAllard_GarrilacDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I don't know if I believe him, Boss. What's gonna stop this guy from turning around and pulling the same nonsense again the minute we leave?
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I'm a man of my word. And even if it wasn't true, I'm not stupid enough to let the same train hit me twice. In this analogy, you're the train.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_justinAllard_GarrilacDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Yes, thank you. We get it.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Then we're square. You clear out, I'll scrape my Marauders off the field, and Allard can go on enjoying the money he owes me. I wash my hands of it.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_justinAllard_GarrilacDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]I warned you, {COMMANDER.LastName}—you can't kill me. Better MechWarriors than you have tried. Now, because I'm in a magnanimous mood, I'll let you take what's left of your lance off the field… just as soon as you pay us what you owe us. Pleasure doing business with you.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_justinAllard_TalonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_Dragon_fp_justinAllard
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_Talon
+		[Unit]Mech
+			[UnitDef]mechdef_Griffin_fp_justinAllard
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_Valravn
+		[Unit]Mech
+			[UnitDef]mechdef_Centurion_fp_justinAllard
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_Diva
+		[Unit]Mech
+			[UnitDef]mechdef_Catapult_fp_justinAllard
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_Beta
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

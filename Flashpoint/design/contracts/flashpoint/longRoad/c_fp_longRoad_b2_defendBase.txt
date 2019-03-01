@@ -1,0 +1,427 @@
+// Contract c_fp_longRoad_b2_defendBase
+
+		
+[ID]c_fp_longRoad_b2_defendBase
+[Name]Joint Venture II
+[Template]DefendBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]House Liao's occupation force is moving on our Mech Bay in force, Commander. I know that you've had no time to refit or repair your BattleMechs, but I'm going to need your assistance all the same. In light of this, I've authorized the deployment of a Steiner asset—the very rare and precious BattleMech that you just delivered to this site—to assist you, with one of my own MechWarriors to pilot it.
+[LongDesc]This new Steiner-Davion BattleMech looks pretty damned impressive for its class. Let's hope it's enough to get us through this.
+[Salvage]12
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+			
+// Contract Objectives
+[ContractObjective]Defend the Fortified Mech Bay
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Defend the Fortified Mech Bay
+		[Description]Defend Targetted Base Structures from Attackers
+
+	// Optional Objective
+	[Objective]Destroy the Liao Vanguard
+		[Description]Destroy the enemy vanguard force, the first wave.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Defend All Target Buildings from Destruction
+		[Description]Optional objective to keep ALL target structures intact. 
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Hold Out for Reinforcements
+		[Description]Objective for tracking the time left in the mission. While the player it told to Hold Out for Reinforcements
+
+	// Optional Objective
+	[Objective]Escort the Engineer APCs to the Inactive Base Defenses
+		[Description]Escort Engineer APCs to Base Defenses in order to take control of them.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden Objetive: Destroy the Second Lance
+		[Description]Hidden Objetive: Destroy the Second Lance
+
+
+	// Optional Objective
+	[Objective]Hidden Objective: Destroy the Third Lance
+		[Description]Hidden Objective: Destroy the Third Lance
+
+
+	// Optional Objective
+	[Objective]Destroy the Liao Reinforcements
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_EscortAPC_DefensiveTurrets (Bonus)|off
+[OptionalChunk]Chunk_Wave3Attackers (Bonus)|off
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_longRoad_b2_defendBase
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_Wave1Attackers
+//		Lance_Neutral_BaseTurrets
+//		Lance_Enemy_BaseTurrets
+//		Lance_Friendly_BaseTurrets
+//		Lance_Escort
+//		Lance_Enemy_Wave2Attackers
+//		Lance_Enemy_Wave3Attackers
+//		Region_EscortDestination
+			
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]Commander. I'm afraid that Dr. Murad's sensor readings have been confirmed: a large contingent of Liao Reserves are en route to the Mech Bay at this moment, and they are eager to strike.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_Wave1Attackers
+	[Content]I suggest that you strike back at them with this. Meet the HTC-3F Hatchetman, House Steiner's new melee-specialized brawler. You'll find it perfectly equipped to hack these Capellan peasants in two, I assure you.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]It's a hell of a machine, I've gotta say. That hatchet makes me feel downright tingly.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Just wait until you've seen it in action. To that point, Commander: eliminate the enemy and keep our assets safe. Key members of the Davion-Steiner alliance will be watching.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]That's the last of them, Commander. Nicely done. This deployment has proven to be an excellent test of our new BattleMech's combat abilities.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]And, uh, Boss? Moving forward, let's keep our eyes open for another Hatchetman or three. I can think of <i>so many</i> things I could do with a chassis like that…
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]We're gonna have to scrub this one, Commander. I'll send our apologies to Graf Stieglitz-Bradford.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_CapturedTurrets
+	[Content]NOT USED IN THIS FLASHPOINT.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_OneBuildingLeft
+	[Content]That last building <i>must</i> remain standing, Commander! Keep fighting and push through—your client demands it!
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretBriefing
+	[Content]NOT USED IN THIS FLASHPOINT.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]mechdef_hatchetman_HCT-3F
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_StienerLongRoad
+			[CustomHeraldryDefID]heraldrydef_steiner
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]
+
+[Team]player2Team
+
+[Team]employerTeam
+	[Lance]Lance_Friendly_BaseTurrets
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+	[Lance]Lance_Escort
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_convoy
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_Wave1Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Wave2Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Wave3Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+	[Lance]Lance_Neutral_BaseTurrets
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+
+[Team]hostileToAllTeam

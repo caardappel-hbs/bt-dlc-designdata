@@ -1,0 +1,317 @@
+// Contract AmbushConvoy_Template 
+
+
+[ID]c_fp_allianceMarik_2_ambushConvoy
+[Name]Marik Alliance II
+[Template]AmbushConvoy
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]The vehicles seem to be a standard supply convoy, with an escorting lance. It was simple bad luck that they happened to be scheduled to arrive just after we neutralized the base. We need to eliminate them before they arrive here and see League salvage and intel teams all over their facility. I wouldn't expect more than a single lance as an escort, but it's possible the vehicles themselves may pose a significant threat, given the restrictions a covert operation places on your drop tonnage.
+[LongDesc]The only real danger I see here, Commander, is if they manage to slip someone past us who can call for help. The vehicles will do what vehicles always do in fights with 'Mechs: they'll die.
+[Salvage]24
+[FOW]Surveyed
+
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]-1
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]50|50|50|50
+
+// Contract Objectives
+[ContractObjective]Destroy the Convoy and Extract Safely
+	[Description]The ENEMYFACTION scum are trying to get from one place to another. Kill them.
+[ContractObjective]Destroy the Convoy Guards.
+	[Description]Send a message by not only destroy the convoy, but eliminte their escorts as well.
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Destroy the Enemy Convoy
+		[Description]The objective for destroying the convoy units.
+
+	// Optional Objective
+	[Objective]Destroy the Convoy Guards
+		[Description]The objective for destroying the units guarding the convoy.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Prevent the Convoy from Escaping
+		[Description]The objective for preventing the enemy from reaching their escape point, if this happens the player will lose.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Recon the Convoy's Route
+		[Description]The objective for the player to intercept/observe the enemy convoy.
+
+	// Optional Objective
+	[Objective]Get to the Evac Zone
+		[Description]The objective for the player units escaping and finishing the mission.
+
+	// Optional Objective
+	[Objective]Destroy the Enemy Reinforcements
+		[Description]The objective for killing the additional units that ambush you.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_AmbushByNumKilled (Bonus)|off
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_allianceMarik_2_ambushConvoy
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_Convoy
+//		Lance_Enemy_Bodyguard
+//		Ambush Lance Spawner
+//		Region_ConvoyTarget
+//		Region_GoTo
+//		Region_Escape
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Force Commander, mercenary unit dropped in the AO. Ground vehicles and BattleMechs spotted.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceMarik_PilotDefault
+		[Emote]Default
+		[Audio]audioevent_universal_hostilesInbound
+		[Focus]
+	[Content]Right on target, Lieutenant. Well done. Commander, if you bring your lance up to this position, you should be able to see the convoy and its escort.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_GoTo
+	[Content]Once the convoy is handled, move to the extraction LZ here. The Leopard will remain on station to handle the pickup.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape
+	[Content]Good luck, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Well done, Commander. Any messages they were able to send will have reported this as a bandit raid, nothing more. Let's debrief once you're back on your ship.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Force Commander, we just intercepted a transmission positively IDing us as a League strike force.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceMarik_PilotDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]That's it, then. The operation's blown. We're pulling out, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_GuardsDestroyed
+	[Content]All the escort units are down, Commander. Focus your fire on any remaining units.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_ConvoyReachedExtraction
+	[Content]The convoy will be in sight of the destroyed base soon, Commander. You need to bring them down immediately, or the operation will be exposed.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_Convoy
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_vehicle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Bodyguard
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Ambush Lance Spawner
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

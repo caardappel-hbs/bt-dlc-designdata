@@ -1,0 +1,296 @@
+// Contract DestroyBase_Template 
+
+		
+[ID]c_fp_allianceSteiner_2_destroyBase
+[Name]Steiner Alliance II
+[Template]DestroyBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]I've received word from Margrave General Neil; our success was well received within Cavanaugh Theater Command. Margrave Neil has passed on the results of their stragetic planning session, and we've been asked to strike one of the local military installations. The goal is to completely neutralize the facility, to send a message to local forces that they are vulnerable.
+[LongDesc]This is bizarre, Commander. We just finished a covert drop to avoid drawing attention, and now we're going to blow up a <i>military base</i>?
+[Salvage]28
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+			
+// Contract Objectives
+[ContractObjective]Destroy the Enemy Structures and Extract Safely
+	[Description]Destroy Enemy Structures and Extract Safely
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy the Facility
+		[Description]The objective to destroy the targeted buildings.
+
+	// Optional Objective
+	[Objective]Destroy the Facility Garrison
+		[Description]The primary objective to destroy the garrison / defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden Objective: Destroy the Base Turrets
+		[Description]HIDDEN Objective: Destroy Base Turrets
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Destroy the Enemy Reinforcements
+		[Description]The objective to eliminate enemy reinforcements who attack.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Get to the Evac Zone
+		[Description]The objective for the player to extract their units.
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_allianceSteiner_2_destroyBase
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_BaseTurrets
+//		Lance_Enemy_Ambushers
+//		Region_Ambush
+//		Region_Escape
+			
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]Commander, the target facility is just on the other side of that highway.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Your objective is to cause as much damage as possible to critical facility structures.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Destruction of enemy forces in the region is not mandatory, but will be rewarded.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]My Lord, the mission was successful. We've extracted the mercenary team.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceSteiner_PilotDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Ah, yes. Well done, Commander. I'll report our victory to the Margrave and contact you with further orders.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]This is a highly disappointing outcome that reflects poorly on you and your people, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AmbushWarning
+	[Content]My Lord, we have additional contacts in the area. It might be an ambush.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceSteiner_PilotDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Hmm. Commander, I trust that you can handle any additional enemy forces?
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_cavalry|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

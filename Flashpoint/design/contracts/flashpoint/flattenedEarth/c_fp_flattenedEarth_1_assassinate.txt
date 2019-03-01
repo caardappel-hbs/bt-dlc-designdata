@@ -1,0 +1,306 @@
+// Contract c_fp_flattenedEarth_1_assassinate
+
+
+[ID]c_fp_flattenedEarth_1_assassinate
+[Name]Operation: Flattened Earth
+[Template]Assassinate
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]Before you can rid us of the Volkovites, you're going to have to deal with Razorback Company, the hired guns they imported from the Frontier. Our surveillance drones have identified the company's command-and-control 'Mech, a CP-10-Z Cyclops. Eliminate it to cripple Razorback Company and clear a path to your real target.
+[LongDesc]Let's do this thing quickly, {COMMANDER.FirstName}. I don't want us spending any more time on these jokers than we have to.
+[Salvage]8
+[FOW]Surveyed
+
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+
+// Contract Objectives
+[ContractObjective]Destroy the Razorback Company Cyclops and Escape
+	[Description]Destroy the target, clear area of additional forces, and escape
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Destroy the Supporting Mercenary Forces
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.25
+
+	// Optional Objective
+	[Objective]Eliminate the Ambushers
+		[Description]Destroy enemy Ambushers before extraction
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Eliminate the Razorback Company Cyclops
+		[Description]
+
+	// Optional Objective
+	[Objective]Hidden Objective: Destroy the Assassination Lance 
+		[Description]Hidden Objective for AutoComplete, Destroy Assassination Lance
+
+	// Primary Objective
+	[Objective]Get to the Evac Zone
+		[Description]
+
+	// Primary Objective
+	[Objective]Prevent the Cyclops from Escaping
+		[Description]
+
+	// Optional Objective
+	[Objective]Armor Breached
+		[Description]Armor of the Target is breached.
+
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|off
+[OptionalChunk]Chunk_TargetEscape (Bonus)|off
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_flattenedEarth_1_assassinate
+
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]For this first drop, I want you to hunt down Razorback Company's C&C 'Mech, a CP-10-Z Cyclops. It appears to be running a stock configuration, and it will be combat-capable at any range.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]It wouldn't do to underestimate Razorback Company. Remember, these are Frontier mercenaries operating in Liao space. They wouldn't be here if they weren't confident in their abilities.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]Confident enough to do what's right. We won't let you persecute these people for rejecting your bullshit screed.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_SigynDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]That was an… unwise… display of disrespect, Commander Elliathy. I'd encourage you to change your tone before the Chancellor orders your death as well.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]Petty tyrants like Maximilian Liao are a dime a dozen out in the Frontier. You people don't frighten me, and neither do your hired guns. Elliathy out.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_SigynDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]As brave as she is foolish. Engage the enemy and destroy them, Commander {COMMANDER.LastName}. Liao out.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Nicely done, Commander. With Razorback Company's Cyclops down, their combat cohesiveness will crumble into disarray. If they are wise, they'll abandon their clients and crawl back to the Frontier to lick their wounds.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]For now, return to orbit and conduct your repairs. We'll move on the Volkovites as soon as you're ready. Liao out.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]You are defeated, Commander. The Chancellor has asked me to express his displeasure at your performance, and to inform you that he will find another company to carry out his will.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_KillConfirmedEscapeInstruction
+	[Content]Kill confirmed, Commander. The Cyclops is down, and you are cleared for extraction.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You've got a hell of a combat lance, {COMMANDER.LastName}. You really do. Pity you're using it to fight for a tyrant.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_SigynDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]We're fighting for our client, just like you are. Oliveira out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_50
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_AssassinationTarget
+		[LanceDef]Manual
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_solo
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_cyclops_CP-10-Z
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[CustomName]Razorback Company C&C Unit
+			[SpawnEffects]
+			[PilotDef]Tagged
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]Tagged
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]Tagged
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]Tagged
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

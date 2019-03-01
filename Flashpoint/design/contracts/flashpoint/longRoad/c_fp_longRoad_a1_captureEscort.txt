@@ -1,0 +1,392 @@
+// Contract c_fp_longRoad_a1_captureEscort
+
+		
+[ID]c_fp_longRoad_a1_captureEscort
+[Name]Joint Venture
+[Template]CaptureEscort
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]We have eyes on Sentry Team Alpha, Commander—they're patrolling the AO, just as I said they would be. Expect moderate-to-heavy resistance on the path to your objective. As a reminder, it is absolutely vital that this convoy reach its destination. Do not disappoint me.
+[LongDesc]House Steiner isn't even supposed to have a presence in this system, so be careful. When the Capellans pick you up on their sensors, I imagine that all hell is gonna break loose.
+[Salvage]12
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Escort the Steiner Convoy to Its Destination
+	[Description]Escort the Steiner Convoy to its Destination
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Eliminate Sentry Team Alpha
+		[Description]The objective to destroy the force of enemies which will try adn stop the player from reaching the rally point.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Secure the Convoy Rally Point
+		[Description]Secure the Convoy Rally Point
+
+	// Optional Objective
+	[Objective]Destroy the Liao Reinforcements
+		[Description]The objective to destroy enemy units which will attempt to block the convoy from reaching its destination. 
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Escort the Steiner Convoy to Its Destination
+		[Description]Escort Friendly units to their Destination
+
+	// Optional Objective
+	[Objective]Ensure That All Steiner Units Survive
+		[Description]Protect the all units in Convoy during Extraction, suffering no losses.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden Objective: Destroy hunter lance for mission complete.
+		[Description]Hidden Objective: Destroy hunter lance for mission complete.
+
+
+	// Primary Objective
+	[Objective]Get to the Evac Zone
+		[Description]The objective to escape with all the player units.
+
+	// Primary Objective
+	[Objective]Protect the Convoy Until the DropShip Arrives
+		[Description]USELESS OBJECTIVE
+
+	// Primary Objective
+	[Objective]Protect the Convoy As It Boards the DropShip
+		[Description]USELESS OBJECTIVE
+			
+// Optional Chunks
+[OptionalChunk]Chunk_BlockingLance (Bonus)|off
+[OptionalChunk]Chunk_ReinforcementLance (Bonus)|on
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_longRoad_a1_captureEscort
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BlockingForce
+//		Lance_Enemy_Reinforcement
+//		Lance_Friendly_Escort
+//		Lance_Enemy_Hunter
+//		Region_Occupy
+//		Region_EscortDestination
+//		Region_Escape
+//		Region_Extraction
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]I've marked Graf Stieglitz-Bradford's rendezvous point on your map, Commander. Convoy leader, do you copy?
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Roger that, Oliveira—we are all packed up and ready to roll. We're under orders to beeline it to the Mech Bay as soon as you reach the rendezvous point, so I hope that your MechWarriors can keep up.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longRoad_ConvoyLeaderDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]Understood, convoy leader. We'll let you set the pace.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Thanks for understanding. Oh, and fair warning: I've been hearing a lot of Capellan military chatter on the comms lately. It won't take 'em long to find us after we roll out.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longRoad_ConvoyLeaderDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]We'll take it under advisement, convoy leader. See you soon.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]That's it, Commander {COMMANDER.LastName}—our payload has been secured. On behalf of my entire crew, thank you. We never would've made it here without you.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longRoad_ConvoyLeaderDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You'd better hold that thought, this isn't over yet. Long-range sensors are picking up inbound Capellan DropShips, ETA 45 minutes.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]That doesn't even give me enough time to fly you back for repairs. This is a problem, XO.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Then allow me to propose a solution. I will authorize my MechTechs to rush the activation of our new BattleMech: the HTC-3F Hatchetman. It will stand in place of one of your own 'Mechs in the upcoming fray.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]We'll take the help, Graf Stieglitz-Bradford. From the sound of things, we're gonna need it.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]We're gonna have to scrub this one, Commander. I'll send our apologies to Graf Stieglitz-Bradford.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_HunterWarning
+	[Content]I just picked up a new blip on my long-range sensors, Commander. You're about to have company.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]All Capellan troops, destroy that convoy! Your families will be held accountable if you fail!
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longRoad_ConvoyHunterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_ConvoyMoving
+	[Content]Ready to roll out, Commander! Keep the hostiles off of us—we can get Stieglitz-Bradford's payload from Point A to Point B, but we aren't equipped to fight.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longRoad_ConvoyLeaderDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+	[Lance]Lance_Friendly_Escort
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_convoy
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BlockingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcement
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_jenner_JR7-D
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechdef_jenner_JR7-D
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Hunter
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_trebuchet_TBT-5N
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechdef_trebuchet_TBT-5N
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam

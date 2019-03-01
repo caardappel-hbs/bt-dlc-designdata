@@ -1,0 +1,382 @@
+// Contract c_fp_morganKell_2_captureEscort
+
+		
+[ID]c_fp_morganKell_2_captureEscort
+[Name]The Braying of Hounds II
+[Template]CaptureEscort
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]With the LRM Stalker down, you should be clear to rendezvous with Tempest's convoy. Escort the vehicles to the pickup point, and get them there in one piece. All other considerations are secondary.
+[LongDesc]In theory, we've already done the heavy lifting on this one, but keep your eyes open. We still don't know why the Beasts of Balawat are chasing Kell's people.
+[Salvage]12
+[FOW]Surveyed
+			
+// Flashpoint Miscellaneous Values - paste this block at bottom of Flashpoint contracts
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Rendezvous with Tempest's Convoy and Escort It to the Evac Point
+	[Description]Rendezvous with Tempest's Convoy and escort it to the Evac Point
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Eliminate the Beasts of Balawat Units
+		[Description]The objective to destroy the force of enemies which will try and stop the player from reaching the rally point.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Rendezvous with Tempest's APC
+		[Description]Secure the Convoy Rally Point
+
+	// Optional Objective
+	[Objective]Destroy the Beasts of Balawat Reinforcements
+		[Description]The objective to destroy enemy units which will attempt to block the convoy from reaching its destination. 
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Escort the Convoy to the Extraction Point
+		[Description]Escort Friendly units to their Destination
+
+	// Optional Objective
+	[Objective]Ensure That All Convoy Units Survive
+		[Description]Protect the all units in Convoy during Extraction, suffering no losses.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden Objective: Destroy hunter lance for mission complete.
+		[Description]Hidden Objective: Destroy hunter lance for mission complete.
+
+
+	// Primary Objective
+	[Objective]Proceed to the Evac Zone
+		[Description]The objective to escape with all the player units.
+
+	// Primary Objective
+	[Objective]Protect the Convoy Until Kell's DropShip Arrives
+		[Description]USELESS OBJECTIVE
+
+	// Primary Objective
+	[Objective]Protect the Convoy during DropShip Extraction
+		[Description]USELESS OBJECTIVE
+			
+// Optional Chunks
+[OptionalChunk]Chunk_BlockingLance (Bonus)|on
+[OptionalChunk]Chunk_ReinforcementLance (Bonus)|on
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_morganKell_2_captureEscort
+
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BlockingForce
+//		Lance_Enemy_Reinforcement
+//		Lance_Friendly_Escort
+//		Lance_Enemy_Hunter
+//		Region_Occupy
+//		Region_EscortDestination
+//		Region_Escape
+//		Region_Extraction
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]The convoy is holed up near this location, Commander. They're surrounded by BattleMechs flying the colors of the Beasts of Balawat; you may have taken out their fire support, but they're still in the fight.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]These mercs are sinking a lot of resources into chasing after your people, Kell. Either they've got a bone to pick with you, or their client does.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]Priorities, Oliveira. I'll deal with the mercs after my people are safe. Kell out.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]We have the convoy, but they aren't answering their comms, and we can't get anyone to open the doors.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Your ex and your kid? Are they…?
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I don't know. We'll all find out once we've cut the doors open. Now get the hell out of there—we'll regroup in orbit. Kell out.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]That's it, {COMMANDER.FirstName}—we're done here. Kell's gonna have to find someone else to soak up fire for him.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_HunterWarning
+	[Content]Look out, Commander! We've got multiple enemy BattleMechs on the field!
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_ConvoyMoving
+	[Content]The convoy is moving out, Commander. Can't get the pilot to talk over the comms, though. I've been hailing 'em since I set you down at the drop zone, and it's been nothing but radio silence on their part.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I've been getting the same thing. There may be something wrong with their comms.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Either way, they're rolling toward the extraction point. It won't matter why they aren't answering their comms if the Beasts blow them to scrap.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Agreed. Proceed with the plan. I'll have a medical team standing by on the DropShip, just in case.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+	[Lance]Lance_Friendly_Escort
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_convoy
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BlockingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_vehicle
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_75
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcement
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Hunter
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

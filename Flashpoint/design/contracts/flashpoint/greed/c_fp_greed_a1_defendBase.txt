@@ -1,0 +1,378 @@
+// Contract c_fp_greed_a1_defendBase
+
+
+[ID]c_fp_greed_a1_defendBase
+[Name]Criminal Minds III
+[Template]DefendBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]The Iron Sparrow has dispatched all of his remaining units to attack the vault's northmost entrance, Commander. Hold them off until the Liao Reserves arrive to relieve you.
+[LongDesc]Unpleasant as Subcommander Tianyu may be, he's getting his vault, SLDF Griffin and all. Our reputation with House Liao is worth more than a single 'Mech.
+[Salvage]16
+[FOW]Surveyed
+
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]UNKNOWN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+// Contract Objectives
+[ContractObjective]Defend the Warehouse
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Defend the Vault from the Iron Sparrow's Forces
+		[Description]Defend Base from Attackers
+
+	// Optional Objective
+	[Objective]Destroy the Iron Sparrow's Attackers
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Ensure That All Buildings Survive
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Hold Out for Reinforcements
+		[Description]Hold Out for Reinforcements
+
+	// Optional Objective
+	[Objective]Escort the Combat Engineer APCs to the Turret Control Center
+		[Description]Escort Engineer APCs to Base Defenses in order to take control of them.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hostile Units Inbound
+		[Description]
+
+// Optional Chunks
+[OptionalChunk]Chunk_EscortAPC_DefensiveTurrets (Bonus)|off
+[OptionalChunk]Chunk_Wave3Attackers (Bonus)|off
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_greed_a1_defendBase
+
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]The Iron Sparrow's forces are converging on the vault's northmost entrance point, Commander. Doubtless, they were hoping to catch you by surprise. Ready yourselves, they'll be on you soon enough.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_Greed_BorisDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]We've got it covered, Subcommander Tianyu.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_Wave1Attackers
+	[Content]You don't know how wrong you are. When I catch up with your lance, I'm gonna have my people pull your pilots out of their 'Mechs. And then I'm gonna show you what happens to individuals who cross the Iron Sparrow.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_Greed_SparrowDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]All right, Commander… you win. I give up. I didn't get where I am today by not knowing when to break off a fight.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_Greed_SparrowDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Run, then. Flee like the coward you are.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_Greed_BorisDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]One man's cowardice is another man's wisdom. I'm smart enough to know when I'm beaten, Tianyu. Enjoy your victory while you can, I'll take it out of your hide later.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_Greed_SparrowDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]A terrible disappointment, Commander. But the Liao Reserves will succeed where you have failed.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_Greed_BorisDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_CapturedTurrets
+	[Content]NOT USED IN THIS FLASHPOINT - CHUNK TURNED OFF.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_OneBuildingLeft
+	[Content]Only one building is still standing, you fool! If the Iron Sparrow brings it down, this whole campaign will be over!
+		[Color]1|1|1|1
+		[Cast]castDef_FP_Greed_BorisDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretBriefing
+	[Content]NOT USED IN THIS FLASHPOINT - CHUNK TURNED OFF.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+	[Lance]Lance_Friendly_BaseTurrets
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+	[Lance]Lance_Escort
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_convoy
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Vehicle
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Vehicle
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_Wave1Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_75
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_hatchetman_HCT-3F
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Wave2Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_75
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Wave3Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+	[Lance]Lance_Neutral_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+
+[Team]hostileToAllTeam
+

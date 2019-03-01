@@ -1,0 +1,298 @@
+// Contract Assassinate_Template 
+
+		
+[ID]c_fp_allianceDavion_a2_assassinate
+[Name]Davion Alliance IV
+[Template]Assassinate
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]Those aren't just reinforcements, Commander. That's our target: the CCAF commander, Lieutenant Colonel Song. As a reminder, they're a deadly MechWarrior as well as a skilled strategist. Their arrival on the field presents an opportunity—if we act swiftly, we can achieve our goals here on Kern in a single strike, making this world an easy pickup when we mount the full-scale attack. This is it, Commander. Don't screw this up.
+[LongDesc]Yang's been filling me in about Song, Commander. He says they're supposed to be the best shot in the entire CCAF. We're going to be lucky to get out of this one without serious losses.
+[Salvage]28
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Destroy Lieutenant Colonel Song and Escape
+	[Description]Destroy the Target, clear area of additional forces Enemies, and Escape
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Destroy the Supporting Capellan Forces
+		[Description]The secondary objective to destroy an additional lance supporting the assassination target.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Destroy the Capellan Reinforcements
+		[Description]Destroy enemy Ambushers before extraction
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Destroy Lieutenant Colonel Song
+		[Description]The objective to destroy the Assassination Target.
+
+	// Optional Objective
+	[Objective]Destroy Assassination Lance Hidden Objective
+		[Description]Hidden Objective for AutoComplete, Destroy Assassination Lance
+
+	// Primary Objective
+	[Objective]Get to the Evac Zone
+		[Description]The objective for the player to escape and complete the mission. 
+
+	// Primary Objective
+	[Objective]Prevent the Target from Escaping
+		[Description]The objective to stop the assassination target for escaping, the player will fail if the target escapes.
+
+	// Optional Objective
+	[Objective]Armor Breached
+		[Description]Armor of the Target is breached.
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+[OptionalChunk]Chunk_TargetEscape (Bonus)|off
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_allianceDavion_a2_assassinate
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_Ambushers
+//		Lance_Enemy_AssassinationTarget
+//		Region_Escape
+//		Region_TargetEscapeZone
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Commander, we're receiving a transmission from the Liao forces.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Attention, mercenary forces. You are trespassing on sovereign Capellan Confederation territory.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceDavion_SongDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]If you retreat now, you will be spared. If you remain, we will wipe you out completely. Song out.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceDavion_SongDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]…Well, that seems pretty straightforward.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+		
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Song is down and their remaining forces are without a commander. All that's left is the cleanup. Well done, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Goddamn it, we were <i>so close</i>. Song's just contacted their commanding officer, and reinforcements are on the way. The operation is blown.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_KillConfirmedEscapeInstruction
+	[Content]The Lieutenant Colonel is down, Commander. A Leopard is on standby for pickup.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_AssassinationTarget
+		[LanceDef]Manual
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_awesome_AWS-8Q
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Lt Colonel Song
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_d10_sharpshooter
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

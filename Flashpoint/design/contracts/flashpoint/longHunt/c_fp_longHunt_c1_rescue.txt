@@ -1,0 +1,295 @@
+// Contract c_fp_longHunt_c1_rescue
+
+		
+[ID]c_fp_longHunt_c1_rescue
+[Name] The Long Hunt IV
+[Template]Rescue
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]Colonel Lees's stronghold is just ahead of you, Commander. For all his arrogant bluster, it would seem that the Butcher of Shaul Khala is a coward at heart. I've seen no sign that he intends to meet you on the field of battle. So be it; if he won't leave his fortress voluntarily, then I will have your BattleMechs remove him by force.
+[LongDesc]We've got Lees backed into a corner. Time to finish the job. 
+[Salvage]12
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+			
+// Contract Objectives
+[ContractObjective]Apprehend Colonel Basil Lees
+	[Description]Apprehend Colonel Basil Lees
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Pull Colonel Lees from His Hiding Place
+		[Description]The objective for the player to retrieve the primary rescue target. 
+
+	// Optional Objective
+	[Objective]Hidden KILL OBJECTIVE for OpFor1
+		[Description]UNUSED KILL OBJECTIVE for AutoComplete
+
+
+	// Primary Objective
+	[Objective]Proceed to the Evac Zone
+		[Description]The objective to escape with all player units.
+
+	// Primary Objective
+	[Objective]Ensure the 'Mech Carrying Lees Survives
+		[Description]The objective to keep the unit which is carrying the primary target alive. Player will fail if it is destroyed.
+
+	// Optional Objective
+	[Objective]Abduct Colonel Lees's Second-in-Command
+		[Description]The secondary and optional objective to secure the second rescue target.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden KILL OBJECTIVE for OpFor2
+		[Description]Hidden KILL OBJECTIVE for autocomplete of mission
+
+	// Optional Objective
+	[Objective]Ensure the 'Mech Carrying Lees's Second Survives
+		[Description]The objective to keep the unit which is carrying the secondary target alive. The player can fail this objective.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_OccupyRegion_2 (Bonus)|off
+[OptionalChunk]Chunk_EnsureSurvives_Objective (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_OpposingForce_1
+//		Lance_Enemy_OpposingForce_2
+//		Region_Occupy_1
+//		Region_Escape
+//		Region_Occupy_2
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_longHunt_c1_rescue
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]This is it, Commander. My agents tell me that the Butcher of Shaul Khala is sheltering in a disused tower just ahead of you. Apparently, he'd rather hide in his command center than face you directly.
+		[Color]1|1|1|1
+		[Cast]castDef_KuritaRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]If he thinks a little concrete and rebar will keep him safe, he's in for a rude awakening.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You don't know how right you are. I've decdided that a MechWarrior's death is too good for a man like Lees; he deserves to meet his fate in the Combine, wretched and afraid. And you are in a position to deliver him to me.
+		[Color]1|1|1|1
+		[Cast]castDef_KuritaRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy_1
+	[Content]I welcome your mercenaries to try, drunkard. They will find themselves quite outmatched.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_LeesDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy_1
+	[Content]Come for me, hireling. I have superior numbers on my side, and your lance has a campaign's worth of attrition to contend with. Come for me, and I will show you what I did to the people of Shaul Khala.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_LeesDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy_1
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]The package has been delivered, Shugo Yamaguchi. We'll be transferring the Butcher of Shaul Khala into your custody directly. When you get him back to the Draconis Combine, your people can dispense whatever justice they see fit.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Justice? You call this justice?! Those Kuritan dogs will have me executed without trial!
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_LeesDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You've given us ample opportunity to see what kind of man you are, Lees. If you're expecting us to shed a tear over your fate, I'm afraid that you're sadly mistaken.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Well said, Doctor Murad. Meet with me in orbit, Commander… I want to celebrate our victory, and there are matters of compensation to discuss.
+		[Color]1|1|1|1
+		[Cast]castDef_KuritaRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Was that the best you could do, Kuritan filth? It wasn't enough. But then, is it ever?
+		[Color]1|1|1|1
+		[Cast]castDef_FP_longHunt_LeesDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_OccupyRegionStarted
+	[Content]Your day of reckoning is close at hand, Lees. For Abraham Kobayashi, and the hundreds of others you murdered on Shaul Khala. You're coming with me to the Combine, and there, you will <i>pay</i> for what you've done!
+		[Color]1|1|1|1
+		[Cast]castDef_KuritaRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_RecoveringUnitDestroyed2
+	[Content]This objective is a lost cause, Commander. Focus on Colonel Lees—he's the only thing that matters!
+		[Color]1|1|1|1
+		[Cast]castDef_KuritaRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_OpposingForce_1
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]2
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_OpposingForce_2
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]2
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

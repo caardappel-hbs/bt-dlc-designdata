@@ -1,0 +1,413 @@
+// Contract c_fp_extraActivities_b1_captureEscort 
+
+		
+[ID]c_fp_extraActivities_b1_captureEscort
+[Name]Extracurricular Activities II
+[Template]CaptureEscort
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]We'd be dead without your assistance, Commander. Full stop. There are at least a dozen different bandit gangs operating on the outskirts of our territory, and any one of 'em would jump at the chance to gun us down. So… thanks for doing what's decent. From all of us.
+[LongDesc]Let's knock this out quickly, {COMMANDER.FirstName}. I don't want to try Graf Stieglitz-Bradford's patience any more than we have to.
+[Salvage]16
+[FOW]Surveyed
+
+// Working for free: disable negotations = true, negotiated salary = 0, negotiated salvage = 0.5
+
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]0
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+			
+// Contract Objectives
+[ContractObjective]Escort the Refugees to Safety and Escape
+	[Description]Capture Convoy Rally Point and Escort Convoy to Safety
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Eliminate the Bandit Roadblock
+		[Description]The objective to destroy the force of enemies which will try an stop the player from reaching the rally point.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Secure the Convoy Rally Point
+		[Description]Secure the Convoy Rally Point
+
+	// Optional Objective
+	[Objective]Destroy the Bandit Reinforcements
+		[Description]The objective to destroy enemy units which will attempt to block the convoy from reaching its destination.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Escort the Refugees to the Safe Zone
+		[Description]Escort Friendly units to their Destination
+
+	// Optional Objective
+	[Objective]Ensure that All Refugee Vehicles Survive
+		[Description]Protect the all units in Convoy during Extraction, suffering no losses.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden Objective: Destroy the Hunter Lance for Mission Completion
+		[Description]Hidden Objective: Destroy hunter lance for mission complete.
+
+	// Primary Objective
+	[Objective]Get to the Evac Zone
+		[Description]The objective to escape with all the player units.
+
+	// Primary Objective
+	[Objective]Protect the Convoy Until the DropShip Arrives
+		[Description]USELESS OBJECTIVE
+
+	// Primary Objective
+	[Objective]Protect the Convoy As It Boards the DropShip
+		[Description]USELESS OBJECTIVE
+			
+// Optional Chunks
+[OptionalChunk]Chunk_BlockingLance (Bonus)|on
+[OptionalChunk]Chunk_ReinforcementLance (Bonus)|off
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_extraActivities_b1_captureEscort
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BlockingForce
+//		Lance_Enemy_Reinforcement
+//		Lance_Friendly_Escort
+//		Lance_Enemy_Hunter
+//		Region_Occupy
+//		Region_EscortDestination
+//		Region_Escape
+//		Region_Extraction
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Thank you for helping us out of this, Commander. I've gotta admit, when I first reached out to you, I didn't have much hope that you'd respond.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_RefugeeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Most mercenary commands wouldn't. Don't worry, Mr. Zapata, we'll provide you safe passage out of the conflict zone.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]"Conflict zone." You're talking about our home… or what's left of it. In the blink of an eye, we've gone from regular people to war refugees. We've got your client to thank for that.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_RefugeeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Yeah, you do. I'd be pissed about it, too. But trust me, buddy… things could be a hell of a lot worse.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]I'm well aware of that, and I thank you for doing what's right—as your XO said, most mercenaries wouldn't. We'll be waiting for you at the rendezvous point. Zapata out.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_RefugeeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]You've saved us, Commander. We won't forget it. Thank you.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_RefugeeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Not a problem. We hope that you're able to live out your lives in peace.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]If you're finished with this little diversion, you still have a job to do. So get to it, Commander—my patience is wearing thin. 
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]It's no good, Commander… there's nothing more that we can do for the local population. I'm pulling our people out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]This is exactly what I was afraid of, Mr. Oliveira… you bit off more than you could chew, and your company is the worse for it.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Recover your lance and return to the munitions factory. You still have a fight to win, and I am counting on your success.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_HunterWarning
+	[Content]Damn it! We've got more bandits, coming in fast!
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_RefugeeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]We're gonna catch those scurrying little rats you're herding, Commander. We're gonna catch 'em, and we're gonna kill 'em.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_BanditDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_ConvoyMoving
+	[Content]We're all packed in and ready to move, Commander. Get us to safety—please.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_RefugeeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Running away, are we? Through <i>our</i> territory? Is that what you think you're going to do?
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_BanditDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]This convoy is under our protection, jackass. Back off or you're gonna be in for a world of hurt.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Think your big, bad BattleMechs scare us, merc boy? They don't. We're gonna tear 'em apart and sell 'em as scrap.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_extraActivities_BanditDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+	[Lance]Lance_Friendly_Escort
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_convoy
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BlockingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_75
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcement
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_50
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Hunter
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_50
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam

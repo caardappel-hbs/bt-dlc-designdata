@@ -1,0 +1,317 @@
+// Contract c_fp_shadowOrg_a1_assassinate 
+
+		
+[ID]c_fp_shadowOrg_a1_assassinate
+[Name]White Lies II
+[Template]Assassinate
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]According to the information my team pulled from the base you captured, our target—my enemy—is one Murdoch Dhawan, a small-time political extremist from Kilarney. He's here, in this basin. Destroy him and you will be well rewarded.
+[LongDesc]Nice, clean, and simple. Just the kind of job I like, and just what we'd have missed if we'd taken our shadowy friend up on his offer. You made the right call, {COMMANDER.FirstName}—now let's finish this thing.
+[Salvage]12
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Destroy the Target and Escape
+	[Description]Destroy the Target, clear area of additional forces Enemies, and Escape
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Destroy Dhawan's Bodyguard
+		[Description]The secondary objective to destroy an additional lance supporting the assassination target.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Destroy the Criminal BattleMechs
+		[Description]Destroy enemy Ambushers before extraction
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Eliminate Murdoch Dhawan
+		[Description]The objective to destroy the Assassination Target.
+
+	// Optional Objective
+	[Objective]Destroy Assassination Lance Hidden Objective
+		[Description]Hidden Objective for AutoComplete, Destroy Assassination Lance
+
+
+	// Primary Objective
+	[Objective]Proceed to the Evac Zone
+		[Description]The objective for the player to escape and complete the mission. 
+
+	// Primary Objective
+	[Objective]Prevent Dhawan from Escaping
+		[Description]The objective to stop the assassination target for escaping, the player will fail if the target escapes.
+
+	// Optional Objective
+	[Objective]Dhawan's Armor Breached
+		[Description]Armor of the Target is breached.
+
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+[OptionalChunk]Chunk_TargetEscape (Bonus)|off
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_shadowOrg_a1_assassinate
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_Ambushers
+//		Lance_Enemy_AssassinationTarget
+//		Region_Escape
+//		Region_TargetEscapeZone
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Dhawan is here, in this basin. According to the intel my people dug up in the computers you seized, Dhawan is a political extremist whose juvenile philosophy begins and ends with "eat the rich."
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Dhawan's attacks on my family, and on my colleagues' families? Random violence. There was no vendetta, just the perverse agenda of a small man with something to prove.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]And the fabricated evidence on the warehouse's computers? What was the deal with that?
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]Dhawan wanted to provoke me in to attacking House Steiner—an entity that he views as synonymous with the moneyed elite. Without your help, he probably would have succeeded, and I'd have been lured into a blood-feud with a juggernaut. I may not have survived such a conflict.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]But now Dhawan's lies have been laid bare, and I see my enemy for who he is. Do you hear me, Murdoch? On this day, my mercenaries will bring you to justice!
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]They can try, Singh. I will spit on their corpses, and then I will spit on yours.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_shadowOrg_DhawanDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Well done, Commander. By killing Dhawan, you've removed a thorn from the side of the entire Singh family. Return to me and we can discuss your well-earned reward.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]We can't take any more punishment, Commander. I'm pulling us out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_KillConfirmedEscapeInstruction
+	[Content]You've done it! Dhawan is dead, and my family is avenged!
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Then it sounds like our job here is done! Get to the LZ, Commander—I'll meet you there.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_AssassinationTarget
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Murdoch Dhawan
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

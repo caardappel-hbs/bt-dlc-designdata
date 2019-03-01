@@ -1,0 +1,312 @@
+// Contract c_fp_headhunting_b1_assassinate 
+
+		
+[ID]c_fp_headhunting_b1_assassinate
+[Name]Headhunting II
+[Template]Assassinate
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]Hunt down and eliminate Dominik "Whistler" Zhao, one of the two leaders of the Flak Jackals. Be advised that his personal BattleMech is equipped with LosTech weaponry and equipment.
+[LongDesc]Remember, Dominik is a sniper—he likes to sit back and punch holes in things at range, and his 'Mech is equipped to facilitate that. I'd suggest closing into knife-fight range if possible.
+[Salvage]20
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]UNKNOWN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+			
+// Contract Objectives
+[ContractObjective]Defeat Dominik "Whistler" Zhao and Escape
+	[Description]
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Destroy the Supporting Flak Jackal Forces
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Destroy the Flak Jackal Reinforcements
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Eliminate Dominik "Whistler" Zhao
+		[Description]
+
+	// Optional Objective
+	[Objective]Destroy Assassination Lance Hidden Objective
+		[Description]Hidden Objective for AutoComplete, Destroy Assassination Lance
+
+
+	// Primary Objective
+	[Objective]Reach the Evac Zone
+		[Description]
+
+	// Primary Objective
+	[Objective]Prevent Dominik Zhao from Escaping
+		[Description]
+
+	// Optional Objective
+	[Objective]Armor Breached
+		[Description]Armor of the Target is breached.
+
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+[OptionalChunk]Chunk_TargetEscape (Bonus)|off
+
+//AutoComplete Override
+[OverrideAutoCompleteDialogueId]DialogBucketDef_c_fp_headhunting_b1_assassinate
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_Ambushers
+//		Lance_Enemy_AssassinationTarget
+//		Region_Escape
+//		Region_TargetEscapeZone
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content][Incoming Transmission.]
+		[Color]1|1|1|1
+		[Cast]castDef_Computer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Killing my Jackals wasn't enough for you, huh? You think that you can put Whistler in the ground?
+		[Color]1|1|1|1
+		[Cast]castDef_FP_headhunting_DominikDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]I wish you luck, I really do… not that it'll do you much good. I'm gonna drill your pilots, one by one, right through their little cockpits. And you're gonna watch me do it.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_headhunting_DominikDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]There's our target, Boss. Remember, he's a sniper, and his 'Mech is outfitted with Star League–era weaponry. If you try to engage him at long range, things could get messy.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_AssassinationTarget
+	[Content]When you've finished with Dominik, proceed to the evac zone. I'll swing by with the Leopard to pick you up.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Dominik Zhao is down, his sister is on the run, and the Flak Jackals are as good as disbanded. That LosTech is ours, Commander. Let's bring our people home.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]I warned you what would happen if you sent your lance after me, Commander. What just happened to them is on your head, though I'll gladly take the credit.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_headhunting_OrchidDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+		
+[Dialogue]Dialogue_Interrupt_KillConfirmedEscapeInstruction
+	[Content]No! That's not— [piercing screams][static]
+		[Color]1|1|1|1
+		[Cast]castDef_FP_headhunting_DominikDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Target down, Commander! Get our lance to the evac zone and I'll bring 'em on home!
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_cavalry|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_AssassinationTarget
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_solo
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_jagermech_JM6-S_fp_headhunting
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Dominik "Whistler" Zhao
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_DominikZhao
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

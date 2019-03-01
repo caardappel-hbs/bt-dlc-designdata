@@ -1,0 +1,235 @@
+// Contract c_fp_shadowOrg_b1_simpleBattle 
+
+		
+[ID]c_fp_shadowOrg_b1_simpleBattle
+[Name]White Lies II
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]According to the information recovered by my forensics team, our target—the person responsible for my family's suffering—is Lord Parzival Gurung, the head of a minor noble house from Atreus. Lord Gurung is well connected and well defended. If we're going to capture him, first we must strike against his bodyguard.
+[LongDesc]Looks like Force Commander Singh's forensics team bought the false intel we planted. Let's hope it leads to the payoff we were promised.
+[Salvage]12
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Destroy the Enemy Units
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy Lord Gurung's Bodyguard
+		[Description]The primary objective to destroy the enemy lance. 
+
+	// Primary Objective
+	[Objective]Destroy the Hostile Reinforcements
+		[Description]An OPTIONAL primary objective to destroy the second enemy lance. 
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_Ambushers
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Thanks to you, Commander, I finally know who's been attacking my family. In retrospect, his identity should have been obvious to me. My father sent Gurung's mother to prison for sedition nearly 20 years ago, and evidently he's still holding a grudge.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Gurung is no MechWarrior, but he has a robust and powerful bodyguard. I need you to eliminate as many of them as you can before we can advance on his location.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_OpposingForce
+	[Content]When Gurung's bodyguard is down, we'll immediately press the attack on his stronghold. I have no doubt that the villain will flee if given the chance; we must deny him the opportunity.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Roger that, Force Commander Singh—consecutive deployments it is. We'll adjust our tactics accordingly.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Good work, Commander. With Lord Gurung's bodyguard down, we are free to advance on his stronghold.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]My mother was right—you can no more trust a Singh than you can a serpent! This attack on my holdings will not stand, do you hear me?! I will <i>destroy</i> you for what you've done today!
+		[Color]1|1|1|1
+		[Cast]castDef_FP_shadowOrg_GurungDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You'll get your opportunity to try soon enough, villain. Commander, prepare your MechWarriors. We're pressing the attack, and we're doing it now.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Lance down, Commander. I'm pulling us out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

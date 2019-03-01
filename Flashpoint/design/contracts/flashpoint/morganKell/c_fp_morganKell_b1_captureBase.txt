@@ -1,0 +1,339 @@
+// Contract c_fp_morganKell_b1_captureBase
+		
+[ID]c_fp_morganKell_b1_captureBase
+[Name]The Braying of Hounds III
+[Template]CaptureBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]The Beasts of Balawat's armory is just ahead of you, Commander. Strike swiftly, take the facility, and hold it until Megan and Tempest can be extracted. The Kell Hounds and I will handle Rhee and her people. Let's do this.
+[LongDesc]This is going to be risky, but it seems like the only way to be certain that Kell's people make it home safe.
+[Salvage]12
+[FOW]Surveyed
+			
+// Flashpoint Miscellaneous Values - paste this block at bottom of Flashpoint contracts
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]-1
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]60|60|60|60	
+
+// Contract Objectives
+[ContractObjective]Capture the Beasts of Balawat's Armory
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Scout the Beasts' Armory
+		[Description]The objective to scout the base that is being captured. Must be completed before the actual capture of the base.
+
+	// Optional Objective
+	[Objective]Destroy the Beasts of Balawat Forces
+		[Description]The objective to optionally destroy the defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Occupy the Armory
+		[Description]The objective for the player to move into and capture the base.
+
+	// Primary Objective
+	[Objective]Hold Out against the Beasts of Balawat's Attack
+		[Description]HIDDEN TIMER, NO NEED TO EDIT: This is the hidden timer objective that will trigger the enemy reinforcements.
+
+	// Primary Objective
+	[Objective]Pacify the Area Surrounding the Armory
+		[Description]This is a general objective to indicate the player must keep playing and eliminate enemies as they come.
+
+	// Primary Objective
+	[Objective]Destroy the Hostile Reinforcements
+		[Description]The primary objective to destroy the force that tries to remove the player from the captured base.
+
+	// Optional Objective
+	[Objective]Eliminate the Armory's Turrets
+		[Description]The chunk controlled objective to destroy the turrets for the base, if the chunk is active.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_DestroyLance_Defenders (Bonus)|off
+[OptionalChunk]Chunk_BaseDefense_Turrets (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BaseDefenders
+//		Lance_Enemy_Reinforcements
+//		Lance_Enemy_BaseTurrets
+//		Region_GoTo
+//		Region_Occupy
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Okay, {COMMANDER.Callsign}. I've got an assault lance on the ground keeping Rhee and her Beasts occupied. They won't be expecting a backdoor attack on their armory.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Get in there, seize the buildings, and wipe out anyone that tries to stop you. If you do your job right, we should be able to extract Tempest and Megan, and then we've won.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_GoTo
+	[Content]Come and get me, Rhee. Show me what you've learned.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Nicely done, {COMMANDER.LastName}. I just heard from my extraction team—Megan and Tempest are secure.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I'm very happy to hear that, Mr. Kell.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]As am I. My assault lance is just mopping up over here. As soon as they're done, we'll meet you in orbit.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Damn it. We bit off more than we could chew, {COMMANDER.LastName}. This is my failure as much as it is yours.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropshipLanding
+	[Content]DropShip inbound, Commander. Watch your heads.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretWarning
+	[Content]Hey, Boss? The mercs you're fighting are firing up a bunch of turrets.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_BaseTurrets
+	[Content]Smash 'em down and keep fighting! We don't stop until our people are safe!
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_GoToComplete
+	[Content]I'm seeing heavy defenses around the armory, including point-defense turrets. Not a huge surprise, but it's worth paying attention to.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]Keep your head on a swivel, and smash down anything that gets in your way. My scout 'Mechs will follow suit.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]2
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_enforcer_ENF-4R_fp_morganKell
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_KellHound_1
+			[CustomHeraldryDefID]heraldrydef_KellHounds
+		[Unit]Mech
+			[UnitDef]mechdef_jenner_JR7-D_fp_morganKell
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_KellHound_2
+			[CustomHeraldryDefID]heraldrydef_KellHounds
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+			
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+			
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BaseDefenders
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-2
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// Tagged: unit def will be chosen randomly using tags field
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// Tagged: unit def will be chosen randomly using tags field
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcements
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_50
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]UseLance
+			// Tagged: unit def will be chosen randomly using tags field
+			[CustomName]
+			[Tags] 
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// Tagged: unit def will be chosen randomly using tags field
+			[CustomName]
+			[Tags] 
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// Tagged: unit def will be chosen randomly using tags field
+			[CustomName]
+			[Tags] 
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]UseLance
+			// Tagged: unit def will be chosen randomly using tags field
+			[CustomName]
+			[Tags] 
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

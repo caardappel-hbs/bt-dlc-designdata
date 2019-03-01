@@ -1,0 +1,285 @@
+// Contract rescue_Template 
+
+		
+[ID]c_fp_allianceMarik_b1_rescue
+[Name]Marik Alliance III
+[Template]Rescue
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]Our operative, Jawad, is in deep cover at the naval logistics base on this tiny island, Commander. Once you arrive at the facility, he'll break cover and board your unit in the rumble seat. Then you just need to get him and the data he carries out of the facility. We'll have the Leopard on standby to pick you up. We're going in loud, Commander, which means the facility is going to know you're coming. Be prepared for heavy resistance.
+[LongDesc]I doubt they'll have been able to get more than a single backup lance over to this remote island in the time they'll have before we show up, guns blazing.
+[Salvage]20
+[FOW]Unknown
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Retrieve the Operative and Extract Safely
+	[Description]Retrieve the VIP and Extract Safely
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Recover the Data by Securing the Designated Area
+		[Description]The objective for the player to retrieve the primary rescue target. 
+
+	// Optional Objective
+	[Objective]Hidden KILL OBJECTIVE for OpFor1
+		[Description]UNUSED KILL OBJECTIVE for AutoComplete
+		[OnSuccess]			
+
+	// Primary Objective
+	[Objective]Get to the Evac Zone
+		[Description]The objective to escape with all player units.
+
+	// Primary Objective
+	[Objective]Ensure the Data Recovery Unit Survives
+		[Description]The objective to keep the unit which is carrying the primary target alive. Player will fail if it is destroyed.
+
+	// Optional Objective
+	[Objective]Recover the Operative by Securing the Secondary Designated Area
+		[Description]The secondary and optional objective to secure the second rescue target.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden KILL OBJECTIVE for OpFor2
+		[Description]Hidden KILL OBJECTIVE for autocomplete of mission
+		[OnSuccess]			
+
+	// Optional Objective
+	[Objective]Ensure the Operative Recovery Unit Survives
+		[Description]The objective to keep the unit which is carrying the secondary target alive. The player can fail this objective.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_OccupyRegion_2 (Bonus)|on
+[OptionalChunk]Chunk_EnsureSurvives_Objective (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_OpposingForce_1
+//		Lance_Enemy_OpposingForce_2
+//		Region_Occupy_1
+//		Region_Escape
+//		Region_Occupy_2
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Force Commander Singh, we're picking up a tight-beam transmission coming from the secondary facility in the lagoon. It's our operative's distress signal.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceMarik_PilotDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Blast. They must have caught him uploading the data on their facilities. Is there anything else, Lieutenant?
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy_1
+	[Content]Force Commander, he's signaling no-scrub. The data is still ready for pickup at the primary facility.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceMarik_PilotDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape
+	[Content]This complicates matters. Commander, if you have the opportunity, I'd take it as a personal favor if you would pick up my agent at the secondary facility, but… the data must come first.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Well done, Commander. We'll begin analyzing the data immediately. I'll have an update for you shortly.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]We've lost Jawad—and his data. I have to scrub the operation, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_OccupyRegionStarted
+	[Content]Commander, broadcast the following validation code toward the facility on our comms frequency, and the upload to your 'Mech should begin automatically.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Once that data's aboard, the whole operation depends on that 'Mech making it out safely.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_RecoveringUnitDestroyed2
+	[Content]Friendly down! It's… it's Jawad, Force Commander. He's gone.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_allianceMarik_PilotDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]…
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]He knew the risks of this operation. Commander, get that data out intact. Make his death mean something.
+		[Color]1|1|1|1
+		[Cast]castDef_MarikRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+		
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_OpposingForce_1
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_OpposingForce_2
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

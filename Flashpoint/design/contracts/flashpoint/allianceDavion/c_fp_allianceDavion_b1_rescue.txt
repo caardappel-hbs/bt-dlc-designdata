@@ -1,0 +1,291 @@
+// Contract rescue_Template 
+
+		
+[ID]c_fp_allianceDavion_b1_rescue
+[Name]Davion Alliance III
+[Template]Rescue
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]The location of the bunker is extremely well concealed, presumably to prevent exactly the kind of orbital strike we're planning to make. For us to locate it, you'll need to download transmission data from a logistics base in the region. That should give us a rough location. The logistics base is likely to be well defended, but if we're going to keep from alerting the Capellans to our plan, you'll need to insert with a lighter lance than you may be used to. Remember that all we need is the data; any enemy forces present are incidental.
+[LongDesc]They may be incidental but they're going to be shooting <i>our</i> 'Mechs in the ass, Commander. We're going to need to stay on the move.
+[Salvage]20
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]-1
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]50|50|50|50
+
+// Contract Objectives
+[ContractObjective]Retrieve the Transmission Data and Extract Safely
+	[Description]Retrieve the VIP and Extract Safely
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Recover the Transmission Data by Securing the Designated Area
+		[Description]The objective for the player to retrieve the primary rescue target. 
+
+	// Optional Objective
+	[Objective]Hidden KILL OBJECTIVE for OpFor1
+		[Description]UNUSED KILL OBJECTIVE for AutoComplete
+
+	// Primary Objective
+	[Objective]Get to the Evac Zone
+		[Description]The objective to escape with all player units.
+
+	// Primary Objective
+	[Objective]Ensure the Primary Asset Recovery Unit Survives
+		[Description]The objective to keep the unit which is carrying the primary target alive. Player will fail if it is destroyed.
+
+	// Optional Objective
+	[Objective]Recover the VIP's Assistant by Securing the Secondary Designated Area
+		[Description]The secondary and optional objective to secure the second rescue target.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden KILL OBJECTIVE for OpFor2
+		[Description]Hidden KILL OBJECTIVE for autocomplete of mission
+
+	// Optional Objective
+	[Objective]Ensure the Secondary Asset Recovery Unit Survives
+		[Description]The objective to keep the unit which is carrying the secondary target alive. The player can fail this objective.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_OccupyRegion_2 (Bonus)|off
+[OptionalChunk]Chunk_EnsureSurvives_Objective (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_OpposingForce_1
+//		Lance_Enemy_OpposingForce_2
+//		Region_Occupy_1
+//		Region_Escape
+//		Region_Occupy_2
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]You're coming up on the Capellan facility, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]It's at the end of this dirt road, and it looks to be lightly defended.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy_1
+	[Content]Once you've reached the facility and downloaded the data, move to the extract LZ.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape
+	[Content]A Leopard is on station to pick you up.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]We've got the transmission data, Commander. This should be enough to give us a rough location.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Don't relax just yet, though. As soon as we have the location, we need to deploy immediately, before they realize what we've done and evacuate the bunker.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Commander, I'm looking at this data, and this bunker… is commanded by Lieutenant Colonel Song. They're a crack shot with their Awesome's PPCs—best in the CCAF, I've heard.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]If they take the field against us… well, let's hope they don't.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+		
+[Dialogue]Dialogue_MissionFailure
+	[Content]That's it. The Capellans will pull their people out of the bunker before we can hit it. We have to call off the whole operation.
+		[Color]1|1|1|1
+		[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_OccupyRegionStarted
+	[Content]You're in position. Once the transmission data is downloaded, make for the LZ. The Leopard is on its way to you.
+	[Color]1|1|1|1
+	[Cast]castDef_DavionRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_RecoveringUnitDestroyed2
+	[Content]That's it, the 'Mech recovering our secondary target is scrapped. S&R will look for what's left. That objective failed. Focus on the primary goal.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_OpposingForce_1
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_OpposingForce_2
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+
+

@@ -1,0 +1,243 @@
+// Contract c_fp_gladiator_a1_simpleBattle 
+
+		
+[ID]c_fp_gladiator_a1_simpleBattle
+[Name]The Steel Beast III
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]This is it, Commander. Your one-on-one contest with the Steel Beast. Give him the justice he so richly deserves!
+[LongDesc]Keep your eyes open down there, {COMMANDER.FirstName}. We're going in with a single MechWarrior, and I don't trust this joker to stick to his end of the deal.
+[Salvage]12
+[FOW]Surveyed
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]-1
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]50|-1|-1|-1
+
+[MaxNumberOfPlayerUnits]1
+			
+			
+// Contract Objectives
+[ContractObjective]Eliminate the Steel Beast
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Kill Bogdan "The Steel Beast" Tubbs
+		[Description]The primary objective to destroy the enemy lance. 
+
+	// Primary Objective
+	[Objective]Destroy Tubbs's Reinforcements
+		[Description]An OPTIONAL primary objective to destroy the second enemy lance. 
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_Ambushers
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]You're here. Good! I've been LOOKING FORWARD to BREAKING YOUR NECK!
+		[Color]1|1|1|1
+		[Cast]castDef_FP_gladiator_SteelBeastDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Shut up and fight, you murderous swine. Commander {COMMANDER.LastName} will make you suffer, as you made my nephew Arjun suffer!
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_OpposingForce
+	[Content]SUFFERING? <i>I'LL SHOW YOU SUFFERING!</i> Get ready for a taste of the BIG! STEEL! CLAW! B-B-B-BIG! STEEEEEEL! <i>CLAAAAAAAAW!</i>
+		[Color]1|1|1|1
+		[Cast]castDef_FP_gladiator_SteelBeastDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_OpposingForce
+	[Content]What is wrong with him?
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]It's his catch phrase, he screams it before every bout. Now get out there and make us some money, huh? We've got cameras rolling on this.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_gladiator_IronwoodRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Scratch one Steel Beast. The miserable fool cheated, and we <i>still</i> took him down.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]And I salute you for it. Arjun's death has been avenged. May it bring his poor parents some measure of comfort.
+		[Color]1|1|1|1
+		[Cast]castDef_SteinerRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]RRRR<i>AAAAAAGGGGH!</i> BIG! STEEL! CLAW! B-B-B-BIG! STEEEEEEL! <i>CLAAAAAAAAW!</i>
+		[Color]1|1|1|1
+		[Cast]castDef_FP_gladiator_SteelBeastDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_crab__fp_gladiator_BSC-27
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_steelBeast
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_75
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_locust_LCT-1M
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechdef_panther1b_PNT-9R
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Vehicle
+			[UnitDef]vehicledef_GALLEON
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Vehicle
+			[UnitDef]vehicledef_GALLEON
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

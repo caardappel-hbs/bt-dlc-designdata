@@ -1,0 +1,232 @@
+// Contract c_fp_flattenedEarth_b1_simpleBattle
+
+
+[ID]c_fp_flattenedEarth_b1_simpleBattle
+[Name]Operation: Flattened Earth II
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]Good on you for being on the right side of this conflict, {COMMANDER.Callsign}… I know it couldn't have been an easy decision. And speaking of difficult matters, you're about to have a fight on your hands. House Liao has sent a detachment of 'Mechs to finish your job for you, and unfortunately, Razorback Company is no position to deal with 'em.
+[LongDesc]No good deed goes unpunished, {COMMANDER.FirstName}. Not ever.
+[Salvage]16
+[FOW]Surveyed
+[DifficultyUIMod]1
+
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+
+// Contract Objectives
+[ContractObjective]Eliminate the Liao Units
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy the Liao Attack Units
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy the Liao Reinforcements
+		[Description]
+		[OnSuccess]Company|stat|ContractBonusRewardPct|0.3
+
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Uh, Boss? I'm seeing a couple of Liao attack lances on my screen, and I'm willing to bet their pilots are pretty angry.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]I'd wager they're furious. Get in there and take 'em out, but do it carefully. You need to come through this fight in good enough shape to escort the Volkovites to safety.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_SigynDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Impressive work, Commander… this should make evacuating the Volkovites a lot easier. And for what it's worth, I respect the hell out of the fact that you were willing to turn your back on House Liao to help these people.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_SigynDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]The fact that Persephone Volkov doubled our old contract rates didn't hurt. But between you and me, I'm glad we jumped ship on Lady Marina and the Chancellor.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]You're Capellan yourself, aren't you, Mr. Virtanen?
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_PersephoneDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]Born and raised. But I never really bought into the whole "the state above all" thing. I think that, deep down, most of us don't.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]Let's save the small talk for later, eh? We still need to get Persephone and her people off-planet, and House Liao is bound to have another kill team en route. You need to get them to safety, and you need to do it now.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_SigynDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]Roger that, Commander Elliathy. We're on our way.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]I'm pulling you out, Commander. I feel sorry for the Volkovites, but I won't let our people die for them.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Lance Def: the specified lance def will be used to spawn units
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values

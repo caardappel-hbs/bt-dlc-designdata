@@ -1,0 +1,211 @@
+// Contract c_fp_flattenedEarth_a1_simpleBattle
+
+
+[ID]c_fp_flattenedEarth_a1_simpleBattle
+[Name]Operation: Flattened Earth II
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]My contacts in the Maskirovka tell me that you rejected Commander Elliathy's offer. A wise decision, Commander. Bring down the remainder of Razorback Company, and nothing will stand between you and the seditionist camp.
+[LongDesc]Tough luck for Razorback Company, but they knew what they were getting themselves into when they took sides against House Liao.
+[Salvage]16
+[FOW]Surveyed
+[DifficultyUIMod]1
+
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+
+
+// Contract Objectives
+[ContractObjective]Destroy Razorback Company's BattleMechs
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy Razorback Company's BattleMechs
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy Razorback Company's Reinforcements
+		[Description]
+		[OnSuccess]Company|stat|ContractBonusRewardPct|0.3
+
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]The remnants of Razorback Company have taken position ahead of you, Commander. I'd advise you to approach them with the caution you would a wounded animal. Commander Elliathy has little left to lose.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]Little left, huh? Let's go ahead and reduce that to nothing. You can tell your precious Chancellor that if he really believed his own line of bullshit, he'd have taken the field himself. 'Course, if he had, I'd already be scraping him off my BattleMech's foot.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_SigynDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]…What a terrible waste. Very well, Commander Elliathy, my mercenaries will bring you the death that you so evidently long for. Destroy them all, Commander. Leave no survivors.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]That's it, Commander {COMMANDER.LastName}—the last of the Razorback Company units is down. Elliathy is dead, and the path to the Volkovite compound is clear.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]We do what we're paid to, Lady Marina. Every time.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]And I will remember it, Mr. Oliveira. Now proceed to your next drop site.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Holy shit! We won! We actually won!
+		[Color]1|1|1|1
+		[Cast]castDef_FP_flattenedEarth_SigynDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]The Chancellor has asked me to express his displeasure at this humiliation, Commander {COMMANDER.LastName}. I will find another company to carry out the will of House Liao.
+		[Color]1|1|1|1
+		[Cast]castDef_LiaoRepDefault
+		[Emote]Default
+		[Audio]NONE
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Lance Def: the specified lance def will be used to spawn units
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

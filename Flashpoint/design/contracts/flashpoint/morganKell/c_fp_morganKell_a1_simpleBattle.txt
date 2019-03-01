@@ -1,0 +1,202 @@
+// Contract c_fp_morganKell_a1_simpleBattle
+
+[ID]c_fp_morganKell_a1_simpleBattle
+[Name]The Braying of Hounds III
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]This will be a difficult fight, Commander. The Beasts of Balawat are former Kell Hounds; they've received some of the best training and equipment you'll find anywhere. But more than that, they've got something to prove.
+[LongDesc]If Kell is saying that this will be tough, I'm inclined to believe him. Get your war face on, Commander. This is gonna be a hell of a drop.
+[Salvage]16
+[FOW]Surveyed
+[DifficultyUIMod]1
+			
+// Flashpoint Miscellaneous Values - paste this block at bottom of Flashpoint contracts
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+// End Miscellaneous Values
+			
+
+// Contract Objectives
+[ContractObjective]Destroy the Beasts of Balawat
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy the Beasts of Balawat Units
+		[Description]
+
+	// Primary Objective
+	[Objective]Eliminate the Beasts' Reinforcements
+		[Description]
+		[OnSuccess]Company|stat|ContractBonusRewardPct|0.3
+
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Morgan. You're here. After all these years, you can't imagine how gratifying it is to see you on the other end of a battlefield.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_AelwydDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]You promised to release Tempest and Megan. I expect you to keep your word.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]It's already done. As we speak, a DropShuttle carrying your ex and child is on its way to your DropShip. On my honor, I swear that it is so.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_AelwydDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]In that case, you've got your fight. En garde, Rhee. Show me what you've learned.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Nicely done, {COMMANDER.Callsign}—you punch above your weight. Color me impressed.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]We're pulling out, Commander. Rhee, I'm calling uncle. You win.
+		[Color]1|1|1|1
+		[Cast]castDef_FP_morganKell_KellDefault
+		[Emote]Default
+		[Audio]NONE
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Lance Def: the specified lance def will be used to spawn units
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_battlemaster_BLR-1G_fp_morganKell
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_KellHound_1
+			[CustomHeraldryDefID]heraldrydef_KellHounds
+		[Unit]Mech
+			[UnitDef]mechdef_orion_ON1-K_fp_morganKell
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_MorganKell
+			[CustomHeraldryDefID]heraldrydef_KellHounds
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+
