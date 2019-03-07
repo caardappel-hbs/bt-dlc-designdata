@@ -171,7 +171,7 @@
 		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
-			[UnitDef]mechdef_crab__fp_gladiator_BSC-27
+			[UnitDef]mechdef_crab_fp_gladiator_BSC-27
 			// Unit Def: the specified unit will be spawned
 			[CustomName]
 			[Tags]
