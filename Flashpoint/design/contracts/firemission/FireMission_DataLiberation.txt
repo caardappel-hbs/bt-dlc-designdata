@@ -37,15 +37,15 @@
 
 	// Primary Objective
 	[Objective]Place Beacon Alpha
-		[Description]Place Beacon Alpha for Artillery Desgination
+		[Description]Place Beacon Alpha for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Beacon Bravo
-		[Description]Place Beacon Bravo for Artillery Desgination
+		[Description]Place Beacon Bravo for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Beacon Charlie
-		[Description]Place Beacon Charlie for Artillery Desgination
+		[Description]Place Beacon Charlie for Artillery Designation
 
 	// Primary Objective
 	[Objective]Await Further Instructions
@@ -64,7 +64,7 @@
 		[Description]
 
 	// Primary Objective
-	[Objective]Extract before additional Enemy Reinforcments Arrive
+	[Objective]Extract before additional Enemy Reinforcements Arrive
 		[Description]
 
 	// Optional Objective
@@ -108,7 +108,7 @@
 		[Description]Complete the Fire Mission
 
 	// Primary Objective
-	[Objective]Extract before Enemy Reinforcments Arrive
+	[Objective]Extract before Enemy Reinforcements Arrive
 		[Description]
 
 	// Primary Objective
@@ -188,7 +188,7 @@
 		[Emote]Default
 		[Audio]NONE
 		[Focus]
-	[Content]After the data's been uploaded, you'll get confirmation and you can make for the evac point. Sumire will be on station to pull you out of there.
+	[Content]After the data has been uploaded, you'll get confirmation and you can make for the evac point. Sumire will be on station to pull you out of there.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default

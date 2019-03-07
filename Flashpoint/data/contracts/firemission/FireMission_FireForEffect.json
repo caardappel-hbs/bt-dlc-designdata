@@ -7,7 +7,7 @@
     "weight" : 1,
     "scope" : "STANDARD",
     "finalDifficulty" : 0,
-    "shortDescription" : "There is a {TEAM_TAR.FactionDef.Demonym} base in this region. We have the equipment to level it, however our recon capability has been diminshed. We would you to take a team and attack the installation. Place beacons for our Artillery to target, and exfiltrate while our guns destroy the base.",
+    "shortDescription" : "There is a {TEAM_TAR.FactionDef.Demonym} base in this region. We have the equipment to level it, however our recon capability has been diminished. We would you to take a team and attack the installation. Place beacons for our Artillery to target, and exfiltrate while our guns destroy the base.",
     "longDescription" : "Commander, there is nothing glamorous about sighting targets for big guns, but the fireworks can be exciting. Just make sure your clear of the blast radius before those shells land.",
     "salvagePotential" : 1,
     "requirementList" : [
@@ -68,8 +68,8 @@
             "objective" : {
                 "EncounterObjectGuid" : "b666957c-c0f2-4ea2-959b-33165d490ba5"
             },
-            "title" : "Place Beacon Alpha for Artillery Desgination",
-            "description" : "Place Beacon Alpha for Artillery Desgination",
+            "title" : "Place Beacon Alpha for Artillery Designation",
+            "description" : "Place Beacon Alpha for Artillery Designation",
             "isPrimary" : true,
             "overrideIsRequiredForContractObjective" : null,
             "OnSuccessResults" : [
@@ -83,8 +83,8 @@
             "objective" : {
                 "EncounterObjectGuid" : "82e56617-5098-4baf-bbb9-ce5dc4ce470f"
             },
-            "title" : "Place Beacon Bravo for Artillery Desgination",
-            "description" : "Place Beacon Bravo for Artillery Desgination",
+            "title" : "Place Beacon Bravo for Artillery Designation",
+            "description" : "Place Beacon Bravo for Artillery Designation",
             "isPrimary" : true,
             "overrideIsRequiredForContractObjective" : null,
             "OnSuccessResults" : [
@@ -98,8 +98,8 @@
             "objective" : {
                 "EncounterObjectGuid" : "92415cd8-d751-455b-8496-b11a09c8d7cd"
             },
-            "title" : "Place Beacon Charlie for Artillery Desgination",
-            "description" : "Place Beacon Charlie for Artillery Desgination",
+            "title" : "Place Beacon Charlie for Artillery Designation",
+            "description" : "Place Beacon Charlie for Artillery Designation",
             "isPrimary" : true,
             "overrideIsRequiredForContractObjective" : null,
             "OnSuccessResults" : [
@@ -173,7 +173,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "8ff11c96-4bd9-454e-b883-2f5e089bff1a"
             },
-            "title" : "Extract before additional Enemy Reinforcments Arrive",
+            "title" : "Extract before additional Enemy Reinforcements Arrive",
             "description" : "",
             "isPrimary" : true,
             "overrideIsRequiredForContractObjective" : null,
@@ -233,7 +233,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "c02cca7e-6e2c-4a3d-beb0-f9af713a466f"
             },
-            "title" : "Destroy Enem",
+            "title" : "Destroy Enemy",
             "description" : "",
             "isPrimary" : false,
             "overrideIsRequiredForContractObjective" : null,
@@ -293,7 +293,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "2b78c46d-a854-4288-adeb-c7fc1574f055"
             },
-            "title" : "Extract before Enemy Reinforcments Arrive",
+            "title" : "Extract before Enemy Reinforcements Arrive",
             "description" : "",
             "isPrimary" : true,
             "overrideIsRequiredForContractObjective" : null,
@@ -549,7 +549,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I won't lie, our window of oppurtunity for this strike is small and time is limited. You will likely have to split your lance in order to blace all the beacons in time. ",
+                    "words" : "I won't lie, our window of opportunity for this strike is small and time is limited. You will likely have to split your lance in order to place all the beacons in time. ",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1077,7 +1077,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, they are depolying vehicles and tanks from their motorpool.",
+                    "words" : "Commander, they are deploying vehicles and tanks from their motorpool.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1093,7 +1093,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "It appears to be subterranian, and hardened. We can't take it out, they will keep comng until the artillery lands. So move quickly. ",
+                    "words" : "It appears to be subterranean, and hardened. We can't take it out, they will keep coming until the artillery lands. So move quickly. ",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1118,7 +1118,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, our window of oppurtunity for this strike is closing. At least half of our time has expired. You'll need to move quickly if you're to accomplish this. ",
+                    "words" : "Commander, our window of opportunity for this strike is closing. At least half of our time has expired. You'll need to move quickly if you're to accomplish this. ",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
