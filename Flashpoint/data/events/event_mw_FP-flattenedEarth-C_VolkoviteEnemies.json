@@ -76,7 +76,7 @@
                     "Description" : {
                         "Id" : "outcome_0_0",
                         "Name" : "Nothing happens",
-                        "Details" : "The confused preacher makes a half-hearted argument about your identity before giving up and moving down the street with his pamphlets.\r\n\r\nThe rest of the crowd hums for a moment longer, disappointed at the lack of conflict, but then continues with their business in the market.\r\n\r\nDarius breathes a sigh of relief. \"Commander, we may or may not have made the right decions about the Volkovites. But they're Lady Liao's problem now, not ours. Best to stay out of this as best we can.\"",
+                        "Details" : "The confused preacher makes a half-hearted argument about your identity before giving up and moving down the street with his pamphlets.\r\n\r\nThe rest of the crowd hums for a moment longer, disappointed at the lack of conflict, but then continues with their business in the market.\r\n\r\nDarius breathes a sigh of relief. \"Commander, we may or may not have made the right decisions about the Volkovites. But they're Lady Liao's problem now, not ours. Best to stay out of this as best we can.\"",
                         "Icon" : null
                     },
                     "Weight" : 75,
@@ -487,7 +487,7 @@
                     "Description" : {
                         "Id" : "outcome_2_1",
                         "Name" : "least  injuries",
-                        "Details" : "You stall for time with the preacher, keeping him confused, yet engaged. Meanwhile, [[TGT_MW,{TGT_MW.Callsign}]] maneuvers through the crowd. One after the other, {TGT_MW.SUBJ} quietly disarms several thugs. The crowd is none the wiser, focused as they are on the preacher's insistence as to your identity.\r\n\r\nThe rest of the crowd hums for a moment longer, disappointed at the lack of conflict, but then continues with their business in the market.\r\n\r\nAs you return the shuttle, Darius breathes a sigh of relief. \"Commander, we may or may not have made the right decions about the Volkovites. But they're Lady Liao's problem now, not ours. Best to stay out of this as best we can.\"",
+                        "Details" : "You stall for time with the preacher, keeping him confused, yet engaged. Meanwhile, [[TGT_MW,{TGT_MW.Callsign}]] maneuvers through the crowd. One after the other, {TGT_MW.SUBJ} quietly disarms several thugs. The crowd is none the wiser, focused as they are on the preacher's insistence as to your identity.\r\n\r\nThe rest of the crowd hums for a moment longer, disappointed at the lack of conflict, but then continues with their business in the market.\r\n\r\nAs you return the shuttle, Darius breathes a sigh of relief. \"Commander, we may or may not have made the right decisions about the Volkovites. But they're Lady Liao's problem now, not ours. Best to stay out of this as best we can.\"",
                         "Icon" : null
                     },
                     "Weight" : 50,

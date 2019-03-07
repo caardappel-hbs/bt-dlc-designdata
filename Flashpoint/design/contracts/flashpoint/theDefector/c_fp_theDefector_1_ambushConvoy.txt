@@ -33,7 +33,7 @@
 [ContractObjective]Ambush and Destroy Yoshito Okada's Convoy
 	[Description]House Liao is attempting to move Okada to safety. Kill him.
 [ContractObjective]Destroy the Liao Convoy Guards
-	[Description]Send a message by not only destroy the convoy, but eliminte their escorts as well.
+	[Description]Send a message by not only destroy the convoy, but eliminate their escorts as well.
 
 // Battle Objectives
 

@@ -35,7 +35,7 @@
 [ContractObjective]Eliminate the Defector's Convoy and Extract Safely
 	[Description]The ENEMYFACTION scum are trying to get from one place to another. Kill them.
 [ContractObjective]Destroy the Liao Convoy Guards
-	[Description]Send a message by not only destroy the convoy, but eliminte their escorts as well.
+	[Description]Send a message by not only destroy the convoy, but eliminate their escorts as well.
 
 // Battle Objectives
 

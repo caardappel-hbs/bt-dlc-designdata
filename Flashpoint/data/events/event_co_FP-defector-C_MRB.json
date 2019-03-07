@@ -184,7 +184,7 @@
         {
             "Description" : {
                 "Id" : "outcome_1",
-                "Name" : "Take a hardline stance on payment plus extra for 'damages.'",
+                "Name" : "Take a hard line stance on payment plus extra for 'damages.'",
                 "Details" : "Money option",
                 "Icon" : null
             },

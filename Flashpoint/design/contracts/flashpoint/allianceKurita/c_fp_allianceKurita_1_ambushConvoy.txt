@@ -33,7 +33,7 @@
 [ContractObjective]Destroy the Convoy and Extract to Safety
 	[Description]The ENEMYFACTION scum are trying to get from one place to another. Kill them.
 [ContractObjective]Destroy the Convoy Guards.
-	[Description]Send a message by not only destroy the convoy, but eliminte their escorts as well.
+	[Description]Send a message by not only destroy the convoy, but eliminate their escorts as well.
 
 // Battle Objectives
 
