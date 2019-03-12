@@ -37,15 +37,15 @@
 
 	// Primary Objective
 	[Objective]Place Beacon Alpha
-		[Description]Place Beacon Alpha for Artillery Desgination
+		[Description]Place Beacon Alpha for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Beacon Bravo
-		[Description]Place Beacon Bravo for Artillery Desgination
+		[Description]Place Beacon Bravo for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Beacon Charlie
-		[Description]Place Beacon Charlie for Artillery Desgination
+		[Description]Place Beacon Charlie for Artillery Designation
 
 	// Primary Objective
 	[Objective]Await Further Instructions
@@ -184,7 +184,7 @@
 		[Focus]
 
 [Dialogue]Dialogue_MissionSuccess
-	[Content]The data's aboard, and the <i>Airavata</i> is away. Congratulations, Commander. This operation has been a resounding success.
+	[Content]The data has aboard, and the <i>Airavata</i> is away. Congratulations, Commander. This operation has been a resounding success.
 		[Color]1|1|1|1
 		[Cast]castDef_MarikRepDefault
 		[Emote]Default

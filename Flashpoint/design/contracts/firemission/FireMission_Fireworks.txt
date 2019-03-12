@@ -35,16 +35,16 @@
 // Battle Objectives
 
 	// Primary Objective
-	[Objective]Place Beacon Alpha for Artillery Desgination
-		[Description]Place Beacon Alpha for Artillery Desgination
+	[Objective]Place Beacon Alpha for Artillery Designation
+		[Description]Place Beacon Alpha for Artillery Designation
 
 	// Primary Objective
-	[Objective]Place Beacon Bravo for Artillery Desgination
-		[Description]Place Beacon Bravo for Artillery Desgination
+	[Objective]Place Beacon Bravo for Artillery Designation
+		[Description]Place Beacon Bravo for Artillery Designation
 
 	// Primary Objective
-	[Objective]Place Beacon Charlie for Artillery Desgination
-		[Description]Place Beacon Charlie for Artillery Desgination
+	[Objective]Place Beacon Charlie for Artillery Designation
+		[Description]Place Beacon Charlie for Artillery Designation
 
 	// Primary Objective
 	[Objective]Await Further Instructions
@@ -63,7 +63,7 @@
 		[Description]
 
 	// Primary Objective
-	[Objective]Extract before additional Enemy Reinforcments Arrive
+	[Objective]Extract before additional Enemy Reinforcements Arrive
 		[Description]
 
 	// Optional Objective
@@ -107,7 +107,7 @@
 		[Description]Complete the Fire Mission
 
 	// Primary Objective
-	[Objective]Extract before Enemy Reinforcments Arrive
+	[Objective]Extract before Enemy Reinforcements Arrive
 		[Description]
 
 	// Primary Objective
@@ -294,13 +294,13 @@
 		[Focus]Point_ArtilleryCameraTarget
 
 [Dialogue]Dialogue_Interrupt_MotorPoolWarning
-	[Content]Commander, they are depolying vehicles and tanks from their motorpool.
+	[Content]Commander, they are deploying vehicles and tanks from their motorpool.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]
-	[Content]It appears to be subterranian, and hardened. We can't take it out, they will keep comng until the artillery lands. So move quickly. 
+	[Content]It appears to be subterranean, and hardened. We can't take it out, they will keep coming until the artillery lands. So move quickly. 
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -308,7 +308,7 @@
 		[Focus]
 
 [Dialogue]Dialogue_Interrupt_MissionTimerWarning
-	[Content]Commander, our window of oppurtunity for this strike is closing. At least half of our time has expired. You'll need to move quickly if you're to accomplish this. 
+	[Content]Commander, our window of opportunity for this strike is closing. At least half of our time has expired. You'll need to move quickly if you're to accomplish this. 
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default

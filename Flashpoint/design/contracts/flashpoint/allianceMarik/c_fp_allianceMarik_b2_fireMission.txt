@@ -37,15 +37,15 @@
 
 	// Primary Objective
 	[Objective]Place Beacon Alpha
-		[Description]Place Beacon Alpha for Artillery Desgination
+		[Description]Place Beacon Alpha for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Beacon Bravo
-		[Description]Place Beacon Bravo for Artillery Desgination
+		[Description]Place Beacon Bravo for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Beacon Charlie
-		[Description]Place Beacon Charlie for Artillery Desgination
+		[Description]Place Beacon Charlie for Artillery Designation
 
 	// Primary Objective
 	[Objective]Await Further Instructions
@@ -105,7 +105,7 @@
 		[Description]Complete the Fire Mission
 
 	// Primary Objective
-	[Objective]Extract before Enemy Reinforcments Arrive
+	[Objective]Extract before Enemy Reinforcements Arrive
 		[Description]
 
 	// Primary Objective
@@ -183,7 +183,7 @@
 		[Focus]
 
 [Dialogue]Dialogue_MissionSuccess
-	[Content]The data's aboard, and the <i>Airavata</i> is away. Congratulations, Commander. This operation has been a resounding success.
+	[Content]The data has aboard, and the <i>Airavata</i> is away. Congratulations, Commander. This operation has been a resounding success.
 		[Color]1|1|1|1
 		[Cast]castDef_MarikRepDefault
 		[Emote]Default
@@ -293,13 +293,13 @@
 		[Focus]
 
 [Dialogue]Dialogue_Interrupt_MotorPoolWarning
-	[Content]Commander, they are depolying vehicles and tanks from their motor pool.
+	[Content]Commander, they are deploying vehicles and tanks from their motor pool.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]
-	[Content]It appears to be subterranean, and hardened. We can't take it out, and they will keep comng until the artillery lands. So move quickly.
+	[Content]It appears to be subterranean, and hardened. We can't take it out, and they will keep coming until the artillery lands. So move quickly.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default

@@ -37,15 +37,15 @@
 
 	// Primary Objective
 	[Objective]Take Position at Artillery Control Relay Alpha
-		[Description]Place Beacon Alpha for Artillery Desgination
+		[Description]Place Beacon Alpha for Artillery Designation
 
 	// Primary Objective
 	[Objective]Take Position at Artillery Control Relay Bravo
-		[Description]Place Beacon Bravo for Artillery Desgination
+		[Description]Place Beacon Bravo for Artillery Designation
 
 	// Primary Objective
 	[Objective]Take Position at Artillery Control Relay Charlie
-		[Description]Place Beacon Charlie for Artillery Desgination
+		[Description]Place Beacon Charlie for Artillery Designation
 
 	// Primary Objective
 	[Objective]Await Further Instructions

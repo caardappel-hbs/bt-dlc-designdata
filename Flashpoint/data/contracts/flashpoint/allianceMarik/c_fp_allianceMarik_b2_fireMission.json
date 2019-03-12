@@ -62,7 +62,7 @@
                 "EncounterObjectGuid" : "b666957c-c0f2-4ea2-959b-33165d490ba5"
             },
             "title" : "Place Beacon Alpha",
-            "description" : "Place Beacon Alpha for Artillery Desgination",
+            "description" : "Place Beacon Alpha for Artillery Designation",
             "isPrimary" : true,
             "OnSuccessResults" : [],
             "OnFailureResults" : []
@@ -72,7 +72,7 @@
                 "EncounterObjectGuid" : "82e56617-5098-4baf-bbb9-ce5dc4ce470f"
             },
             "title" : "Place Beacon Bravo",
-            "description" : "Place Beacon Bravo for Artillery Desgination",
+            "description" : "Place Beacon Bravo for Artillery Designation",
             "isPrimary" : true,
             "OnSuccessResults" : [],
             "OnFailureResults" : []
@@ -82,7 +82,7 @@
                 "EncounterObjectGuid" : "92415cd8-d751-455b-8496-b11a09c8d7cd"
             },
             "title" : "Place Beacon Charlie",
-            "description" : "Place Beacon Charlie for Artillery Desgination",
+            "description" : "Place Beacon Charlie for Artillery Designation",
             "isPrimary" : true,
             "OnSuccessResults" : [],
             "OnFailureResults" : []
@@ -315,7 +315,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "2b78c46d-a854-4288-adeb-c7fc1574f055"
             },
-            "title" : "Extract before Enemy Reinforcments Arrive",
+            "title" : "Extract before Enemy Reinforcements Arrive",
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -633,7 +633,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "The data's aboard, and the <i>Airavata</i> is away. Congratulations, Commander. This operation has been a resounding success.",
+                    "words" : "The data has aboard, and the <i>Airavata</i> is away. Congratulations, Commander. This operation has been a resounding success.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1063,7 +1063,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, they are depolying vehicles and tanks from their motor pool.",
+                    "words" : "Commander, they are deploying vehicles and tanks from their motor pool.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1079,7 +1079,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "It appears to be subterranean, and hardened. We can't take it out, and they will keep comng until the artillery lands. So move quickly.",
+                    "words" : "It appears to be subterranean, and hardened. We can't take it out, and they will keep coming until the artillery lands. So move quickly.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,

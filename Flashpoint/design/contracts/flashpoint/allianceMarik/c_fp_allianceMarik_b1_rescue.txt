@@ -132,7 +132,7 @@
 		[Emote]Default
 		[Audio]NONE
 		[Focus]
-	[Content]Once that data's aboard, the whole operation depends on that 'Mech making it out safely.
+	[Content]Once that data has aboard, the whole operation depends on that 'Mech making it out safely.
 		[Color]1|1|1|1
 		[Cast]castDef_MarikRepDefault
 		[Emote]Default
