@@ -11,7 +11,9 @@
 [LongDesc]The time-frame on this is tight, since we need the artillery strike to hit while the {TEAM_EMP.FactionDef.Demonym} representative has everyone looking in the right direction. And Commander, I wouldn't take any bets on that military base actually being abandoned.
 [Salvage]12
 [FOW]Surveyed
-			
+
+[Requirement]StarSystem|stat|Employer.AuriganPirates|eq|0
+
 // Miscellaneous Values (if you don't know what these are for, don't mess with them!)
 [ContractDisplayStyle]BaseCampaignNormal
 [ContractScope]STANDARD
@@ -35,16 +37,16 @@
 // Battle Objectives
 
 	// Primary Objective
-	[Objective]Place Beacon Alpha for Artillery Desgination
-		[Description]Place Beacon Alpha for Artillery Desgination
+	[Objective]Place Beacon Alpha for Artillery Designation
+		[Description]Place Beacon Alpha for Artillery Designation
 
 	// Primary Objective
-	[Objective]Place Beacon Bravo for Artillery Desgination
-		[Description]Place Beacon Bravo for Artillery Desgination
+	[Objective]Place Beacon Bravo for Artillery Designation
+		[Description]Place Beacon Bravo for Artillery Designation
 
 	// Primary Objective
-	[Objective]Place Beacon Charlie for Artillery Desgination
-		[Description]Place Beacon Charlie for Artillery Desgination
+	[Objective]Place Beacon Charlie for Artillery Designation
+		[Description]Place Beacon Charlie for Artillery Designation
 
 	// Primary Objective
 	[Objective]Await Further Instructions

@@ -1,0 +1,21 @@
+{
+   "Description" : {
+      "Id" : "movedef_javelin_JVN-10F",
+      "Name" : "MovementCapabilitiesDef for Fire Javelin JVN-10F",
+      "Details" : "",
+      "Icon" : ""
+   },
+   "MaxWalkDistance" : 165.0,
+   "MaxSprintDistance" : 275.0,
+   "WalkVelocity" : 16.0,
+   "RunVelocity" : 24.0,
+   "SprintVelocity" : 32.0,
+   "LimpVelocity" : 8.0,
+   "WalkAcceleration" : 25.0,
+   "SprintAcceleration" : 40.0,
+   "MaxRadialVelocity" : 480.0,
+   "MaxRadialAcceleration" : 1600.0,
+   "MaxJumpVel" : 80.0,
+   "MaxJumpAccel" : 30.0,
+   "MaxJumpVerticalAccel" : 60.0
+}

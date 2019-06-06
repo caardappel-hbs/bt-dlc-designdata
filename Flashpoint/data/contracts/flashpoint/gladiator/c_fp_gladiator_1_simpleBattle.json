@@ -8,6 +8,9 @@
     "scope" : "MID_CAMPAIGN",
     "finalDifficulty" : 0,
     "representativeCastDefIDOverride" : null,
+    "missionSuccessStatementOverride" : null,
+    "badFaithStatementOverride" : null,
+    "goodFaithStatementOverride" : null,
     "shortDescription" : "If we are to draw the Steel Beast into a fight, we must first provoke him. The wholesale slaughter of his revolting followers seems like a reasonable first step. I'll point you in the right direction, you'll bring the firepower, and we'll scour this world of Bogdan Tubbs's fan club. Then we'll move on to a more high-profile target.",
     "longDescription" : "I've got nothing to add, {COMMANDER.FirstName}. Let's go beat up some violent drunks.",
     "salvagePotential" : 12,
@@ -57,7 +60,9 @@
             "description" : "The primary objective to destroy the enemy lance.",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         },
         {
             "objective" : {
@@ -67,7 +72,9 @@
             "description" : "An OPTIONAL primary objective to destroy the second enemy lance.",
             "isPrimary" : true,
             "OnSuccessResults" : [],
-            "OnFailureResults" : []
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : null,
+            "OnFailureDialogueGUID" : null
         }
     ],
     "artilleryObjectiveList" : [],
@@ -316,6 +323,7 @@
             ]
         }
     ],
+    "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
     "disableLanceConfiguration" : false,
@@ -873,6 +881,14 @@
         },
         "teamGuid" : "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
         "teamName" : "Hostile to All",
+        "faction" : "INVALID_UNSET",
+        "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
+        "lanceOverrideList" : []
+    },
+    "employersAllyTeam" : {
+        "encounterLayerData" : null,
+        "teamGuid" : "70af7e7f-39a8-4e81-87c2-bd01dcb01b5e",
+        "teamName" : "Employers Ally",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []

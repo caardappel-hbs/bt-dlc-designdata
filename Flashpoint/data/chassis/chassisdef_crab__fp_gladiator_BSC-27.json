@@ -8,7 +8,7 @@
         "UIName": "BIG STEEL CLAW",
         "Id": "chassisdef_crab__fp_gladiator_BSC-27",
         "Name": "BIG STEEL CLAW",
-        "Details": "A uniquely hybridized brawler built from the husk of a CRB-27. Bogdan ''The Steel Beast'' Tubbs had the Big Steel Claw's chassis rebuilt to support the mounting of ballistic weaponry, presumably in the interest of creating a louder and more violent spectacle in the arena.",
+        "Details": "A uniquely hybridized brawler built from the husk of a CRB-20. Bogdan ''The Steel Beast'' Tubbs had the Big Steel Claw's chassis rebuilt to support the mounting of ballistic weaponry, presumably in the interest of creating a louder and more violent spectacle in the arena.",
         "Icon": "uixTxrIcon_crab"
     },
     "MovementCapDefID": "movedef_crab_CRB-27",
@@ -38,7 +38,7 @@
     "SensorRangeMultiplier": 1,
     "Signature": 0,
     "Radius": 5,
-    "PunchesWithLeftArm": true,
+    "PunchesWithLeftArm": false,
     "MeleeDamage": 50,
     "MeleeInstability": 50,
     "MeleeToHitModifier": 0,
@@ -192,7 +192,7 @@
             "z": 2
         }
     ],
-    "VariantName": "BSC-27",
+    "VariantName": "BSC-20",
     "ChassisTags": {
         "items": [],
         "tagSetSourceFile": ""

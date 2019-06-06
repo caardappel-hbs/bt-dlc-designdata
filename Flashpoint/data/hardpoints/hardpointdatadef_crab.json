@@ -1,0 +1,115 @@
+{
+    "ID" : "hardpointdatadef_crab",
+    "HardpointData" : [
+        {
+            "location" : "centertorso",
+            "weapons" : [
+                [
+                    "chrPrfWeap_crab_centertorso_flamer_eh1",
+                    "chrPrfWeap_crab_centertorso_laser_eh1"
+                ],
+                [
+                    "chrPrfWeap_crab_centertorso_flamer_eh2",
+                    "chrPrfWeap_crab_centertorso_laser_eh2"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        },
+        {
+            "location" : "head",
+            "weapons" : [
+                [
+                    "chrPrfWeap_crab_headflamer_flamer_eh1",
+                    "chrPrfWeap_crab_headlaser_laser_eh1"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        },
+        {
+            "location" : "leftarm",
+            "weapons" : [
+                [
+                    "chrPrfWeap_crab_leftarm_flamer_eh1",
+                    "chrPrfWeap_crab_leftarm_laser_eh1",
+                    "chrPrfWeap_crab_leftarm_ppc_eh1"
+                ],
+                [
+                    "chrPrfWeap_crab_leftarm_flamer_eh2",
+                    "chrPrfWeap_crab_leftarm_laser_eh2",
+                    "chrPrfWeap_crab_leftarm_ppc_eh2"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        },
+        {
+            "location" : "lefttorso",
+            "weapons" : [
+                [
+                    "chrPrfWeap_crab_lefttorso_ams_ah1",
+                    "chrPrfWeap_crab_lefttorso_flamer_eh1",
+                    "chrPrfWeap_crab_lefttorso_laser_eh1",
+                    "chrPrfWeap_crab_lefttorso_ppc_eh1"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        },
+        {
+            "location" : "rightarm",
+            "weapons" : [
+                [
+                    "chrPrfWeap_crab_rightarm_flamer_eh1",
+                    "chrPrfWeap_crab_rightarm_laser_eh1",
+                    "chrPrfWeap_crab_rightarm_ppc_eh1"
+                ],
+                [
+                    "chrPrfWeap_crab_rightarm_flamer_eh2",
+                    "chrPrfWeap_crab_rightarm_laser_eh2",
+                    "chrPrfWeap_crab_rightarm_ppc_eh2"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        },
+        {
+            "location" : "righttorso",
+            "weapons" : [
+                [
+                    "chrPrfWeap_crab_righttorso_ams_ah1",
+                    "chrPrfWeap_crab_righttorso_flamer_eh1",
+                    "chrPrfWeap_crab_righttorso_laser_eh1",
+                    "chrPrfWeap_crab_righttorso_ppc_eh1"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        }
+    ]
+}

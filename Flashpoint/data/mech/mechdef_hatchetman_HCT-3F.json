@@ -13,7 +13,13 @@
             "unit_jumpOK",
 			"unit_release",
             "unit_dlc",
-			"unit_hatchetman"
+			"unit_hatchetman",
+			"unit_range_medium",
+			"unit_jumpOK",
+			"unit_hot",
+			"unit_speed_low",
+			"Davion",
+			"Steiner"
         ],
         "tagSetSourceFile": ""
     },

@@ -1,0 +1,343 @@
+// Contract redHunt_3b_CaptureBase 
+
+		
+[ID]redHunt_3b_CaptureBase
+[Name]Red Hunt III
+[Template]CaptureBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]Commander, we're starting our assault. As soon as we take out the Combine military base, the Kuritans will lose their ability to coordinate a response. That's your cue to move in and capture the ComStar facility, shut down the jamming gear DEST set up there, and get our signal broadcasting. We've got a pretty big window before Tor leaves again, so the only hurry is that our DEST friends aren't going to sit on their hands after we start shooting at them.
+[LongDesc]As long as Carlyle's people can handle their part of this operation, we shouldn't have any trouble taking the base.
+[Salvage]28
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center 
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]0
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.0
+[NegotiatedSalvage]1.0
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Capture the Outpost
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Scout the ComStar Facility
+		[Description]The objective to scout the base that is being captured. Must be completed before the actual capture of the base.
+
+	// Optional Objective
+	[Objective]Destroy DEST defensive force
+		[Description]The objective to optionally destroy the defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Move friendly 'Mechs into base
+		[Description]The objective for the player to move into and capture the base.
+
+	// Primary Objective
+	[Objective]Hold Out as Enemies Counterattack
+		[Description]HIDDEN TIMER, NO NEED TO EDIT: This is the hidden timer objective that will trigger the enemy reinforcements.
+
+	// Primary Objective
+	[Objective]Destroy any additional DEST forces
+		[Description]This is a general objective to indicate the player must keep playing and eliminate enemies as they come.
+
+	// Primary Objective
+	[Objective]Destroy the DEST Reinforcements
+		[Description]The primary objective to destroy the force that tries to remove the player from the captured base.
+
+	// Optional Objective
+	[Objective]Eliminate Base Turrets
+		[Description]The chunk controlled objective to destroy the turrets for the base, if the chunk is active.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_DestroyLance_Defenders (Bonus)|on
+[OptionalChunk]Chunk_BaseDefense_Turrets (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BaseDefenders
+//		Lance_Enemy_Reinforcements
+//		Lance_Enemy_BaseTurrets
+//		Region_GoTo
+//		Region_Occupy
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]The Kurita military outpost is rubble, Commander. You're clear to begin your assault. Good luck.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_redHunter_CarlyleDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Affirmative, Carlyle. Commander, I've identified a good vantage point where you can get eyes on the facility. That should tell us what we're dealing with.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_GoTo
+	[Content]Let's get moving; I don't like being stuck in one place this long.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Commander, I've got a line open to the facility, and it's under our control now. Broadcasting Carlyle's message.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]… [static] …
+		[Color]1|1|1|1
+		[Cast]castDef_ViewscreenDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]… [static] …ello? Hello, do you copy? This is the <i>Invidious</i>. We copy and are standing on station. See you in a few.
+		[Color]1|1|1|1
+		[Cast]castDef_ViewscreenDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]This is the <i>Argo</i>. We copy, <i>Invidious</i>. Carlyle, are you receiving this?
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Affirmative. Let's get out of here. Drinks are on me.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_redHunter_CarlyleDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Shit. We dropped the ball on this one, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropshipLanding
+	[Content]DropShip inbound for landing! We're going to get in and out quick!
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretWarning
+	[Content]XO, I'm seeing turrets coming online at the base. Did we know there were automated defenses?
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_BaseTurrets
+	[Content]No, but I'm not surprised. Commander, those are <i>big</i> turrets. Be careful.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_GoToComplete
+	[Content]You should be able to see the ComStar facility from here, Commander. Looks like DEST got the base turrets running, as we suspected.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]Occupy the facility and take care of any additional DEST forces that show up. Good luck, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BaseDefenders
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_kurita
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcements
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_kurita
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]2
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

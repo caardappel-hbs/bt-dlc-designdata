@@ -1,0 +1,237 @@
+{
+    "Description" : {
+        "Id" : "event_co_FP-defector-A",
+        "Name" : "Two Birds",
+        "Details" : "As the daily briefing winds down, Darius pauses. \"Last item on the agenda: Capellan officials have sent us an inquiry. They somehow know about our involvement in the assassination of the Kuritan defector, Yoshito Okada. Their message <i>suggests</i> that they'd be willing to forget our involvement\u2014even pay us\u2014if we offer up some information on our accomplices.\"\r\n\r\n\"Oh, man.\" Yang grins. \"This is a 'two birds, one LRM' situation. Let's tell 'em all about our <i>charming</i> friend, [[DM.BaseDescriptionDefs[LoreGakuHironaka],Gaku Hironaka]].\"\r\n\r\nDr. Murad arches an eyebrow. \"That isn't an expression, Yang. <i>But</i> admittedly\u2026 I'm inclined to agree. If we gave up [[DM.BaseDescriptionDefs[LoreRepKurita],Yamaguchi]], we'd never work again, but a subcommander is another story.\"\r\n\r\n\"Usually, I'd be all for this. Hironaka is small fry, relatively, but if the [[DM.BaseDescriptionDefs[LoreMaskirovka],Maskirovka]] makes him 'disappear' It won't take a genius to figure out where the leak came from.\" Darius looks to you. \"It's risky. What do you think, Commander?\"",
+        "Icon" : "uixTxrSpot_DailyBriefing.png"
+    },
+    "Scope" : "Company",
+    "Weight" : 1000,
+    "Requirements" : {
+        "Scope" : "Company",
+        "RequirementTags" : {
+            "tagSetSourceFile" : "Tags/CompanyTags",
+            "items" : [
+                "flashpoint_defector_a"
+            ]
+        },
+        "ExclusionTags" : {
+            "tagSetSourceFile" : "",
+            "items" : [
+                "event_flashpoint_defector_a_complete"
+            ]
+        },
+        "RequirementComparisons" : []
+    },
+    "AdditionalRequirements" : [],
+    "AdditionalObjects" : [],
+    "Options" : [
+        {
+            "Description" : {
+                "Id" : "outcome_0",
+                "Name" : "Order Darius to tell the Capellans nothing.",
+                "Details" : "mouth shut",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_0_0",
+                        "Name" : "Liao Displeased",
+                        "Details" : "You shake your head. \"Ratting on our employers or their associates is bad for business. Don't say a thing.\"\r\n\r\nHours after the XO send a response to the Capellan officials, the comms in your private quarters crackle. Darius's voice is tinged with frustration. \"After some back and forth, I gave 'em nothing\u2014in a professional manner\u2014of course.\"\r\n\r\n\"I'm sensing that this wasn't a complete victory,\" you say. \"How did they respond?\"\r\n\r\n\"Poorly. The agents insinuated that we were interfering with a formal investigation and said some other things I won't repeat.\"\r\n\r\n\"Should I be concerned?\"\r\n\r\nDarius snorts. \"Eh\u2026 for all their <i>huffin'</i> and <i>puffin'</i> our MechWarriors are far more creative with their insults. Sure, the Capellans will be a <i>little</i> frostier next time we talk, but they don't have authority over the MRB and they know it.\"",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "event_flashpoint_defector_a_complete"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Liao",
+                                    "value" : "-1",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_small]"
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_1",
+                "Name" : "Order Darius to comply, but use his best judgement.",
+                "Details" : "safe choice",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_1_0",
+                        "Name" : "morale loss + small Liao rep gain",
+                        "Details" : "You incline your head toward the XO. \"Darius, you'll take the point on this one. Use your best judgement.\"\r\n\r\nHours after the XO sends a response, he calls the command staff back to the Command Center. \"Good news, Commander. The Capellans appreciated our cooperation, even though I provided a heavily redacted account of our mission. There won't be any further inquiries from them.\"\r\n\r\n\"What about [[DM.BaseDescriptionDefs[LoreGakuHironaka],Hironaka]], XO?\" Yang asks.\r\n\r\n\"I couldn't risk giving up his name,\" Darius says. \"We need to maintain plausible deniability, so we don't risk drawing the ire of the Draconis Combine.\"\r\n\r\nYang grunts dismissively. When the crew breaks after the meeting, you can see that the chief tech and Dr. Murad are visibly tense. They speak quietly and grumble to one another, but offer no direct complaints.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "event_flashpoint_defector_a_complete"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Liao",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_gain_small]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Morale",
+                                    "value" : "-1",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        },
+        {
+            "Description" : {
+                "Id" : "outcome_2",
+                "Name" : "Tell Darius to give up Gaku Hironaka's name.",
+                "Details" : "give 'em up",
+                "Icon" : null
+            },
+            "RequirementList" : [],
+            "ResultSets" : [
+                {
+                    "Description" : {
+                        "Id" : "outcome_2_0",
+                        "Name" : "rep gain +  rep loss + funds",
+                        "Details" : "You shrug.\"I might regret this, but Yang's right. To hell with [[DM.BaseDescriptionDefs[LoreGakuHironaka],Gaku Hironaka]].\"\r\n\r\nHours after the XO sends a response to the Liao officials, he calls the command staff back to the Command Center. \"Good news, the Capellans were <i>highly</i> interested in our <i>mutual</i> pain in the ass. They'll follow up with Hironaka and leave us alone. We even earned a hundred-thousand C-Bills for our trouble.\"\r\n\r\nYang whistles. \"See! What did I tell you? Now that's three birds, one\u2014\"\r\n\r\n\"Political explosion?\" Dr. Murad interrupts.\"Colloquialisms aside, I'd say this was just the sort of small victory we needed. Sometimes the bad guys do pay.\"\r\n\r\nDays later, you receive an [[DM.BaseDescriptionDefs[LoreHPG],HPG]] message in your private quarters. You read through the formal language quickly and suss out the point. The Capellans can't pin you down for a role in the disappearance of Hironaka, but their intelligence indicates that your outfit must be involved. This is a warning.",
+                        "Icon" : null
+                    },
+                    "Weight" : 100,
+                    "Results" : [
+                        {
+                            "Scope" : "Company",
+                            "Requirements" : null,
+                            "AddedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : [
+                                    "event_flashpoint_defector_a_complete"
+                                ]
+                            },
+                            "RemovedTags" : {
+                                "tagSetSourceFile" : "",
+                                "items" : []
+                            },
+                            "Stats" : [
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Liao",
+                                    "value" : "1",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_gain_small]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Reputation.Kurita",
+                                    "value" : "-2",
+                                    "set" : false,
+                                    "valueConstant" : "[rep_loss_medium]"
+                                },
+                                {
+                                    "typeString" : "System.Int32",
+                                    "name" : "Funds",
+                                    "value" : "100000",
+                                    "set" : false,
+                                    "valueConstant" : null
+                                }
+                            ],
+                            "Actions" : null,
+                            "ForceEvents" : null,
+                            "TemporaryResult" : false,
+                            "ResultDuration" : 0
+                        }
+                    ]
+                }
+            ],
+            "Requirements" : {
+                "Scope" : "Company",
+                "RequirementTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "ExclusionTags" : {
+                    "tagSetSourceFile" : "",
+                    "items" : []
+                },
+                "RequirementComparisons" : []
+            }
+        }
+    ],
+    "PublishState" : "PUBLISHED",
+    "ValidationState" : "UNTESTED",
+    "EventType" : "NORMAL"
+}

@@ -1,0 +1,307 @@
+// Contract lastChance_1_ambushConvoy 
+
+		
+[ID]lastChance_1_ambushConvoy
+[Name]A House Divided
+[Template]AmbushConvoy
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Medium
+[ShortDesc]My daughter will arrive shortly at a private compound, and Luthendorff is on the way to greet her. Intercept and eliminate this criminal. But be on guard—she has bodyguards with her, although I expect you to easily outmaneuver and outsmart them.
+[LongDesc]You heard Lady Suiko. Let's put Luthendorff down, {COMMANDER.FirstName}.
+[Salvage]12
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center 
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Ambush and Eliminate Luthendorff
+	[Description]Eliminate Luthendorff.
+[ContractObjective]Destroy Luthendorff's Guards.
+	[Description]Send a message by not only destroying the convoy, but eliminating their escorts as well.
+
+// Battle Objectives
+
+	// Optional Objective
+	[Objective]Destroy Luthendorff
+		[Description]The objective for destroying the convoy units.
+
+	// Optional Objective
+	[Objective]Eliminate Luthendorff's Guards
+		[Description]The objective for destroying the units guarding the convoy.
+
+	// Optional Objective
+	[Objective]Prevent Luthendorff from Escaping
+		[Description]The objective for preventing the enemy from reaching their escape point, if this happens the player will lose.
+
+
+	// Optional Objective
+	[Objective]Recon Luthendorff's Route
+		[Description]The objective for the player to intercept/observe the enemy convoy.
+
+
+	// Optional Objective
+	[Objective]Get to the Evac Zone
+		[Description]The objective for the player units escaping and finishing the mission.
+
+
+	// Optional Objective
+	[Objective]Destroy Enemy Reinforcements
+		[Description]The objective for killing the additional units that ambush you.
+
+			
+// Optional Chunks
+[OptionalChunk]Chunk_AmbushByNumKilled (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_Convoy
+//		Lance_Enemy_Bodyguard
+//		Ambush Lance Spawner
+//		Region_ConvoyTarget
+//		Region_GoTo
+//		Region_Escape
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Luthendorff will be forced to make her way through this pass. You can use that to catch her unawares.
+		[Cast]castDef_UW_lastChance_LadyNakanoDefault
+		[Emote]Default
+		[Audio]audioevent_universal_hostilesInbound
+		[Focus]
+	[Content]Roger that, Lady Suiko. We'll get a visual and confirm she's en route.
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_GoTo
+	[Content]I shall leave you to it, Mr. Oliveira. Let none of you forget—this woman is an honorless war profiteer. Show her no mercy!
+		[Color]1|1|1|1
+		[Cast]castDef_UW_lastChance_LadyNakanoDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Thanks for the pep talk, Lady Suiko. We can handle it from here.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Don't celebrate too soon, Commander. We're being hailed by a DropShip with House Nakano's heraldry…
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]It's Lady Suiko's daughter, Mariko. She wants to talk.
+		[Color]1|1|1|1
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Audio]NONE
+	[Content]Of course she does.
+		[Color]1|1|1|1
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Bold of you to charge for this kind of service, Commander {COMMANDER.LastName}.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_lastChance_LadyNakanoDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_GuardsDestroyed
+	[Content]Well done, Commander. You've removed the guards. Now end Luthendorff! 
+		[Color]1|1|1|1
+		[Cast]castDef_UW_lastChance_LadyNakanoDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_ConvoyReachedExtraction
+	[Content]Luthendorff is getting away, Commander. Run her down!
+		[Color]1|1|1|1
+		[Cast]castDef_UW_lastChance_LadyNakanoDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_Convoy
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_vehicle
+		[ExcludedTags]lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]Tagged
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_vehicle_apc
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Bodyguard
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_dynamic_difficulty|lance_type_slow
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]role-brawler|light|mech|KSBeta
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]role-flanker|ready|light|mech|KSBeta
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]role-brawler|ready|medium|mech|KSBeta
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]role-brawler|ready|medium|mech|KSBeta
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Ambush Lance Spawner
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]wheels|light|vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]wheels|medium|vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]heavy
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

@@ -4,7 +4,16 @@
             "unit_mech",
             "unit_medium",
 			"unit_release",
-			"unit_dlc"
+			"unit_dlc",
+			"unit_range_long",
+			"unit_armor_high",
+			"NotDavion",
+			"Kurita",
+			"NotLiao",
+			"NotMarik",
+			"NotSteiner",
+			"NotMagistracyOfCanopus",
+			"NotTaurianConcordat"
         ],
         "tagSetSourceFile": ""
     },
@@ -16,10 +25,10 @@
         "Purchasable": true,
         "Manufacturer": null,
         "Model": null,
-        "UIName": "Crab CRB-27",
+        "UIName": "Crab CRB-20",
         "Id": "mechdef_crab_CRB-27",
         "Name": "Crab",
-        "Details": "Crab 27s fulfill an oft overlooked role, that of a skirmisher with firepower. Wielding strong energy weapons, the Crab delivers a punch at nearly all ranges, with no ammunition constraints. The blend of firepower, heat efficiency, and speed make the Crab the perfect 'Mech to raid enemy positions.",
+        "Details": "Crab 20s fulfill an oft overlooked role, that of a skirmisher with firepower. Wielding strong energy weapons, the Crab delivers a punch at nearly all ranges, with no ammunition constraints. The blend of firepower, heat efficiency, and speed make the Crab the perfect 'Mech to raid enemy positions.",
         "Icon": "uixTxrIcon_crab"
     },
     "simGameMechPartCost": 510000,

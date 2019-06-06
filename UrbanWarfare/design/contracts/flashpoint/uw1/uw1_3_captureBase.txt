@@ -1,0 +1,341 @@
+// Contract uw1_3_captureBase 
+
+		
+[ID]uw1_3_captureBase
+[Name]Prototype III
+[Template]CaptureBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]According to the intel we found, Black Caldera Defense is storing their stolen Raven prototype at an old armory in southern New Jakobstad. We need to capture the base and recover the prototype. Conqueror, Viscacha, and Peregrine will be standing by to carry out the second half of the operation when we're done.
+[LongDesc]Ombra died for this, {COMMANDER.FirstName}. It's on us to make sure that her sacrifice counts for something.
+[Salvage]12
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center 
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+
+[MapMood]UrbanSunsetFoggy
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]200
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]55|55|55|55
+
+[MaxNumberOfPlayerUnits]4
+
+// Contract Objectives
+[ContractObjective]Recover the Prototype Raven
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Scout the Black Caldera Armory
+		[Description]The objective to scout the base that is being captured. Must be completed before the actual capture of the base.
+
+	// Optional Objective
+	[Objective]Destroy the Black Caldera Garrison
+		[Description]The objective to optionally destroy the defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Capture the Armory to Recover the Prototype Raven
+		[Description]The objective for the player to move into and capture the base.
+
+	// Primary Objective
+	[Objective]Hold Out as Enemies Counter Attack
+		[Description]HIDDEN TIMER, NO NEED TO EDIT: This is the hidden timer objective that will trigger the enemy reinforcements.
+
+	// Primary Objective
+	[Objective]Pacify the Area around the Facility
+		[Description]This is a general objective to indicate the player must keep playing and eliminate enemies as they come.
+
+	// Primary Objective
+	[Objective]Eliminate Black Caldera Reinforcements
+		[Description]The primary objective to destroy the force that tries to remove the player from the captured base.
+
+	// Optional Objective
+	[Objective]Eliminate Base Turrets
+		[Description]The chunk controlled objective to destroy the turrets for the base, if the chunk is active.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_DestroyLance_Defenders (Bonus)|on
+[OptionalChunk]Chunk_BaseDefense_Turrets (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BaseDefenders
+//		Lance_Enemy_Reinforcements
+//		Lance_Enemy_BaseTurrets
+//		Region_GoTo
+//		Region_Occupy
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Okay, Commander. According to our intel, the Raven is being stored in a dilapidated armory in this part of the city. The OpFor's unit strength is unknown, but I bet it'll be somewhere between "a lot" and "way too much."
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I don't doubt it. This prototype is the most valuable asset on Fagerholm; it's bound to be well protected. From this position, you should be able to get eyes on the facility. We can plan our attack from there.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_GoTo
+	[Content]Caution is fine, but we're on a timetable here. Bravo Lance is waiting for us to get that Raven up and running so that they can carry out their part of the plan. We've got a lot riding on this mission, so let's get it done.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]That's it, Boss! The armory is ours. If you'll excuse me, I'm gonna go take a look at that Raven. I have to learn what I can about it before we can put it in the field.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Two heads are better than one, Yang. I'll meet you in the Mech Lab.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Study it quick, you two. We've got a limited window to support Bravo Lance, and we need that Raven to do it.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Roger that, XO. We'll have it ready for them in no time.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]We've lost this one, Commander. I'm pulling us out of here. The Great Houses are going to have to fight this out among themselves.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropshipLanding
+	[Content]Heads up, Commander! I'm touching down now!
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretWarning
+	[Content]Commander, a word of warning—we've got reports this base may have gun emplacements for point defense.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_BaseTurrets
+	[Content]Turrets, Boss. Just keep an eye out, in case they're online.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_GoToComplete
+	[Content]There it is, Boss—we've found the Black Caldera armory. This is where we'll find the Raven—assuming we can get to it, that is.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BaseDefenders
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcements
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

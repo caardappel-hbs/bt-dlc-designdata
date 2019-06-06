@@ -1,0 +1,314 @@
+// Contract prize_1_rescue 
+
+		
+[ID]prize_1_rescue
+[Name]One Man's Trash
+[Template]Rescue
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]I've given your pilot a map of Men Lojowen, complete with the rough location of the Star League installation. I want you to get in there, brush aside any resistance, and loot whatever your BattleMechs can carry. You'll get your pay when my associates have the goods.
+[LongDesc]Well. This should be exciting.
+[Salvage]12
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center 
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]200
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]55|55|55|55
+
+[MaxNumberOfPlayerUnits]4
+
+
+// Contract Objectives
+[ContractObjective]Loot the Star League Stapler Factory
+	[Description]Retrieve the VIP and Extract Safely
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Loot the Star League Stapler Factory
+		[Description]The objective for the player to retrieve the primary rescue target. 
+
+	// Optional Objective
+	[Objective]Hidden KILL OBJECTIVE for OpFor1
+		[Description]UNUSED KILL OBJECTIVE for AutoComplete
+
+
+	// Primary Objective
+	[Objective]Proceed to the Evac Zone
+		[Description]The objective to escape with all player units.
+
+	// Primary Objective
+	[Objective]Unit Carrying the Star League-era Cache Must Survive
+		[Description]The objective to keep the unit which is carrying the primary target alive. Player will fail if it is destroyed.
+
+	// Optional Objective
+	[Objective]Recover additional Star League-era Supplies
+		[Description]The secondary and optional objective to secure the second rescue target.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Hidden KILL OBJECTIVE for OpFor2
+		[Description]Hidden KILL OBJECTIVE for autocomplete of mission
+
+
+	// Optional Objective
+	[Objective]Ensure Secondary Asset Recovery unit survives
+		[Description]The objective to keep the unit which is carrying the secondary target alive. The player can fail this objective.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_OccupyRegion_2 (Bonus)|off
+[OptionalChunk]Chunk_EnsureSurvives_Objective (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_OpposingForce_1
+//		Lance_Enemy_OpposingForce_2
+//		Region_Occupy_1
+//		Region_Escape
+//		Region_Occupy_2
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]According to Corbu's map, our Star League "stapler factory" should be somewhere just ahead of you. He also said that we shouldn't run up against anything more dangerous than a combat vehicle or two, but I'd take that with a grain of salt.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy_1
+	[Content]Perhaps more than a grain. I don't especially trust Mr. Corbu, or his mysterious associates.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Me neither, but it's refreshing to work for someone who's <i>obviously</i> sketchy for a change. I mean, most of our clients are just as bad, but they're much better at hiding it.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]INCOMING TRANSMISSION.
+		[Color]1|1|1|1
+		[Cast]castDef_Computer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I see that we've got some new BattleMechs on the field. Hello. My name is Binton, and if you've come for the vault, my hired cutthroats will be murdering you today.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_BintonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Men Lojowen is <i>my</i> island, Binton. If I catch either of you near that vault, you'll only <i>wish</i> you were dead. I've got a bucket of Proserpinan blood limpets and a vivid imagination, and I'm feeling eager to use 'em.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_ModgeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Then I guess we'd better not let you catch us. Game faces on, everybody. We've got a fight on our hands.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]Commander, I've been studying the symbols on the crates that our lance pulled from the facility. Against all odds, it looks like Mr. Corbu was telling us the truth. We've just stolen several tons of commercial-grade LosTech desk accessories.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Well, that's one for the record books. We just pulled the biggest stapler heist in human history.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]And to think, Binton and Modge have been at each other's throats over this vault for months. People have <i>died</i> for this. How do we break it to them they were fighting over garbage?
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]It isn't our job to break anything to them. All we need to do is get this crap to Louth Abbey and get paid. Speaking of which, I'm setting a course, Commander. We'll get Corbu on the horn as soon as we reach cruising altitude.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]That was the heaviest "light resistance" I've ever seen. Corbu's gonna have to find someone else to appease his associates, whoever the hell they are. We're out of here.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_OccupyRegionStarted
+	[Content]We've taken possession of the stapler factory, Commander. Keep our scavenger friends occupied and away from the facility while our people crack the vault.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_RecoveringUnitDestroyed2
+	[Content]Well, there goes half our cargo. Better keep our other cargo carrier safe, Boss. We don't wanna bail out of this mess empty-handed.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_OpposingForce_1
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_vehicle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_OpposingForce_2
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_vehicle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

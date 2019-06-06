@@ -1,0 +1,330 @@
+// Contract uw1_4_destroyBase 
+
+		
+[ID]uw1_4_destroyBase
+[Name]Prototype IV
+[Template]DestroyBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]According to the intel we found, Black Caldera's hardened R&D facility is protected by a phalanx of LRM batteries. Using the Raven's unique capabilities, you will protect Bravo Lance from these weapons while leading them to destroy the facility.
+[LongDesc]Handle this and we're done here, {COMMANDER.FirstName}.
+[Salvage]12
+[FOW]Surveyed
+			
+// Misc - Flashpoint consecutive deployment
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]true
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+
+[MapMood]UrbanNightFoggy
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]-1
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]-1|-1|-1|-1
+
+[MaxNumberOfPlayerUnits]4
+
+// Contract Objectives
+[ContractObjective]Destroy the Black Caldera R&D Facility
+	[Description]Destroy Enemy Structures and Extract Safely
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy the Black Caldera R&D Facility
+		[Description]The objective to destroy the targeted buildings.
+
+	// Optional Objective
+	[Objective]Destroy the Black Caldera Garrison
+		[Description]The primary objective to destroy the garrison / defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]HIDDEN Objective: Destroy Base Turrets
+		[Description]HIDDEN Objective: Destroy Base Turrets
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Eliminate Black Caldera Reinforcements
+		[Description]The objective to eliminate enemy reinforcements who attack.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Proceed to the evac zone
+		[Description]The objective for the player to extract their units.
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+[OptionalChunk]Chunk_TutorialDialogue|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_BaseTurrets
+//		Lance_Enemy_Ambushers
+//		Region_Ambush
+//		Region_Escape
+			
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]This is it, Commander. The Black Caldera facility should lie just ahead of us.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_newJakobstad_PeregrineDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Guess it's time to see whether the Raven's anti-IDF capabilities are everything they're cracked up to be. If they aren't, this is gonna be a short trip.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_newJakobstad_ViscachaDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]It'll work. The Great Houses wouldn't all be fighting over this protoype if it were a dud. Now I say that we get in there and blow that facility to hell, and that we do it in Ombra's name.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_newJakobstad_ConquerorDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Best of luck, Bravo Lance. When the job is done, I'll be waiting to bring you home.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]Excellent work all around, people. Hang on tight, and I'll get you out of there.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Can't happen fast enough, Meyer. I think I can speak for all of us when I say that we're more than ready to get the hell off this planet.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_newJakobstad_PeregrineDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]This nut is too tough for us to crack, Commander. I'm pulling our people out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AmbushWarning
+	[Content]Keep your eyes peeled, Bravo Lance. Black Caldera is bound to have more 'Mechs in the area, and they're likely to call 'em in any second now.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_newJakobstad_ConquerorDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_Tutorial
+	[Content]Placeholder - this dialogue is automatically replaced by the Sensor Warfare popup. The guid in data/constants/CombatGameConstants must match the guid in data/contracts/destroybase/DestroyBase_RavenTutorial_Template
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	
+	[Dialogue]Dialogue_Interrupt_BaseDestroyed|Dialogue_Interrupt_BaseDestroyed
+	[Content]That's it, Commander! The facility is down, and BCD's research on the Raven project has gone down with it!
+		[Color]1|1|1|1
+		[Cast]castDef_UW_newJakobstad_ConquerorDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Good riddance.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_newJakobstad_ViscachaDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+		
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_raven_RVN-1X
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+			[CustomHeraldryDefId]heraldrydef_BlackCalderaDefense
+		[Unit]Mech
+			[UnitDef]mechdef_griffin_GRF-1N
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Conqueror
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_uw_Conqueror
+			[CustomHeraldryDefId]heraldrydef_DuchyOfAndurien
+		[Unit]Mech
+			[UnitDef]mechdef_trebuchet_TBT-5N
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Viscacha
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_uw_Viscacha
+			[CustomHeraldryDefId]heraldrydef_DuchyOfAndurien
+		[Unit]Mech
+			[UnitDef]mechdef_javelin_JVN-10F
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Peregrine
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_uw_Peregrine
+			[CustomHeraldryDefId]heraldrydef_DuchyOfAndurien
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_cavalry
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_trebuchet_TBT-5N
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechdef_trebuchet_TBT-5N
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Vehicle
+			[UnitDef]vehicledef_CARRIER_LRM
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Vehicle
+			[UnitDef]vehicledef_CARRIER_LRM
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretdef_Light_LRM
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretdef_Light_LRM
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretdef_Light_LRM
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretdef_Light_LRM
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_locust_LCT-1V
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechdef_locust_LCT-1V
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Vehicle
+			[UnitDef]vehicledef_STRIKER
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Vehicle
+			[UnitDef]vehicledef_STRIKER
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

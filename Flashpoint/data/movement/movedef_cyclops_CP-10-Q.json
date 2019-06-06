@@ -1,0 +1,21 @@
+{
+   "Description" : {
+      "Id" : "movedef_cyclops_CP-10-Q",
+      "Name" : "MovementCapabilitiesDef for Cyclops CP-10-Q",
+      "Details" : "",
+      "Icon" : ""
+   },
+   "MaxWalkDistance" : 120.0,
+   "MaxSprintDistance" : 200.0,
+   "WalkVelocity" : 20.0,
+   "RunVelocity" : 36.0,
+   "SprintVelocity" : 44.0,
+   "LimpVelocity" : 8.0,
+   "WalkAcceleration" : 12.0,
+   "SprintAcceleration" : 18.0,
+   "MaxRadialVelocity" : 60.0,
+   "MaxRadialAcceleration" : 180.0,
+   "MaxJumpVel" : 30.0,
+   "MaxJumpAccel" : 15.0,
+   "MaxJumpVerticalAccel" : 30.0
+}

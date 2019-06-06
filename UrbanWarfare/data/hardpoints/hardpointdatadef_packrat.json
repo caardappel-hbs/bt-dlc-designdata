@@ -1,0 +1,32 @@
+{
+    "ID" : "hardpointdatadef_packrat",
+    "HardpointData" : [
+        {
+            "location" : "front",
+            "weapons" : [
+                [                    
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        },
+        {
+            "location" : "turret",
+            "weapons" : [
+              [
+                "chrPrfWeap_packrat_turret_generic_eh1"
+              ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        }
+    ]
+}

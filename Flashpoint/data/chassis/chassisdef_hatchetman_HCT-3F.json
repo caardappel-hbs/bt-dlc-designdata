@@ -1,6 +1,6 @@
 {
     "Description" : {
-        "Cost" : 3500000,
+        "Cost" : 3700000,
         "Rarity" : 1,
         "Purchasable" : true,
         "Manufacturer" : "",
@@ -72,6 +72,10 @@
                 {
                     "WeaponMount" : "Energy",
                     "Omni" : false
+                },
+                {
+                    "WeaponMount" : "Energy",
+                    "Omni" : false
                 }
             ],
             "Tonnage" : 0,
@@ -83,6 +87,14 @@
         {
             "Location" : "LeftTorso",
             "Hardpoints" : [
+                {
+                    "WeaponMount" : "AntiPersonnel",
+                    "Omni" : false
+                },
+                {
+                    "WeaponMount" : "AntiPersonnel",
+                    "Omni" : false
+                }
                 
             ],
             "Tonnage" : 0,
@@ -107,6 +119,10 @@
             "Hardpoints" : [
                 {
                     "WeaponMount" : "Ballistic",
+                    "Omni" : false
+                },
+                {
+                    "WeaponMount" : "Energy",
                     "Omni" : false
                 }
             ],

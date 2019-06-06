@@ -5,7 +5,12 @@
             "unit_assault",
             "unit_indirectFire",
 			"unit_release",
-			"unit_dlc"
+			"unit_dlc",
+			"unit_range_medium",
+			"unit_range_short",
+			"unit_indirectFire",
+			"unit_hot",
+			"unit_armor_high"
         ],
         "tagSetSourceFile": ""
     },

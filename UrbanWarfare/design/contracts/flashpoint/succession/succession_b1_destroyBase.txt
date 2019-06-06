@@ -1,0 +1,331 @@
+// Contract succession_b1_destroyBase 
+
+		
+[ID]succession_b1_destroyBase
+[Name]Succession II
+[Template]DestroyBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]You'll find my brother waiting for you at the Red Roost. It looks like a commercial office park, but don't be fooled. The structure is reinforced to withstand military payloads. Engage my brother's security team and raze the Red Roost. Let his stronghold serve as his tomb!
+[LongDesc]We're taking a gamble on this one, {COMMANDER.FirstName}. But given our options, it's one that I can live with.
+[Salvage]12
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center 
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]240
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]75|75|75|75
+
+[MaxNumberOfPlayerUnits]4
+			
+// Contract Objectives
+[ContractObjective]Destroy Lord Angus Khulan's Stronghold
+	[Description]Destroy Enemy Structures and Extract Safely
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy the Red Roost
+		[Description]The objective to destroy the targeted buildings.
+		[OnSuccessDialogueGUID]Dialogue_Interrupt_BaseDestroyed
+
+	// Optional Objective
+	[Objective]Destroy Lord Angus Khulan's Bodyguards
+		[Description]The primary objective to destroy the garrison / defenders of the base.
+		[OnSuccessDialogueGUID]Dialogue_Interrupt_BodyguardsDown
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]HIDDEN Objective: Destroy Base Turrets
+		[Description]HIDDEN Objective: Destroy Base Turrets
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Destroy Bodyguard Reinforcements
+		[Description]The objective to eliminate enemy reinforcements who attack.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Proceed to the Evac Zone
+		[Description]The objective for the player to extract their units.
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_BaseTurrets
+//		Lance_Enemy_Ambushers
+//		Region_Ambush
+//		Region_Escape
+			
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]Looks like we're in the right place, Commander. Lord Angus Khulan is hailing us.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Attention, incoming BattleMechs! You are <i>trespassing</i> on… wait. You're the brutes that Mother sent to kill Sister. Is Yvonne dead? Can I see the body?
+		[Color]1|1|1|1
+		[Cast]castDef_UW_succession_SonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I'm sorry to disappoint you, Brother. But I am not the Khulan who will die today.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_succession_DaughterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]You've sent them <i>here</i>, to the Red Roost? My poor, deluded sister. My bodyguards will crush them, and I will drink in the spectacle like a fine port wine. And then, when I tell Mother what you've done, <i>she</i> will—
+		[Color]1|1|1|1
+		[Cast]castDef_UW_succession_SonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Send more assassins? Threaten to disinherit me, and then rage against the laws that prevent her from doing so? There's nothing more that either of you can threaten me with, Brother. And now, your time has come.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_succession_DaughterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]I thank you again, Commander. My brother was a tick on House Khulan's back, draining our coffers and preying on our mother's diminished faculties. Now he is dead, his poisonous influence cut short, and I have you to thank.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_succession_DaughterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You can thank us by lending Shugo Yamaguchi your support, like you promised you would.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I haven't forgotten our arrangement, Mr. Oliveira. I am indebted to your company, and as a fellow mercenary, I fully understand the importance of managing my debts. When you speak with Shugo Yamaguchi, I will reaffirm my commitment to supporting him.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_succession_DaughterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]We can't compete with what Lord Angus is fielding, Boss. Yuetu's gonna have to find someone else to bury her brother, 'cause our job here is done.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AmbushWarning
+	[Content]Brace yourself, Commander. We've got more Khulan bodyguards entering the AO.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_BaseDestroyed|Dialogue_Interrupt_BaseDestroyed
+	[Content]It is done. My brother is dead, entombed in the rubble of his own sanctuary. When I inherit the governorship, I think I'll enshrine it in bronze and marble. A memorial to the follies of ambitious men.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_succession_DaughterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+		
+[Dialogue]Dialogue_Interrupt_BodyguardsDown|Dialogue_Interrupt_BodyguardsDown
+	[Content]Nice shot, Commander! That's all of House Khulan's bodyguards down.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]		
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_cavalry
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

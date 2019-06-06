@@ -1,0 +1,391 @@
+// Contract yangBigScore_1_captureBase 
+
+		
+[ID]yangBigScore_1_captureBase
+[Name]Yang Virtanen's Big Score
+[Template]CaptureBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]Wallo's got a mercenary company on retainer to protect his private aerospace hangar, the imaginatively named "Security Solutions, Inc." I looked 'em up, and they're the real deal—they've got combat vehicles, BattleMechs, the works. But we'll have the element of surprise on our side, given that Wallo's never heard of us. That's something, right?
+[LongDesc]Let's hope this heist works out the way Yang said that it would.
+[Salvage]12
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center - No Pay
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]0
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0
+[NegotiatedSalvage]1
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Capture the Hangar and Eliminate Wallo's Security Detail
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Scout the Hangar
+		[Description]The objective to scout the base that is being captured. Must be completed before the actual capture of the base.
+
+	// Optional Objective
+	[Objective]Eliminate Wallo's Security Detail
+		[Description]The objective to optionally destroy the defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Capture Wallo's Hangar with Friendly 'Mechs
+		[Description]The objective for the player to move into and capture the base.
+
+	// Primary Objective
+	[Objective]Hold Out as Enemies Counter Attack
+		[Description]HIDDEN TIMER, NO NEED TO EDIT: This is the hidden timer objective that will trigger the enemy reinforcements.
+
+	// Primary Objective
+	[Objective]Pacify the Area around Wallo's Hangar
+		[Description]This is a general objective to indicate the player must keep playing and eliminate enemies as they come.
+
+	// Primary Objective
+	[Objective]Destroy Enemy Reinforcements
+		[Description]The primary objective to destroy the force that tries to remove the player from the captured base.
+
+	// Optional Objective
+	[Objective]Eliminate Base Turrets
+		[Description]The chunk controlled objective to destroy the turrets for the base, if the chunk is active.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_DestroyLance_Defenders (Bonus)|off
+[OptionalChunk]Chunk_BaseDefense_Turrets (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BaseDefenders
+//		Lance_Enemy_Reinforcements
+//		Lance_Enemy_BaseTurrets
+//		Region_GoTo
+//		Region_Occupy
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]The hangar's just ahead, Commander. I'm picking up a lot of BattleMech activity out front.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Unknown BattleMech lance, be advised that you're trespassing on protected territory. Turn back now, or you will be destroyed.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_bigScore_WalloSecurityDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_GoTo
+	[Content]So much for the element of surprise. Let's do what we came here for, {COMMANDER.FirstName}. Take 'em out and capture that hangar!
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]The hangar is defenseless, and it looks like Graves is taking the bait. Long-range sensors are picking up activity out by his showroom.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]That's my cue, then. I'll get a lance of MechWarriors together to infiltrate the showroom.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]INCOMING TRANSMISSION.
+		[Color]1|1|1|1
+		[Cast]castDef_Computer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I don't understand you people. You've captured my aerospace hangar and now you're… what? Running away?
+		[Color]1|1|1|1
+		[Cast]castDef_UW_bigScore_WalloDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Looks that way. Word to the wise: Graves's security team will be coming along any second now. If you don't want them tearing that hangar down around you, I'd recommend moving your Griffin components out to the front yard.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I'd also recommend that you password-protect your security cameras, 'cause your security team doesn't have the faintest idea what it's doing.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I appreciate the warning, Miss…?
+		[Color]1|1|1|1
+		[Cast]castDef_UW_bigScore_WalloDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Call me Sam. And I notice you've got a nearly completed Achilles in there. I'm a thief, not a monster; I don't want to see a marvel like that get destroyed.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]That's very kind of you, Sam. Hell, it's downright cordial. I'll try to keep this little exchange in mind the next time we meet. Because there <i>will</i> be a next time, Sam. And when it comes, <i>I'll</i> be the one holding the cards.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_bigScore_WalloDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]Well, that didn't go the way I wanted it to. I guess we're done?
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Yeah, Yang. We're done.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropshipLanding
+	[Content]Leopard inbound, Commander. I'll be touching down directly.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretWarning
+	[Content]Careful, Boss. Wallo's security team just powered up a whole bunch of turrets.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_BaseTurrets
+
+[Dialogue]Dialogue_Interrupt_GoToComplete
+	[Content]I've got eyes on the hangar, Commander. And what's more, Farah's gotten me access to Wallo's internal security cameras.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]They weren't even encrypted! For a security company, these SSI people aren't very good.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]You can say that again. I'm taking a look inside. Wallo's got something big in there, but I can't quite make out… oh. Oh, <i>wooooow</i>!
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]Don't leave us in suspense, Meyer. What are you looking at in there?
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]A thing of beauty, XO. He's got about 80 percent of a Galileo Instruments Achilles up on blocks in there. It's an absolute monster of a DropShip, more than twice as big as our Leopard, and it's armed like a WarShip to boot.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+	[Content]Then we should be relieved it's up on blocks. Let's get this show back on the road, Commander. The sooner we wipe out Wallo's guards, the sooner we can move on Graves's showroom.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BaseDefenders
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_recon
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcements
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

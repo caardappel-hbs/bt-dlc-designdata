@@ -12,6 +12,8 @@
 [FOW]Surveyed
 
 [Requirement]StarSystem|stat|Target.IsOwner|eq|1
+[Requirement]StarSystem|stat|Employer.AuriganPirates|eq|0
+
 
 // Miscellaneous Values (if you don't know what these are for, don't mess with them!)
 [ContractDisplayStyle]BaseCampaignNormal
@@ -37,15 +39,15 @@
 
 	// Primary Objective
 	[Objective]Place Beacon Alpha
-		[Description]Place Beacon Alpha for Artillery Desgination
+		[Description]Place Beacon Alpha for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Beacon Bravo
-		[Description]Place Beacon Bravo for Artillery Desgination
+		[Description]Place Beacon Bravo for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Beacon Charlie
-		[Description]Place Beacon Charlie for Artillery Desgination
+		[Description]Place Beacon Charlie for Artillery Designation
 
 	// Primary Objective
 	[Objective]Await Further Instructions

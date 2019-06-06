@@ -1,0 +1,1536 @@
+// Contract AttackDefend_CoveringFire 
+		
+[ID]AttackDefend_CoveringFire
+[Name]Covering Fire
+[Template]AttackDefend
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]Commander, our covert forces are poised to seize a {TEAM_TAR.FactionDef.Demonym} prison facility where a large number of {TEAM_EMP.FactionDef.Demonym} personnel are being held prisoner. However, the facility is protected by a nearby military base, and as soon as we seize the prison, they'll move against it, and reduce those buildings to rubble before they let us extract those people. We'll be moving our own 'Mechs and Leopards in as quickly as we can but before we can land them and extract the personnel, we need you to pacify that military base.
+[LongDesc]My read on the situation is that by 'personnel' they mean 'covert operatives'. You don't hire 'Mechs to cover the retreat of clerical staff.
+[Salvage]24
+[FOW]Surveyed
+
+[Requirement]StarSystem|notag|planet_other_empty
+[Requirement]StarSystem|stat|Employer.AuriganPirates|eq|0
+[Requirement]StarSystem|stat|Employer.IsOwner|eq|0
+
+			
+// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
+[ContractDisplayStyle]BaseCampaignNormal
+[ContractScope]STANDARD
+[disableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]1
+[NegotiatedSalvage]0
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Defend {TEAM_EMP.FactionDef.Demonym} Base and Destroy {TEAM_TAR.FactionDef.Demonym} Base
+	[Description]Attack and Defend
+
+// Battle Objectives
+
+	// Primary Objective
+	// ** Always On
+	[Objective]Destroy the {TEAM_TAR.FactionDef.Demonym} Base
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - A Flag that activates when one of the Command Vehicles is attacked.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag that succeeds when the Evac region activates.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag for when CommandTrucksDestroyed Dialogue is complete.
+		[Description]
+
+	// Primary Objective
+	[Objective]Get to the evac zone
+		[Description]
+
+	// Primary Objective
+	// ** Always On
+	[Objective]Go to Evac after completing Primary Objectives
+		[Description]Used to show players where the escape region is.
+
+	// Primary Objective
+	// Chunk_DestroyLance_Attackers_Primary
+	[Objective]Destroy the {TEAM_TAR.FactionDef.Demonym} Attackers
+		[Description]
+
+	// Optional Objective
+	// Chunk_DestroyLance_Attackers_Secondary
+	[Objective]Destroy the {TEAM_TAR.FactionDef.Demonym} Attackers
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	// ** Always On
+	[Objective]Defend the {TEAM_EMP.FactionDef.Demonym} Base
+		[Description]At least 1 must survive.
+
+	// Optional Objective
+	// ** Always On
+	[Objective]Keep all friendly structures standing
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - A flag that shows that the defend objective was attacked.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Camera Focus for Spawned Reinforcements
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Approach the Enemy Base
+		[Description]
+
+	// Optional Objective
+	// Chunk_EnemyDefense_Turrets (Optional)
+	[Objective]Destroy the {TEAM_TAR.FactionDef.Demonym} Turrets
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]EMPTY - Flag to activate Turret Warning dialogue.
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy {TEAM_TAR.FactionDef.Demonym} Defenders
+		[Description]
+
+	// Optional Objective
+	[Objective]Destroy {TEAM_TAR.FactionDef.Demonym} Defenders
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Wait for reinforcement warning
+		[Description]Hidden timer that triggers reinforcement warning after the player enters GoTo region.
+
+	// Optional Objective
+	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag indicating that the Silent Timer is ready to go.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag indicating that the Drop Timer is ready to go.
+		[Description]
+
+	// Optional Objective
+	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces.
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Wait for reinforcement warning
+		[Description]Hidden timer that triggers reinforcement warning after the player enters GoTo region.
+
+	// Optional Objective
+	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag indicating that the Silent Timer is ready to go.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag indicating that the Drop Timer is ready to go.
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Hostile to All Drop Timer.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Hostile to All AI Timer
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag indicating that Hostile to All is ready to drop.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag to Activate Hostile to All 1 Round Safety Timer
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Hostile to All 1 Round Safety Timer
+		[Description]
+
+	// Optional Objective
+	[Objective]Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Hostile to All Drop Timer.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Hostile to All AI Timer
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag indicating that Hostile to All is ready to drop.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag to Activate Hostile to All 1 Round Safety Timer
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Hostile to All 1 Round Safety Timer
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy Enemy Allied {TEAM_TAR_ALLY.FactionDef.Demonym} Forces.
+		[Description]
+
+	// Optional Objective
+	[Objective]Destroy Enemy Allied {TEAM_TAR_ALLY.FactionDef.Demonym} Forces.
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Destroy Reinforcement Wave 1
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Reinforcements 1 Attack Timer
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag to drop wave 1.
+		[Description]
+
+	// Optional Objective
+	[Objective]Destroy Reinforcement Wave 2
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Reinforcements 2 Attack Timer
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag to drop wave 2.
+		[Description]
+
+	// Optional Objective
+	[Objective]Destroy Reinforcement Wave 3
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Reinforcements 3 Attack Timer
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag to drop wave 3.
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Medium
+	// ** Always On (Medium)
+	[Objective]Destroy Reinforcement Wave 1
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Medium
+	// ** Always On (Medium)
+	[Objective]Destroy Reinforcement Wave 2
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Medium
+	// ** Always On (Medium)
+	[Objective]Destroy Reinforcement Wave 3
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Heavy
+	// ** Always On (Heavy)
+	[Objective]Destroy Reinforcement Wave 1
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Heavy
+	// ** Always On (Heavy)
+	[Objective]Destroy Reinforcement Wave 2
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Heavy
+	// ** Always On (Heavy)
+	[Objective]Destroy Reinforcement Wave 3
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Assault
+	// ** Always On (Assault)
+	[Objective]Destroy Reinforcement Wave 1
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Assault
+	// ** Always On (Assault)
+	[Objective]Destroy Reinforcement Wave 2
+		[Description]
+
+	// Optional Objective
+	// Chunk_ReinforcementTimers_Assault
+	// ** Always On (Assault)
+	[Objective]Destroy Reinforcement Wave 3
+		[Description]
+
+	// Primary Objective
+	[Objective]Entire Player Lance Must Survive
+		[Description]
+
+	// Optional Objective
+	[Objective]Ensure Entire Player Lance Survives
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Unit One of Player Lance Must Survive
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Ensure Unit One of Player Lance Survives
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Friendly {TEAM_EMP.FactionDef.Demonym} Lance Must Survive
+		[Description]
+
+	// Optional Objective
+	[Objective]Ensure Friendly {TEAM_EMP.FactionDef.Demonym} Lance Survives
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag to determine if all primaries are complete.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - Flag to determine if the PrimariesComplete dialogue ahs been completed.
+		[Description]
+
+	// HIDDEN Objective
+	[Objective]HIDDEN - A flag for when the player kills everything BUT the enemy base is still intact.
+		[Description]
+			
+// Optional Chunks
+// One of the Attackers chunks must be enabled in every contract.
+// One of the ReinforcementTimers chunks must be enabled in every contract.
+
+
+// NOTE: These chunks are Controlled by Contract but it is highly recommended that one of them is turned on in every contract.
+// This also applies to Additional Forces objectives.
+// These chunks control enemy units advancing on the player's position in turn 1.
+[OptionalChunk]Chunk_DestroyLance_Attackers_Primary|off
+[OptionalChunk]Chunk_DestroyLance_Attackers_Secondary|on
+
+// Chunk_Lance_Employer: A lance of Employer units that spawn near the employer's base.
+[OptionalChunk]Chunk_Lance_Employer (Optional)|on
+
+// Chunk_AllyDefense_Turrets: A lance of Employer turrets that surround the employer's base.
+[OptionalChunk]Chunk_AllyDefense_Turrets (Optional)|off
+
+// Chunk_EnemyDefense_Turrets: A lance of Target turrets that surround the enemy base.
+[OptionalChunk]Chunk_EnemyDefense_Turrets (Optional)|off
+
+// Chunk_DestroyLance_Defenders (Primary/Secondary): A lance of Target units that spawns near the enemy base.
+[OptionalChunk]Chunk_DestroyLance_Defenders_Primary (Optional)|off
+[OptionalChunk]Chunk_DestroyLance_Defenders_Secondary (Optional)|on
+
+// Chunk_Enemy_AdditionalForces (Primary/Secondary): A timed drop of Target units that is activated when the player enters Region_GoTo.
+[OptionalChunk]Chunk_Enemy_AdditionalForces_Primary (Optional)|off
+[OptionalChunk]Chunk_Enemy_AdditionalForces_Secondary (Optional)|off
+
+// Chunk_HostileAll_Lance (Primary/Secondary): A timed drop of Hostile to All units that is activated when the player comes into enemy contact for the first time.
+[OptionalChunk]Chunk_HostileAll_Lance_Primary (Optional)|off
+[OptionalChunk]Chunk_HostileAll_Lance_Secondary (Optional)|off
+
+// Chunk_EnemyAlly_Lance (Primary/Secondary): A lance of Enemy Allied units.
+[OptionalChunk]Chunk_EnemyAlly_Lance_Primary (Optional)|off
+[OptionalChunk]Chunk_EnemyAlly_Lance_Secondary (Optional)|off
+
+// Chunk_ReinforcementTimers_Medium: A trio of timers that is used to determine when the three EnemyReinforcement lances arrive.
+// One of the ReinforcementTimers chunks must be enabled in every contract.
+
+// The three waves drop after 7, 11, and 14 rounds.
+[OptionalChunk]Chunk_ReinforcementTimers_Medium (Optional)|off
+
+// The three waves drop after 9, 13, and 16 rounds.
+[OptionalChunk]Chunk_ReinforcementTimers_Heavy (Optional)|on
+
+// The three waves drop after 11, 15, and 18 rounds.
+[OptionalChunk]Chunk_ReinforcementTimers_Assault (Optional)|off
+
+// Chunk_EnsureEntirePlayerLanceSurvives (Primary/Secondary): An optional objective to ensure that all units in the player lance survive.
+[OptionalChunk]Chunk_EnsureEntirePlayerLanceSurvives_Primary (Optional)|off
+[OptionalChunk]Chunk_EnsureEntirePlayerLanceSurvives_Secondary (Optional)|off
+
+// Chunk_EnsureUnit1Survives (Primary/Secondary): An optional objective to ensure that the unit in the first slot of the player lance survives.
+[OptionalChunk]Chunk_EnsureUnit1Survives_Primary (Optional)|off
+[OptionalChunk]Chunk_EnsureUnit1Survives_Secondary (Optional)|off
+
+// Chunk_EnsureUnitsSurvive_Employer (Primary/Secondary): An optional objective to ensure that at least one unit in the employer lance survives.
+// NOTE: Chunk_Lance_Employer must be enabled in order for this to work.
+[OptionalChunk]Chunk_EnsureUnitsSurvive_Employer_Primary (Optional)|off
+[OptionalChunk]Chunk_EnsureUnitsSurvive_Employer_Secondary (Optional)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		PlayerLanceSpawner
+//		Lance_Enemy_Attackers_Primary
+//		Lance_Enemy_Attackers_Secondary
+//		LanceSpawner
+//		LanceSpawner (1)
+//		Lance_Employer_Reinforcements
+//		Lance_Friendly_BaseTurrets
+//		Lance_Enemy_Turret
+//		Lance_Enemy_Defenders_Primary
+//		Lance_Enemy_Defenders_Secondary
+//		Lance_Enemy_AdditionalForces_Primary
+//		Lance_Enemy_AdditionalForces_Secondary
+//		Lance_HostileAll_Primary
+//		Lance_HostileAll_Secondary
+//		Lance_EnemyAlly_Primary
+//		Lance_EnemyAlly_Secondary
+//		Lance_EnemyReinforcements_Wave1
+//		Lance_EnemyReinforcements_Wave2
+//		Lance_EnemyReinforcements_Wave3
+//		Region_Escape_AttDef
+//		Region_GoTo
+//		Region_Reinforcements_FallBack
+//		Region_Target_AdditionalForces_Primary
+//		Region_Target_AdditionalForces_Secondary
+//		Region_Target_HostileAll_Primary
+//		Region_Target_HostileAll_Secondary
+//		Region_Target_Reinforcements1
+//		Region_Target_Reinforcements2
+//		Region_Target_Reinforcements3
+			
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]Argo, we've taken control of the facility. Our DropShips are on station; as soon as the area's secure we'll start evacuating our people.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Acknowledged. Meyer, how long have we got before the bad guys respond?
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Uh, now? They're inbound to you now?
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_Attackers_Secondary
+	[Content]Commander, they're going to keep sending 'Mechs at us until they destroy this base. You'll need to get their attention or they'll bury the civilians in rubble.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]The good news is that once you take out the military facility, they'll have no eyes on their LZ, so they'll have to stop landing more forces.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Darius, you have a really weird definition of 'good news'. Commander, I'll move in for a pickup once you get that base flattened. Don't keep me waiting.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_AttDef
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]We've got it from here, Argo. Thanks for the help.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Another job well done.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]That could have gone better. Let's debrief back in orbit, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AllyReinforcements
+	[Content]Argo, our forces are ready to assist in defending the base.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Employer_Reinforcements
+	[Content]Acknowledged. Commander, they'll stay near the base and intercept any hostiles that make it past your lance.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretObjWarning
+	[Content]PLACEHOLDER. Commander, enemy turrets identified.
+
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DefenderWarning_Primary
+	[Content]PLACEHOLDER Commander, I'm seeing hostile defenders surrounding the enemy base. Primary Version.
+
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]PLACEHOLDER. We can't complete the contract until those units are destroyed. Primary Version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DefenderWarning_Secondary
+	[Content]Hey, boss, I hate to bring bad news, but I've got eyes on enemy units surrounding their base. Looks like you're gonna have to shoot your way through.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_Defenders_Secondary
+
+[Dialogue]Dialogue_Interrupt_KilledFirstBuilding
+	[Content]That's the first target structure down, Commander. Keep up the pressure.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_BuildingDamaged
+	[Content]Argo, our facility is taking fire over here. We need you to draw that fire off, or we're dead!
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_BuildingDestroyed
+	[Content]Argo, we've lost one of our structures. You've got to move faster, or we'll lose them all!
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_OneBuildingLeft
+	[Content]Argo, we're under heavy-- [static]-- hold out-- [static]
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Dammit! Commander, we've only got one building left. If it goes down, I'm scrubbing the contract.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	
+[Dialogue]Dialogue_Interrupt_BuildingDamaged_AllyFallBack
+	[Content]Argo, we're falling back to our base to hold off the attackers. Good luck out there.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EnemyBaseDestroyed
+	[Content]That's the last structure, Commander. That should slow down the attackers. Meyer, are you ready for pickup?
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Affirmative, XO. Let's get out of here, boss.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_PrimariesComplete
+	[Content]Commander, we've completed all the primary objectives and you're clear to extract.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I'm on station to pick you up here whenever you're ready, boss.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_AttDef
+	[Content]As long as you're still in the AO, Commander, you'll need to keep the {TEAM_EMP.FactionDef.Demonym} base secure.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EverythingDead_BaseIncomplete
+	[Content]Commander, that's all the enemy forces. There's a {TEAM_EMP.FactionDef.Demonym} lance ready to relieve you.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]When you're ready to extract, Sumire will pick you up at this location.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_AttDef
+
+[Dialogue]Dialogue_Interrupt_HostileAllArrival_Primary
+	[Content]PLACEHOLDER. Heads up, commander, a lance of {TEAM_HOST.FactionDef.Demonym} units just entered the area. They're hostile to everyone! Primary version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]PLACEHOLDER. We'll have to destroy that lance if we want to complete the mission. Primary version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_HostileAllArrival_Secondary
+	[Content]PLACEHOLDER. Heads up, commander, a lance of {TEAM_HOST.FactionDef.Demonym} units just entered the area. They're hostile to everyone! Secondary version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]PLACEHOLDER. If we destroy them we'll get a hefty bonus. Secondary version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EnemyAlly_Primary
+	[Content]PLACEHOLDER. Commander, I'm seeing hostile {TEAM_TAR_ALLY.FactionDef.Demonym} units in the area. Our target brought in allies for backup. Primary Version.
+
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]PLACEHOLDER. Our employer is saying we NEED to kill those units. Prepare to engage. Primary Version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EnemyAlly_Secondary
+	[Content]PLACEHOLDER. Commander, I'm seeing hostile {TEAM_TAR_ALLY.FactionDef.Demonym} units in the area. Our target brought in allies for backup. Secondary Version.
+
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]PLACEHOLDER. If we kill these units our employer will give us sweet bonus. Secondary Version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AdditionalForces_Primary
+	[Content]PLACEHOLDER. A lance of hostile {TEAM_TAR.FactionDef.Demonym} has landed nearby. Primary Version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]PLACEHOLDER. Our employer wants us to kill those guys. This mission isn't ending until they die. Primary Version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AdditionalForces_Secondary
+	[Content]PLACEHOLDER. A lance of hostile {TEAM_TAR.FactionDef.Demonym} has landed nearby. Secondary Version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]PLACEHOLDER. Kill those guys and our employer will give us some extra cash. Secondary Version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropWarning_HostileAll_Primary
+	[Content]Commander, more hostiles are entering the area. I've marked their LZ.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Target_HostileAll_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_HostileAll_Secondary
+	[Content]Commander, more hostiles are entering the area. I've marked their LZ.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Target_HostileAll_Secondary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_AdditionalForces_Primary
+	[Content]Commander, we've got an enemy lance moving towards the {TEAM_EMP.FactionDef.Demonym} base.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropWarning_AdditionalForces_Secondary
+	[Content]Commander, we've got an enemy lance moving towards the {TEAM_EMP.FactionDef.Demonym} base.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Reinforcement1
+	[Content]Commander, {TEAM_TAR.FactionDef.Demonym} reinforcements are inbound to this location.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Target_Reinforcements1
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Reinforcement2
+	[Content]Commander, {TEAM_TAR.FactionDef.Demonym} reinforcements are inbound to this location.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Target_Reinforcements2
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Reinforcement3
+	[Content]Commander, {TEAM_TAR.FactionDef.Demonym} reinforcements are inbound to this location.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Target_Reinforcements3
+		
+[Dialogue]Dialogue_Interrupt_ReinforcementArrival1
+	[Content]Commander, a {TEAM_TAR.FactionDef.Demonym} Leopard just dropped another lance into the AO.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Target_Reinforcements1
+	[Content]They'll keep landing more units until you take out that base.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_ReinforcementArrival2
+	[Content]That's another {TEAM_TAR.FactionDef.Demonym} lance in the field. Getting kinda crowded down there.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_ReinforcementArrival3
+	[Content]Another enemy lance in the AO, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]PlayerLanceSpawner
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+	[Lance]LanceSpawner
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]LanceSpawner (1)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_convoy|lance_type_turret
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Employer_Reinforcements
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_dynamic_difficulty
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]-1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Friendly_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_turret
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_turret
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_turret
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_turret
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_Attackers_Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_turret|lance_type_convoy|lance_type_vehicle
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_medium|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_mech|unit_lance_support
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Attackers_Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_assault|lance_type_dynamic_difficulty
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Turret
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_turret
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_turret
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_turret
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_turret
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Defenders_Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_turret|lance_type_convoy|lance_type_vehicle
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_medium|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechdef_spider_SDR-5V
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_mech|unit_jumpok
+			[SpawnEffects]
+			[PilotDef]pilot_d1_recruit
+	[Lance]Lance_Enemy_Defenders_Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_defense|lance_type_dynamic_difficulty
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_AdditionalForces_Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_turret|lance_type_convoy|lance_type_vehicle
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_mech|unit_lance_support
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_mech|unit_lance_assassin
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_AdditionalForces_Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_turret|lance_type_convoy|lance_type_vehicle
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_mech|unit_medium
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_EnemyReinforcements_Wave1
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_dynamic_difficulty
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_EnemyReinforcements_Wave2
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_cavalry|lance_type_dynamic_difficulty
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_EnemyReinforcements_Wave3
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_assault|lance_type_dynamic_difficulty
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+	[Lance]Lance_EnemyAlly_Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_convoy|lance_type_turret
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_medium|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_mech|unit_lance_vanguard
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_EnemyAlly_Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_convoy|lance_type_turret
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_medium|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_mech|unit_jumpok
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+	[Lance]Lance_HostileAll_Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_support|lance_type_turret|lance_type_convoy|lance_type_vehicle
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_medium|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_mech|unit_lance_support
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_HostileAll_Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]
+		[ExcludedTags]lance_type_support|lance_type_convoy|lance_type_turret|lance_type_vehicle
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_medium|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_vehicle
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]unit_light|unit_mech|unit_lance_vanguard
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+

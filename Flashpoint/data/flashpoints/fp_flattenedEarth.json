@@ -39,6 +39,6 @@
     "RewardCollectionID" : "itemCollection_loot_FP_generic_rare_double",
     "UnitDropTonnageHint" : "None",
     "LanceDropTonnageHint" : "None",
-    "FlashpointShortDescription" : "A seditionist group has taken root in the Capellan system of Cavalor. House Liao will handsomely reward any company that will root out and destroy these traitors to the Commonwealth.",
+    "FlashpointShortDescription" : "A seditionist group has taken root in the Capellan system of Cavalor. House Liao will handsomely reward any company that will root out and destroy these traitors to the Confederation.",
     "FlashpointDescriberCastDefId" : "castDef_LiaoRepDefault"
 }

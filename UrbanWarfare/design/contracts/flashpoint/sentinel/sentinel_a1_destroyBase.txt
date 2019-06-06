@@ -1,0 +1,326 @@
+// Contract sentinel_a1_destroyBase 
+
+		
+[ID]sentinel_a1_destroyBase
+[Name]Hearts and Minds II
+[Template]DestroyBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]Tiesa "Navaja" Norkus has holed up in the Emerald Dawn's most heavily fortified stronghold, and she's using a number of civilian hostages as human shields. Unfortunately, there isn't much that we can do for those people; Lady Cunningham has made it very clear that eliminating the Emerald Dawn's leadership is imperative, and it'll be impossible for us to take out Norkus without incurring collateral damage.
+[LongDesc]Sometimes you're left with nothing but bad options. This is one of those times, but we're professionals, and it's on us to handle it.
+[Salvage]12
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center 
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]200
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]55|55|55|55
+
+[MaxNumberOfPlayerUnits]4
+			
+// Contract Objectives
+[ContractObjective]Destroy the Emerald Dawn's Stronghold
+	[Description]Destroy Enemy Structures and Extract Safely
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy Emerald Dawn Stronghold
+		[Description]The objective to destroy the targeted buildings.
+
+	// Optional Objective
+	[Objective]Eliminate Emerald Dawn Garrison
+		[Description]The primary objective to destroy the garrison / defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]HIDDEN Objective: Destroy Base Turrets
+		[Description]HIDDEN Objective: Destroy Base Turrets
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Destroy Emerald Dawn Irregulars
+		[Description]The objective to eliminate enemy reinforcements who attack.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Get to the evac zone
+		[Description]The objective for the player to extract their units.
+			
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_OpposingForce
+//		Lance_Enemy_BaseTurrets
+//		Lance_Enemy_Ambushers
+//		Region_Ambush
+//		Region_Escape
+			
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]Your Davion masters aren't going to like this, scum. There are two dozen flag-waving Federation citizens in here who're gonna wind up in pieces if you don't stand down now.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_sentinel_InsurgentWifeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]That's a damn shame, but if you wanna hide behind human shields, we're in no position to stop you. What we <i>can</i> do is keep you from making any more victims.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Nothing will change if you kill me. You may have us outgunned, but we're fighting for our <i>home</i>. Whatever happens today, the Emerald Dawn will live on.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_sentinel_InsurgentWifeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You don't get it, do you? We don't care whether your political movement survives or not. You're just a paycheck to us.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Mercenary pig. You believe in <i>nothing</i>, and I will <i>reduce you</i> to nothing. I will make you <i>pay</i> for my husband's death.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_sentinel_InsurgentWifeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]That's done it, Commander. The Emerald Dawn's leadership is dead.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]And so are the hostages. Can't say I feel great about that.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]None of us do. But we all agreed—
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I know what we agreed. That doesn't mean I have to like it.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I'm getting a new sensor contact, XO. Looks like Lady Cunningham's DropShip. She's here for her photo op, and she probably isn't gonna like what she sees.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]I'm scrubbing the mission, Commander. Lady Cunningham will have to find someone else to deal with Tiesa Norkus and her Emerald Dawn.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AmbushWarning
+	[Content]We're pretty deep in Emerald Dawn territory, Commander. Five'll get you ten the area's crawling with hostiles, so keep your eyes peeled.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_cavalry
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Emerald Dawn Garrison
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Emerald Dawn Garrison
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Emerald Dawn Garrison
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Emerald Dawn Garrison
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Emerald Dawn Irregular
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Emerald Dawn Irregular
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Emerald Dawn Irregular
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]Emerald Dawn Irregular
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

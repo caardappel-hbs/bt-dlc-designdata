@@ -39,15 +39,15 @@
 
 	// Primary Objective
 	[Objective]Place Artillery Beacon Alpha
-		[Description]Place Beacon Alpha for Artillery Desgination
+		[Description]Place Beacon Alpha for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Artillery Beacon Bravo
-		[Description]Place Beacon Bravo for Artillery Desgination
+		[Description]Place Beacon Bravo for Artillery Designation
 
 	// Primary Objective
 	[Objective]Place Artillery Beacon Charlie
-		[Description]Place Beacon Charlie for Artillery Desgination
+		[Description]Place Beacon Charlie for Artillery Designation
 
 	// Primary Objective
 	[Objective]Await Further Instructions

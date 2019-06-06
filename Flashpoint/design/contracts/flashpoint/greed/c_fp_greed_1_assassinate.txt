@@ -89,6 +89,7 @@
 		[Emote]Default
 		[Audio]NONE
 		[Focus]Lance_Enemy_AssassinationTarget
+		[RevealRadius]0
 	[Content]What's wrong, Tianyu? You afraid to fight me yourself? You're a pathetic little man, and when I'm done with your hirelings, I'll turn my guns on you.
 		[Color]1|1|1|1
 		[Cast]castDef_FP_Greed_CourierDefault

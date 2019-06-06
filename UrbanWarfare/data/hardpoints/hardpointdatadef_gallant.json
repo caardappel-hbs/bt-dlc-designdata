@@ -1,0 +1,48 @@
+{
+    "ID" : "hardpointdatadef_gallant",
+    "HardpointData" : [
+        {
+            "location" : "front",
+            "weapons" : [
+                [
+                    "chrPrfWeap_gallant_front_generic_eh1"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        },
+        {
+            "location" : "turret",
+            "weapons" : [
+                [
+                    "chrPrfWeap_gallant_turret_ac10_bh1"
+                ],
+                [
+                    "chrPrfWeap_gallant_turret_mg_ah1"
+                ],
+                [
+                    "chrPrfWeap_gallant_turret_mg_ah2"
+                ],
+                [
+                    "chrPrfWeap_gallant_turret_mg_ah3"
+                ],
+                [
+                    "chrPrfWeap_gallant_turret_mg_ah4"
+                ],
+                [
+                    "chrPrfWeap_gallant_turret_generic_eh1"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        }
+    ]
+}

@@ -1,0 +1,500 @@
+// Contract prize_a1_defendBase 
+
+		
+[ID]prize_a1_defendBase
+[Name]One Man's Trash II
+[Template]DefendBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]The last time I checked, Binton and Modge had a bunch of combat vehicles in the streets around my time-share. Maybe a light 'Mech or two, I can't say for sure. Get 'em off my back, and then we'll conclude our business with the antique staplers.
+[LongDesc]Corbu's time-share is in a civilian housing development, not a military base. We're gonna have to hustle if we want to protect it.
+[Salvage]12
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center 
+[ContractDisplayStyle]BaseFlashpoint
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+
+[MapMood]UrbanAfternoon
+
+// Tonnage
+[LanceMinTonnage]-1
+[LanceMaxTonnage]200
+[MechMinTonnages]-1|-1|-1|-1
+[MechMaxTonnages]55|55|55|55
+
+[MaxNumberOfPlayerUnits]4
+			
+// Contract Objectives
+[ContractObjective]Protect Ed Corbu's Time-Share Condominium
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Defend Ed Corbu's Condo Complex
+		[Description]Defend Targetted Base Structures from Attackers
+
+	// Optional Objective
+	[Objective]Destroy the hostile mercenaries
+		[Description]Destroy the enemy vanguard force, the first wave.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Protect All Condo Complex Buildings
+		[Description]Optional objective to keep ALL target structures intact. 
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Hold Out for Reinforcements
+		[Description]Objective for tracking the time left in the mission. While the player it told to Hold Out for Reinforcements
+
+	// Optional Objective
+	[Objective]Escort Engineer APCs to Base Defenses
+		[Description]Escort Engineer APCs to Base Defenses in order to take control of them.
+
+
+	// Optional Objective
+	[Objective]Hidden Objetive: Destroy the Second Lance
+		[Description]Hidden Objetive: Destroy the Second Lance
+
+
+	// Optional Objective
+	[Objective]Hidden Objective: Destroy the Third Lance
+		[Description]Hidden Objective: Destroy the Third Lance
+
+
+	// Optional Objective
+	[Objective]Baddies Inbound
+		[Description]
+			
+// Optional Chunks
+[OptionalChunk]Chunk_EscortAPC_DefensiveTurrets (Bonus)|off
+[OptionalChunk]Chunk_Wave3Attackers (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_Wave1Attackers
+//		Lance_Neutral_BaseTurrets
+//		Lance_Enemy_BaseTurrets
+//		Lance_Friendly_BaseTurrets
+//		Lance_Escort
+//		Lance_Enemy_Wave2Attackers
+//		Lance_Enemy_Wave3Attackers
+//		Region_EscortDestination
+			
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]Eyes up, Modge. Corbu's pet mercenaries are here.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_BintonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Took 'em long enough. But now they're gonna give us what's ours, aren't they? 'Cause they know their buddy Ed will pay for it if they don't. So they'll relinquish our treasure, nice and easy, and then fly off into the sunset together.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_ModgeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_Wave1Attackers
+	[Content]There isn't any treasure, pal. It's just a bunch of staplers and desk lamps. That's what your people were fighting over, by the way.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]I can see why you're working with Corbu. You're as full of shit as he is. Two peas in a pod, you are.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_BintonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Never could stand peas, the little green bastards. Why, I feel ill just thinking about 'em. <i>Violently</i> ill, if you catch my meaning.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_ModgeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+	[Content]Gods. Leave it to Corbu to find the two mercs on Glentworth who'd try to intimidate us with a vegetable metaphor. Please, Commander—for the sake of a grateful universe—let's put these jackasses in the ground.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Spawner_PlayerLance
+
+
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]That's done it, Commander! By all the gods, you have <i>done</i> it. Binton and Modge are dead—
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_CorbuDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Our <i>foot soldiers</i> are dead, you idiot. <i>We</i> are alive and well, and we will <i>come</i> for you!
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_BintonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Best of luck with that, pal—I'll be long gone before you get here. I'm done with this condo, I'm done with Louth Abbey, I'm done with this entire gods-damned <i>system</i>.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_CorbuDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I swear, Corbu, if you split with <i>my</i> treasure…
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_ModgeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]There <i>is</i> no treasure! It's staplers! Just staplers!
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]If I split, you'll do what exactly, Modge? Cry? Go ahead, see where it gets you. Now, if you'll excuse me, I'm gonna accept {COMMANDER.Callsign}'s delivery, fence it to my associates, and fly off into the sunset. I'm finished here. Corbu out.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_CorbuDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]Aww, man. What an absolute mess. And to think, all of this could've been avoided if you'd given us our treasure.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_BintonDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]THERE IS NO TREASURE!
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]And now, there's no Corbu, either. Tough break for you, and an even tougher break for him.
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_ModgeDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_CapturedTurrets
+	[Content]We're in position! All engineers have disembarked from the personnel carriers. The APCs will scatter and support you. Keep the turrets online and we'll keep firing.
+		[Color]1|1|1|1
+		[Cast]castDef_KuritaDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_OneBuildingLeft
+	[Content]Uh, hey, Commander {COMMANDER.LastName}? My building is the last one standing here. I'd really, really like it if you could <i>keep</i> it standing! Please?
+		[Color]1|1|1|1
+		[Cast]castDef_UW_thePrize_CorbuDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretBriefing
+	[Content]Commander, on this outing we have some additional support from our employer.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]They have point defenses set up around the base. However, they are offline.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]We have a friendly convoy of engineers eager to get at those defenses and bring them online.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Escort them safely to the generators. We can boost our defensive capabilities with those turrets activated. Good luck!
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]
+
+[Team]player2Team
+
+[Team]employerTeam
+	[Lance]Lance_Friendly_BaseTurrets
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+	[Lance]Lance_Escort
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_convoy
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_Wave1Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_vehicle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Wave2Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_vehicle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Wave3Attackers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_vehicle
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+	[Lance]Lance_Neutral_BaseTurrets
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+
+[Team]hostileToAllTeam
+
