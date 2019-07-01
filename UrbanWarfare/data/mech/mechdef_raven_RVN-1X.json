@@ -33,12 +33,12 @@
         "UIName" : "Raven RVN-1X",
         "Id" : "mechdef_raven_RVN-1X",
         "Name" : "Raven",
-        "Details" : "The RVN-1X is a light 'Mech designed specifically to carry a new generation of electronic warfare gear. The Raven excells at support and scouting, and its standard complement of SRMs and medium lasers allows it to fight well in a pinch.",
+        "Details" : "The RVN-1X is a light 'Mech designed specifically to carry a new generation of electronic warfare gear. The Raven excels at support and scouting, and its standard complement of SRMs and medium lasers allows it to fight well in a pinch.",
         "Icon" : "uixTxrIcon_raven"
     },
     "RequiredToSpawnCompanyTags" : {
         "items" : [
-            
+            "flashpoint_uw1_complete"
         ],
         "tagSetSourceFile" : ""
     },

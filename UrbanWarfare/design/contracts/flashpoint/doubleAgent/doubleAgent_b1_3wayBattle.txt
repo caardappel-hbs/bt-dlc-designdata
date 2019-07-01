@@ -1061,7 +1061,7 @@
 	[Lance]Lance_Target_EnemyForce
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]Liao
+		[Tags]Davion
 		[ExcludedTags]
 		[SpawnEffects]
 		[DifficultyAdjustment]0
@@ -1391,7 +1391,7 @@
 	[Lance]Lance_HostileAll_Primary
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]Davion
+		[Tags]Liao
 		[ExcludedTags]
 		[SpawnEffects]
 		[DifficultyAdjustment]0

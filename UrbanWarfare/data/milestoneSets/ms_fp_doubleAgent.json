@@ -548,14 +548,14 @@
                                 "",
                                 "doubleAgent_a1_3wayBattle",
                                 "Liao",
-                                "TaurianConcordat",
+                                "Davion",
                                 "5",
                                 "ms_fp_doubleAgent_101_A-Talk",
                                 null,
                                 null,
                                 null,
                                 null,
-                                "Davion"
+                                "TaurianConcordat"
                             ]
                         },
                         {
@@ -794,14 +794,14 @@
                                 "",
                                 "doubleAgent_b1_3wayBattle",
                                 "TaurianConcordat",
-                                "Liao",
+                                "Davion",
                                 "5",
                                 "ms_fp_doubleAgent_201_B-Talk",
                                 null,
                                 null,
                                 null,
                                 null,
-                                "Davion"
+                                "Liao"
                             ]
                         },
                         {
@@ -1040,14 +1040,14 @@
                                 "",
                                 "doubleAgent_c1_3wayBattle",
                                 "MagistracyOfCanopus",
-                                "Liao",
+                                "TaurianConcordat",
                                 "5",
                                 "ms_fp_doubleAgent_301_C-Talk",
                                 null,
                                 null,
                                 null,
                                 null,
-                                "TaurianConcordat"
+                                "Liao"
                             ]
                         },
                         {
@@ -1282,7 +1282,7 @@
                             "additionalValues" : [
                                 "itemCollection_loot_none",
                                 "CompletedWithoutReward"
-							]
+                            ]
                         }
                     ],
                     "ForceEvents" : [],

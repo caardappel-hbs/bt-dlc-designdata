@@ -8,7 +8,7 @@
     "scope" : "MID_CAMPAIGN",
     "finalDifficulty" : 0,
     "representativeCastDefIDOverride" : null,
-    "missionSuccessStatementOverride" : null,
+    "missionSuccessStatementOverride" : "Nicely done, pal! You just pulled my feet out of the fire, big time!",
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "The last time I checked, Binton and Modge had a bunch of combat vehicles in the streets around my time-share. Maybe a light 'Mech or two, I can't say for sure. Get 'em off my back, and then we'll conclude our business with the antique staplers.",

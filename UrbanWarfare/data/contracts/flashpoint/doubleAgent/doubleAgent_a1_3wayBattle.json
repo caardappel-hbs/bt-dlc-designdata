@@ -3898,7 +3898,7 @@
                 "lanceDefId" : "Tagged",
                 "lanceTagSet" : {
                     "items" : [
-                        "TaurianConcordat"
+                        "Davion"
                     ],
                     "tagSetSourceFile" : "tags/LanceTags"
                 },
@@ -5376,7 +5376,7 @@
                 "lanceDefId" : "Tagged",
                 "lanceTagSet" : {
                     "items" : [
-                        "Davion"
+                        "TaurianConcordat"
                     ],
                     "tagSetSourceFile" : "tags/LanceTags"
                 },

@@ -3898,7 +3898,7 @@
                 "lanceDefId" : "Tagged",
                 "lanceTagSet" : {
                     "items" : [
-                        "Liao"
+                        "Davion"
                     ],
                     "tagSetSourceFile" : "tags/LanceTags"
                 },
@@ -5376,7 +5376,7 @@
                 "lanceDefId" : "Tagged",
                 "lanceTagSet" : {
                     "items" : [
-                        "Davion"
+                        "Liao"
                     ],
                     "tagSetSourceFile" : "tags/LanceTags"
                 },

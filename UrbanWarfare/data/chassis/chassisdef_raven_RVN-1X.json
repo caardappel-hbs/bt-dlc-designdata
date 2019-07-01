@@ -8,7 +8,7 @@
         "UIName" : "Raven",
         "Id" : "chassisdef_raven_RVN-1X",
         "Name" : "Raven",
-        "Details" : "The RVN-1X is a light 'Mech designed specifically to carry a new generation of electronic warfare gear. The Raven excells at support and scouting, and its standard complement of SRMs and medium lasers allows it to fight well in a pinch.",
+        "Details" : "The RVN-1X is a light 'Mech designed specifically to carry a new generation of electronic warfare gear. The Raven excels at support and scouting, and its standard complement of SRMs and medium lasers allows it to fight well in a pinch.",
         "Icon" : "uixTxrIcon_raven"
     },
     "MovementCapDefID" : "movedef_raven_RVN-1X",
@@ -18,7 +18,7 @@
     "PrefabBase" : "raven",
     "VariantName" : "RVN-1X",
     "StockRole" : "Recon & Electronic Warfare",
-    "YangsThoughts" : "The Raven is a very recent design by the Cappellans. It has a decent punch for its weight at close range, but the real star here is its electronic warfare capabilities. If you keep this 'Mech safe, it'll really shift things in your favor.",
+    "YangsThoughts" : "The Raven is a very recent design by the Capellans. It has a decent punch for its weight at close range, but the real star here is its electronic warfare capabilities. If you keep this 'Mech safe, it'll really shift things in your favor.",
     "Tonnage" : 35,
     "InitialTonnage" : 15.5,
     "weightClass" : "LIGHT",

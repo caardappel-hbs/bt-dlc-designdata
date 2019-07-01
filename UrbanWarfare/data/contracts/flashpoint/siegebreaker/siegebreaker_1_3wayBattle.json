@@ -842,7 +842,7 @@
                 "EncounterObjectGuid" : "51aa5837-b540-42be-b8be-26b37bfcf976"
             },
             "title" : "Cheval's Lance Must Survive",
-            "description" : "ATTN ANDREW - Chevral's lance must survive",
+            "description" : "ATTN ANDREW - Cheval's lance must survive",
             "isPrimary" : true,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
@@ -3339,7 +3339,7 @@
                         "unitSpawnPoint" : {
                             "EncounterObjectGuid" : "805d4192-850e-446e-afe4-cdb8a30685b4"
                         },
-                        "customUnitName" : "Chevral",
+                        "customUnitName" : "Cheval",
                         "customHeraldryDefId" : "",
                         "unitType" : "Mech",
                         "unitDefId" : "mechDef_InheritLance",

@@ -236,8 +236,7 @@
 	// Optional Objective
 	[Objective]Destroy Reinforcement Wave 1
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Reinforcements 1 Attack Timer
@@ -250,8 +249,7 @@
 	// Optional Objective
 	[Objective]Destroy Reinforcement Wave 2
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Reinforcements 2 Attack Timer
@@ -264,8 +262,7 @@
 	// Optional Objective
 	[Objective]Destroy Reinforcement Wave 3
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Reinforcements 3 Attack Timer

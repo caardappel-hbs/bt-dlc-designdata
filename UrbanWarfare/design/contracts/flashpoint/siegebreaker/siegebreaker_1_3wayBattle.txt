@@ -245,7 +245,7 @@
 
 	// Primary Objective
 	[Objective]Cheval's Lance Must Survive
-		[Description] ATTN ANDREW - Chevral's lance must survive
+		[Description] ATTN ANDREW - Cheval's lance must survive
 
 	// Primary Objective
 	[Objective]Cheval's lance must reach the evac zone
@@ -959,7 +959,7 @@
 		[Unit]Mech
 			[UnitDef]mechDef_InheritLance
 			// Unit Def: the specified unit will be spawned
-			[CustomName]Chevral
+			[CustomName]Cheval
 			[Tags]
 			[SpawnEffects]
 			[PilotDef]pilotDef_InheritLance

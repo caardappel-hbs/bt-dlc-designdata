@@ -8,7 +8,7 @@
     "scope" : "MID_CAMPAIGN",
     "finalDifficulty" : 0,
     "representativeCastDefIDOverride" : null,
-    "missionSuccessStatementOverride" : null,
+    "missionSuccessStatementOverride" : "Nicely done, pal! You just pulled my feet out of the fire, big time!",
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "I've told Binton and Modge that you're gonna drop their \"treasure\" in a field about a hundred klicks southeast of Louth Abbey. That should put you far enough away to avoid collateral damage, so feel free to go after 'em with whatever BattleMechs you like. Just be aware that there's nothing stopping them from doin' the same to you.",

@@ -3898,7 +3898,7 @@
                 "lanceDefId" : "Tagged",
                 "lanceTagSet" : {
                     "items" : [
-                        "Liao"
+                        "TaurianConcordat"
                     ],
                     "tagSetSourceFile" : "tags/LanceTags"
                 },
@@ -5376,7 +5376,7 @@
                 "lanceDefId" : "Tagged",
                 "lanceTagSet" : {
                     "items" : [
-                        "TaurianConcordat"
+                        "Liao"
                     ],
                     "tagSetSourceFile" : "tags/LanceTags"
                 },

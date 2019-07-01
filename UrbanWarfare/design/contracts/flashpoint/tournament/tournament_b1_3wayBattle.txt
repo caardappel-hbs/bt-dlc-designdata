@@ -11,6 +11,11 @@
 [LongDesc]She got through that entire briefing without saying, "The hunter will become the hunted." I'm pleasantly surprised.
 [Salvage]12
 [FOW]Surveyed
+
+[RepresentativeCastDefIDOverride]castDef_UW_urbieDerby_JackhammerDefault
+[MissionSuccessStatementOverride]That was a thing of beauty, Commander. I can't tell you how much I enjoyed watching you put Horvat in his place.
+[BadFaithStatementOverride]That was pathetic, Commander. I shouldn't have bothered sticking my neck out to recruit you.
+[GoodFaithStatementOverride]Well, that was a disaster, but at least you tried. You'd better get out of here while you still can, Commander. Best of luck.
 			
 // Misc - Flashpoint CMD Center - No Pay
 [ContractDisplayStyle]BaseFlashpoint

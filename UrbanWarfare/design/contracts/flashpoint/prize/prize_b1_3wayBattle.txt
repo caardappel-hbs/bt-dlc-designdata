@@ -11,6 +11,8 @@
 [LongDesc]Binton and Modge were fighting against each other on Men Lojowen. They may be allies of convenience for now, but I'll bet that'll change when they've got the "treasure" in their sights.
 [Salvage]12
 [FOW]Surveyed
+
+[MissionSuccessStatementOverride]Nicely done, pal! You just pulled my feet out of the fire, big time!
 			
 // Misc - Flashpoint CMD Center 
 [ContractDisplayStyle]BaseFlashpoint

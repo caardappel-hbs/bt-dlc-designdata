@@ -11,6 +11,8 @@
 [LongDesc]Corbu's time-share is in a civilian housing development, not a military base. We're gonna have to hustle if we want to protect it.
 [Salvage]12
 [FOW]Surveyed
+
+[MissionSuccessStatementOverride]Nicely done, pal! You just pulled my feet out of the fire, big time!
 			
 // Misc - Flashpoint CMD Center 
 [ContractDisplayStyle]BaseFlashpoint
