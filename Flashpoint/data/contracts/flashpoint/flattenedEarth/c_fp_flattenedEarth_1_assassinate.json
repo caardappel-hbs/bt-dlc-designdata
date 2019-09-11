@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "Assassinate",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -201,6 +200,7 @@
                 "EncounterObjectGuid" : "19e8fa2a-f850-42f0-a067-15fcafcc8123"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -209,6 +209,7 @@
                 "EncounterObjectGuid" : "9a27ee75-f33f-45ac-b0d3-ebc321ae7ffc"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -307,7 +308,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "That was an\u2026 unwise\u2026 display of disrespect, Commander Elliathy. I'd encourage you to change your tone before the Chancellor orders your death as well.",
+                    "words" : "That was an… unwise… display of disrespect, Commander Elliathy. I'd encourage you to change your tone before the Chancellor orders your death as well.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -580,6 +581,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_flattenedEarth_1_assassinate",
     "disableNegotations" : false,
@@ -1306,5 +1308,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "Assassinate",
+    "contractTypeID" : "Assassinate"
 }

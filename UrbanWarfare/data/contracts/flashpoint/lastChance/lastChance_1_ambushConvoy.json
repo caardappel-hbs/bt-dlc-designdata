@@ -11,13 +11,12 @@
     "missionSuccessStatementOverride" : null,
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
-    "shortDescription" : "My daughter will arrive shortly at a private compound, and Luthendorff is on the way to greet her. Intercept and eliminate this criminal. But be on guard\u2014she has bodyguards with her, although I expect you to easily outmaneuver and outsmart them.",
+    "shortDescription" : "My daughter will arrive shortly at a private compound, and Luthendorff is on the way to greet her. Intercept and eliminate this criminal. But be on guard—she has bodyguards with her, although I expect you to easily outmaneuver and outsmart them.",
     "longDescription" : "You heard Lady Suiko. Let's put Luthendorff down, {COMMANDER.FirstName}.",
     "salvagePotential" : 12,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "AmbushConvoy",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -238,7 +237,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I shall leave you to it, Mr. Oliveira. Let none of you forget\u2014this woman is an honorless war profiteer. Show her no mercy!",
+                    "words" : "I shall leave you to it, Mr. Oliveira. Let none of you forget—this woman is an honorless war profiteer. Show her no mercy!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -279,7 +278,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Don't celebrate too soon, Commander. We're being hailed by a DropShip with House Nakano's heraldry\u2026",
+                    "words" : "Don't celebrate too soon, Commander. We're being hailed by a DropShip with House Nakano's heraldry…",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1297,5 +1296,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "AmbushConvoy",
+    "contractTypeID" : "AmbushConvoy"
 }

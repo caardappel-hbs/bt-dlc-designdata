@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "DestroyBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -269,7 +268,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Attention, incoming BattleMechs! You are <i>trespassing</i> on\u2026 wait. You're the brutes that Mother sent to kill Sister. Is Yvonne dead? Can I see the body?",
+                    "words" : "Attention, incoming BattleMechs! You are <i>trespassing</i> on… wait. You're the brutes that Mother sent to kill Sister. Is Yvonne dead? Can I see the body?",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -301,7 +300,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "You've sent them <i>here</i>, to the Red Roost? My poor, deluded sister. My bodyguards will crush them, and I will drink in the spectacle like a fine port wine. And then, when I tell Mother what you've done, <i>she</i> will\u2014",
+                    "words" : "You've sent them <i>here</i>, to the Red Roost? My poor, deluded sister. My bodyguards will crush them, and I will drink in the spectacle like a fine port wine. And then, when I tell Mother what you've done, <i>she</i> will—",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1316,5 +1315,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "DestroyBase",
+    "contractTypeID" : "DestroyBase"
 }

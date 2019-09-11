@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "DestroyBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -202,6 +201,7 @@
                 "EncounterObjectGuid" : "a5257151-5269-4222-9a0d-31001a70fe22"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -509,6 +509,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_allianceSteiner_2_destroyBase",
     "disableNegotations" : true,
@@ -1234,5 +1235,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "DestroyBase",
+    "contractTypeID" : "DestroyBase"
 }

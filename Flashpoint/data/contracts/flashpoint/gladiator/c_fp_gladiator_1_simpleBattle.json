@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "SimpleBattle",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -86,6 +85,7 @@
                 "EncounterObjectGuid" : "181d617b-02bc-4fd3-be25-d6d5cffb78de"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -134,7 +134,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Understand that these people aren't trained mercenaries. They're a motley crew of Solaris gladiators, pirates, and highwaymen. Most don't belong on the battlefield at all, let alone in a BattleMech's cockpit\u2026 it should be a trivial matter for you to smash them flat.",
+                    "words" : "Understand that these people aren't trained mercenaries. They're a motley crew of Solaris gladiators, pirates, and highwaymen. Most don't belong on the battlefield at all, let alone in a BattleMech's cockpit… it should be a trivial matter for you to smash them flat.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -323,6 +323,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -892,5 +893,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "SimpleBattle",
+    "contractTypeID" : "SimpleBattle"
 }

@@ -3,7 +3,7 @@
 		
 [ID]uw1_4_destroyBase
 [Name]Prototype IV
-[Template]DestroyBase
+[Template]DestroyBase|DestroyBase_RavenTutorial_Template
 
 // Difficulty is one of Easy, Medium, or Hard
 [Difficulty]Easy

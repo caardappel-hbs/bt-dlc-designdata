@@ -43,7 +43,6 @@
     ],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "FireMission",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -701,7 +700,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I won't lie, our window of oppurtunity for this strike is small and time is limited. You will likely have to split your lance in order to blace all the beacons in time.",
+                    "words" : "I won't lie, our window of oppurtunity for this strike is small and time is limited. You will likely have to split your lance in order to place all the beacons in time.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -758,7 +757,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "WThe target is destroyed. Pack it in, Commander. We're done here.",
+                    "words" : "The target is destroyed. Pack it in, Commander. We're done here.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1245,7 +1244,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, our window of oppurtunity for this strike is closing. At least half of our time has expired. You'll need to move quickly if you're to accomplish this.",
+                    "words" : "Commander, our window of opportunity for this strike is closing. At least half of our time has expired. You'll need to move quickly if you're to accomplish this.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2693,5 +2692,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "FireMission",
+    "contractTypeID" : "FireMission"
 }

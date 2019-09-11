@@ -12,12 +12,11 @@
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "Hunt down and eliminate Dominik \"Whistler\" Zhao, one of the two leaders of the Flak Jackals. Be advised that his personal BattleMech is equipped with LosTech weaponry and equipment.",
-    "longDescription" : "Remember, Dominik is a sniper\u2014he likes to sit back and punch holes in things at range, and his 'Mech is equipped to facilitate that. I'd suggest closing into knife-fight range if possible.",
+    "longDescription" : "Remember, Dominik is a sniper—he likes to sit back and punch holes in things at range, and his 'Mech is equipped to facilitate that. I'd suggest closing into knife-fight range if possible.",
     "salvagePotential" : 20,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "Assassinate",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -201,6 +200,7 @@
                 "EncounterObjectGuid" : "19e8fa2a-f850-42f0-a067-15fcafcc8123"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -209,6 +209,7 @@
                 "EncounterObjectGuid" : "9a27ee75-f33f-45ac-b0d3-ebc321ae7ffc"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -291,7 +292,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I wish you luck, I really do\u2026 not that it'll do you much good. I'm gonna drill your pilots, one by one, right through their little cockpits. And you're gonna watch me do it.",
+                    "words" : "I wish you luck, I really do… not that it'll do you much good. I'm gonna drill your pilots, one by one, right through their little cockpits. And you're gonna watch me do it.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -307,7 +308,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "There's our target, Boss. Remember, he's a sniper, and his 'Mech is outfitted with Star League\u2013era weaponry. If you try to engage him at long range, things could get messy.",
+                    "words" : "There's our target, Boss. Remember, he's a sniper, and his 'Mech is outfitted with Star League–era weaponry. If you try to engage him at long range, things could get messy.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -398,7 +399,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "No! That's not\u2014 [piercing screams][static]",
+                    "words" : "No! That's not— [piercing screams][static]",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -532,6 +533,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_headhunting_b1_assassinate",
     "disableNegotations" : false,
@@ -1257,5 +1259,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "Assassinate",
+    "contractTypeID" : "Assassinate"
 }

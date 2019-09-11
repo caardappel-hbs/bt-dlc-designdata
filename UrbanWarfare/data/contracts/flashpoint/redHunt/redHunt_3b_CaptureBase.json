@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -348,7 +347,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "\u2026 [static] \u2026",
+                    "words" : "… [static] …",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -364,7 +363,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "\u2026 [static] \u2026ello? Hello, do you copy? This is the <i>Invidious</i>. We copy and are standing on station. See you in a few.",
+                    "words" : "… [static] …ello? Hello, do you copy? This is the <i>Invidious</i>. We copy and are standing on station. See you in a few.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1345,5 +1344,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "CaptureBase",
+    "contractTypeID" : "CaptureBase"
 }

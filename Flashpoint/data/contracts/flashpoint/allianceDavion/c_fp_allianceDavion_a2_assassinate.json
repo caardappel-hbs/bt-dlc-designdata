@@ -11,13 +11,12 @@
     "missionSuccessStatementOverride" : null,
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
-    "shortDescription" : "Those aren't just reinforcements, Commander. That's our target: the CCAF commander, Lieutenant Colonel Song. As a reminder, they're a deadly MechWarrior as well as a skilled strategist. Their arrival on the field presents an opportunity\u2014if we act swiftly, we can achieve our goals here on Kern in a single strike, making this world an easy pickup when we mount the full-scale attack. This is it, Commander. Don't screw this up.",
+    "shortDescription" : "Those aren't just reinforcements, Commander. That's our target: the CCAF commander, Lieutenant Colonel Song. As a reminder, they're a deadly MechWarrior as well as a skilled strategist. Their arrival on the field presents an opportunity—if we act swiftly, we can achieve our goals here on Kern in a single strike, making this world an easy pickup when we mount the full-scale attack. This is it, Commander. Don't screw this up.",
     "longDescription" : "Yang's been filling me in about Song, Commander. He says they're supposed to be the best shot in the entire CCAF. We're going to be lucky to get out of this one without serious losses.",
     "salvagePotential" : 28,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "Assassinate",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -201,6 +200,7 @@
                 "EncounterObjectGuid" : "19e8fa2a-f850-42f0-a067-15fcafcc8123"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -209,6 +209,7 @@
                 "EncounterObjectGuid" : "9a27ee75-f33f-45ac-b0d3-ebc321ae7ffc"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -307,7 +308,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "\u2026Well, that seems pretty straightforward.",
+                    "words" : "…Well, that seems pretty straightforward.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -500,6 +501,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_allianceDavion_a2_assassinate",
     "disableNegotations" : true,
@@ -1223,5 +1225,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "Assassinate",
+    "contractTypeID" : "Assassinate"
 }

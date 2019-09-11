@@ -10,7 +10,6 @@
             "unit_mech",
             "unit_medium",
             "unit_role_brawler",
-            "unit_jumpOK",
 			"unit_release",
             "unit_dlc",
 			"unit_hatchetman",
@@ -19,7 +18,8 @@
 			"unit_hot",
 			"unit_speed_low",
 			"unit_armor_high",
-			"Kurita"
+			"Davion",
+            "Steiner"
         ],
         "tagSetSourceFile": ""
     },

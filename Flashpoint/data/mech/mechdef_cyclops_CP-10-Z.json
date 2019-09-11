@@ -9,7 +9,8 @@
 			"unit_range_short",
 			"unit_indirectFire",
 			"unit_hot",
-			"unit_armor_low"
+			"unit_armor_low",
+            "unit_role_sniper"
         ],
         "tagSetSourceFile": ""
     },

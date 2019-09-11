@@ -9,7 +9,7 @@
 		"Purchasable" : false
 	},
 	"MovementCapDefID" : "movedef_PACKRAT",
-	"PathingCapDefID" : "pathingdef_medium_wheeled",
+	"PathingCapDefID" : "pathingdef_light_wheeled",
 	"HardpointDataDefID" : "hardpointdatadef_packrat",
 	"PrefabIdentifier" : "chrPrfVhcl_packrat",
 	"PrefabBase" : "packrat",

@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "AmbushConvoy",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -201,6 +200,7 @@
                 "EncounterObjectGuid" : "2e0d2e69-6335-49ae-b2bb-61ff3185306b"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -346,7 +346,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Our ground teams report that none of the vehicles were occupied; they were all remotely piloted\u2014in other words, decoys. How aggravating.",
+                    "words" : "Our ground teams report that none of the vehicles were occupied; they were all remotely piloted—in other words, decoys. How aggravating.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -387,7 +387,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Did\u2026 did you just completely fail to accomplish anything at all, Commander? I lack the words to express my disappointment.",
+                    "words" : "Did… did you just completely fail to accomplish anything at all, Commander? I lack the words to express my disappointment.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -580,6 +580,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_allianceKurita_1_ambushConvoy",
     "disableNegotations" : false,
@@ -1305,5 +1306,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "AmbushConvoy",
+    "contractTypeID" : "AmbushConvoy"
 }

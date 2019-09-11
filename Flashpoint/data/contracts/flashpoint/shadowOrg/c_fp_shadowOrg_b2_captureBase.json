@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -203,6 +202,7 @@
                 "EncounterObjectGuid" : "a47386d9-3d67-4e83-ac45-ab438af31f4c"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -211,6 +211,7 @@
                 "EncounterObjectGuid" : "2ffe52ba-8dbe-4893-8161-4f33a01d4335"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -362,7 +363,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Hold your tongue or I will have you gagged, you miserable swine. And Commander\u2014thank you. My family is in your debt.",
+                    "words" : "Hold your tongue or I will have you gagged, you miserable swine. And Commander—thank you. My family is in your debt.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -512,7 +513,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "You're coming for me, eh? Please, by all means\u2014come close. This armory has turrets enough to tear your entire lance to pieces.",
+                    "words" : "You're coming for me, eh? Please, by all means—come close. This armory has turrets enough to tear your entire lance to pieces.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -571,6 +572,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : true,
@@ -1298,5 +1300,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "CaptureBase",
+    "contractTypeID" : "CaptureBase"
 }

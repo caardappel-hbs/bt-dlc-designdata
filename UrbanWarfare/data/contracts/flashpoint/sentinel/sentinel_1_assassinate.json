@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "Assassinate",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -376,7 +375,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Nicely done, Commander {COMMANDER.LastName}\u2014I knew that I could count on you. My personal DropShip is currently en route to New Rennes, where Tiesa Norkus\u2014 [static]",
+                    "words" : "Nicely done, Commander {COMMANDER.LastName}—I knew that I could count on you. My personal DropShip is currently en route to New Rennes, where Tiesa Norkus— [static]",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1357,5 +1356,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "Assassinate",
+    "contractTypeID" : "Assassinate"
 }

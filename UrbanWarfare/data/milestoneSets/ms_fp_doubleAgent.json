@@ -735,7 +735,7 @@
                         },
                         {
                             "typeString" : "System.Int32",
-                            "name" : "Reputation.Steiner",
+                            "name" : "Reputation.TaurianConcordat",
                             "value" : "-3",
                             "set" : false,
                             "valueConstant" : null
@@ -981,7 +981,7 @@
                         },
                         {
                             "typeString" : "System.Int32",
-                            "name" : "Reputation.Steiner",
+                            "name" : "Reputation.TaurianConcordat",
                             "value" : "7",
                             "set" : false,
                             "valueConstant" : null
@@ -1227,7 +1227,7 @@
                         },
                         {
                             "typeString" : "System.Int32",
-                            "name" : "Reputation.Steiner",
+                            "name" : "Reputation.TaurianConcordat",
                             "value" : "-3",
                             "set" : false,
                             "valueConstant" : null

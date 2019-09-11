@@ -11,13 +11,12 @@
     "missionSuccessStatementOverride" : null,
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
-    "shortDescription" : "Wallo's got a mercenary company on retainer to protect his private aerospace hangar, the imaginatively named \"Security Solutions, Inc.\" I looked 'em up, and they're the real deal\u2014they've got combat vehicles, BattleMechs, the works. But we'll have the element of surprise on our side, given that Wallo's never heard of us. That's something, right?",
+    "shortDescription" : "Wallo's got a mercenary company on retainer to protect his private aerospace hangar, the imaginatively named \"Security Solutions, Inc.\" I looked 'em up, and they're the real deal—they've got combat vehicles, BattleMechs, the works. But we'll have the element of surprise on our side, given that Wallo's never heard of us. That's something, right?",
     "longDescription" : "Let's hope this heist works out the way Yang said that it would.",
     "salvagePotential" : 12,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -380,7 +379,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I don't understand you people. You've captured my aerospace hangar and now you're\u2026 what? Running away?",
+                    "words" : "I don't understand you people. You've captured my aerospace hangar and now you're… what? Running away?",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -428,7 +427,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I appreciate the warning, Miss\u2026?",
+                    "words" : "I appreciate the warning, Miss…?",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -683,7 +682,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "You can say that again. I'm taking a look inside. Wallo's got something big in there, but I can't quite make out\u2026 oh. Oh, <i>wooooow</i>!",
+                    "words" : "You can say that again. I'm taking a look inside. Wallo's got something big in there, but I can't quite make out… oh. Oh, <i>wooooow</i>!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1473,5 +1472,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "CaptureBase",
+    "contractTypeID" : "CaptureBase"
 }

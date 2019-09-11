@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "DefendBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -65,8 +64,8 @@
             "isPrimary" : true,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : null,
-            "OnFailureDialogueGUID" : null
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
         },
         {
             "objective" : {
@@ -103,8 +102,8 @@
                 }
             ],
             "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : null,
-            "OnFailureDialogueGUID" : null
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
         },
         {
             "objective" : {
@@ -141,8 +140,8 @@
                 }
             ],
             "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : null,
-            "OnFailureDialogueGUID" : null
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
         },
         {
             "objective" : {
@@ -153,8 +152,8 @@
             "isPrimary" : true,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : null,
-            "OnFailureDialogueGUID" : null
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
         },
         {
             "objective" : {
@@ -165,8 +164,8 @@
             "isPrimary" : false,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : null,
-            "OnFailureDialogueGUID" : null
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
         },
         {
             "objective" : {
@@ -177,8 +176,8 @@
             "isPrimary" : false,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : null,
-            "OnFailureDialogueGUID" : null
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
         },
         {
             "objective" : {
@@ -189,8 +188,8 @@
             "isPrimary" : false,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : null,
-            "OnFailureDialogueGUID" : null
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
         },
         {
             "objective" : {
@@ -201,8 +200,8 @@
             "isPrimary" : false,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : null,
-            "OnFailureDialogueGUID" : null
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
         }
     ],
     "artilleryObjectiveList" : [],
@@ -365,7 +364,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, this is Grayson Carlyle. That was a hell of an ass kicking. Glad we were in salvaged 'Mechs. Listen, I don't have a bone to pick with you; I just need what's in that facility. I've got reinforcements landing shortly and\u2014 [static]",
+                    "words" : "Commander, this is Grayson Carlyle. That was a hell of an ass kicking. Glad we were in salvaged 'Mechs. Listen, I don't have a bone to pick with you; I just need what's in that facility. I've got reinforcements landing shortly and— [static]",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -397,7 +396,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "What the\u2014 Boss, I've got multiple lock-ons coming from the surface. They've got me in their crosshairs. What the hell is this?",
+                    "words" : "What the— Boss, I've got multiple lock-ons coming from the surface. They've got me in their crosshairs. What the hell is this?",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -413,7 +412,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Commander, will someone please tell me what's going on down there? I can't contact my people, and the JumpShip captain isn't answering\u2014 [static]",
+                    "words" : "Commander, will someone please tell me what's going on down there? I can't contact my people, and the JumpShip captain isn't answering— [static]",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -461,7 +460,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "What the hell is\u2014 Combine forces, we're <i>on your side</i>. Stand down, we're the good guys!",
+                    "words" : "What the hell is— Combine forces, we're <i>on your side</i>. Stand down, we're the good guys!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -493,7 +492,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I don't want to say \"I told you so,\" but\u2026 I think we just got double-crossed. They're after Carlyle, but I bet we're acceptable collateral damage.",
+                    "words" : "I don't want to say \"I told you so,\" but… I think we just got double-crossed. They're after Carlyle, but I bet we're acceptable collateral damage.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -534,7 +533,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, this is Grayson Carlyle. That was a hell of an ass kicking. Glad we were in salvaged 'Mechs. Listen, I don't have a bone to pick with you; I just need what's in that facility. I've got reinforcements landing shortly and\u2014 [static]",
+                    "words" : "Commander, this is Grayson Carlyle. That was a hell of an ass kicking. Glad we were in salvaged 'Mechs. Listen, I don't have a bone to pick with you; I just need what's in that facility. I've got reinforcements landing shortly and— [static]",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -566,7 +565,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "What the\u2014 boss, I've got multiple lock-ons coming from the surface. They've got me in their crosshairs. What the hell is this?",
+                    "words" : "What the— boss, I've got multiple lock-ons coming from the surface. They've got me in their crosshairs. What the hell is this?",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -582,7 +581,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Commander, will someone please tell me what's going on down there? I can't contact my people, and the JumpShip captain isn't answering\u2014 [static]",
+                    "words" : "Commander, will someone please tell me what's going on down there? I can't contact my people, and the JumpShip captain isn't answering— [static]",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -630,7 +629,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "What the hell is\u2014 Combine forces, we're <i>on your side</i>. Stand down, we're the good guys!",
+                    "words" : "What the hell is— Combine forces, we're <i>on your side</i>. Stand down, we're the good guys!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -662,7 +661,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I don't want to say \"I told you so,\" but\u2026 I think we just got double-crossed. They're after Carlyle, but I bet we're acceptable collateral damage.",
+                    "words" : "I don't want to say \"I told you so,\" but… I think we just got double-crossed. They're after Carlyle, but I bet we're acceptable collateral damage.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -936,7 +935,7 @@
     "excludedFromProceduralGeneration" : true,
     "player1Team" : {
         "encounterLayerData" : {
-            "EncounterObjectGuid" : "e039172e-0611-4f40-88dd-d9131a45ac55"
+            "EncounterObjectGuid" : "8b14e146-86c5-4221-b5c7-63632376a7db"
         },
         "teamGuid" : "bf40fd39-ccf9-47c4-94a6-061809681140",
         "teamName" : "Player 1",
@@ -1103,7 +1102,7 @@
     },
     "player2Team" : {
         "encounterLayerData" : {
-            "EncounterObjectGuid" : "e039172e-0611-4f40-88dd-d9131a45ac55"
+            "EncounterObjectGuid" : "8b14e146-86c5-4221-b5c7-63632376a7db"
         },
         "teamGuid" : "757173dd-b4e1-4bb5-9bee-d78e623cc867",
         "teamName" : "Player 2",
@@ -1113,10 +1112,10 @@
     },
     "employerTeam" : {
         "encounterLayerData" : {
-            "EncounterObjectGuid" : "e039172e-0611-4f40-88dd-d9131a45ac55"
+            "EncounterObjectGuid" : "8b14e146-86c5-4221-b5c7-63632376a7db"
         },
         "teamGuid" : "ecc8d4f2-74b4-465d-adf6-84445e5dfc230",
-        "teamName" : "Employer",
+        "teamName" : "EmployerTeam",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : [
@@ -1239,10 +1238,10 @@
     },
     "targetTeam" : {
         "encounterLayerData" : {
-            "EncounterObjectGuid" : "e039172e-0611-4f40-88dd-d9131a45ac55"
+            "EncounterObjectGuid" : "8b14e146-86c5-4221-b5c7-63632376a7db"
         },
         "teamGuid" : "be77cadd-e245-4240-a93e-b99cc98902a5",
-        "teamName" : "Target",
+        "teamName" : "TargetTeam",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : [
@@ -1720,20 +1719,20 @@
     },
     "targetsAllyTeam" : {
         "encounterLayerData" : {
-            "EncounterObjectGuid" : "e039172e-0611-4f40-88dd-d9131a45ac55"
+            "EncounterObjectGuid" : "8b14e146-86c5-4221-b5c7-63632376a7db"
         },
         "teamGuid" : "31151ed6-cfc2-467e-98c4-9ae5bea784cf",
-        "teamName" : "Target's Ally",
+        "teamName" : "TargetsAllyTeam",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
     },
     "neutralToAllTeam" : {
         "encounterLayerData" : {
-            "EncounterObjectGuid" : "e039172e-0611-4f40-88dd-d9131a45ac55"
+            "EncounterObjectGuid" : "8b14e146-86c5-4221-b5c7-63632376a7db"
         },
         "teamGuid" : "61612bb3-abf9-4586-952a-0559fa9dcd75",
-        "teamName" : "Neutral to All",
+        "teamName" : "NeutralToAllTeam",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : [
@@ -2021,20 +2020,24 @@
     },
     "hostileToAllTeam" : {
         "encounterLayerData" : {
-            "EncounterObjectGuid" : "e039172e-0611-4f40-88dd-d9131a45ac55"
+            "EncounterObjectGuid" : "8b14e146-86c5-4221-b5c7-63632376a7db"
         },
         "teamGuid" : "3c9f3a20-ab03-4bcb-8ab6-b1ef0442bbf0",
-        "teamName" : "Hostile to All",
+        "teamName" : "HostileToAllTeam",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
     },
     "employersAllyTeam" : {
-        "encounterLayerData" : null,
+        "encounterLayerData" : {
+            "EncounterObjectGuid" : "8b14e146-86c5-4221-b5c7-63632376a7db"
+        },
         "teamGuid" : "70af7e7f-39a8-4e81-87c2-bd01dcb01b5e",
-        "teamName" : "Employers Ally",
+        "teamName" : "EmployersAllyTeam",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "INVALID_UNSET",
+    "contractTypeID" : "DefendBase"
 }

@@ -12,12 +12,11 @@
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "This is it, Commander. Your lance versus the Steel Beast, and whatever reinforcements he dares to call. Give him the justice he so richly deserves!",
-    "longDescription" : "I'm willing to bet that Bogdan Tubbs is bringing friends to this drop, same as we are. Just a feeling I get. So, yeah\u2026 keep your eyes open.",
+    "longDescription" : "I'm willing to bet that Bogdan Tubbs is bringing friends to this drop, same as we are. Just a feeling I get. So, yeah… keep your eyes open.",
     "salvagePotential" : 12,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "SimpleBattle",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -86,6 +85,7 @@
                 "EncounterObjectGuid" : "181d617b-02bc-4fd3-be25-d6d5cffb78de"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -118,7 +118,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "You're here\u2026 and look, you've brought friends! You're a LIAR and a CHEAT, and you're gonna REAP THE STEEL BEAST'S WHIRLWIND!",
+                    "words" : "You're here… and look, you've brought friends! You're a LIAR and a CHEAT, and you're gonna REAP THE STEEL BEAST'S WHIRLWIND!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -191,7 +191,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "And you delivered it to him! I salute you, Commander\u2014prost!",
+                    "words" : "And you delivered it to him! I salute you, Commander—prost!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -259,6 +259,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -828,5 +829,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "SimpleBattle",
+    "contractTypeID" : "SimpleBattle"
 }

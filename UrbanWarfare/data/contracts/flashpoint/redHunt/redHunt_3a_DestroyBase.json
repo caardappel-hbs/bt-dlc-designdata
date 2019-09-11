@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "DestroyBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -415,7 +414,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, we have DEST units closing on our position. Is the base down? Are we ready to engage? Commander\u2014 [static]",
+                    "words" : "Commander, we have DEST units closing on our position. Is the base down? Are we ready to engage? Commander— [static]",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1282,5 +1281,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "DestroyBase",
+    "contractTypeID" : "DestroyBase"
 }

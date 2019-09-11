@@ -52,16 +52,27 @@
                     "chrPrfWeap_javelin_lefttorso_srm4_mh1",
                     "chrPrfWeap_javelin_lefttorso_srm6_mh1"
                 ],
-                [
-                    "chrPrfWeap_javelin_lefttorso_laser_eh2",
+				[
+                    "chrPrfWeap_javelin_lefttorso_lrm5_mh1",
+                    "chrPrfWeap_javelin_lefttorso_narc_mh1",
+                    "chrPrfWeap_javelin_lefttorso_ppc_eh1",
+                    "chrPrfWeap_javelin_lefttorso_srm2_mh1",
+                    "chrPrfWeap_javelin_lefttorso_srm4_mh1",
+                    "chrPrfWeap_javelin_lefttorso_srm6_mh1",
+					"chrPrfWeap_javelin_lefttorso_laser_eh2",
+                    "chrPrfWeap_javelin_lefttorso_ppc_eh2"
+                ],
+				[
+                    "chrPrfWeap_javelin_lefttorso_lrm10_mh2",
+                    "chrPrfWeap_javelin_lefttorso_narc_mh2",
+                    "chrPrfWeap_javelin_lefttorso_srm2_mh2",
+                    "chrPrfWeap_javelin_lefttorso_srm4_mh2"
+                ],
+				[
                     "chrPrfWeap_javelin_lefttorso_lrm10_mh2",
                     "chrPrfWeap_javelin_lefttorso_lrm5_mh2",
-                    "chrPrfWeap_javelin_lefttorso_narc_mh2",
-                    "chrPrfWeap_javelin_lefttorso_ppc_eh2",
-                    "chrPrfWeap_javelin_lefttorso_srm2_mh2",
-                    "chrPrfWeap_javelin_lefttorso_srm4_mh2",
                     "chrPrfWeap_javelin_lefttorso_srm6_mh2"
-                ],
+                ],	
                 [
                     "chrPrfWeap_javelin_lefttorso_lrm5_mh3",
                     "chrPrfWeap_javelin_lefttorso_narc_mh3",
@@ -129,16 +140,27 @@
                     "chrPrfWeap_javelin_righttorso_srm4_mh1",
                     "chrPrfWeap_javelin_righttorso_srm6_mh1"
                 ],
-                [
-                    "chrPrfWeap_javelin_righttorso_laser_eh2",
+				[
+                    "chrPrfWeap_javelin_righttorso_lrm5_mh1",
+                    "chrPrfWeap_javelin_righttorso_narc_mh1",
+                    "chrPrfWeap_javelin_righttorso_ppc_eh1",
+                    "chrPrfWeap_javelin_righttorso_srm2_mh1",
+                    "chrPrfWeap_javelin_righttorso_srm4_mh1",
+                    "chrPrfWeap_javelin_righttorso_srm6_mh1",
+					"chrPrfWeap_javelin_righttorso_laser_eh2",
+                    "chrPrfWeap_javelin_righttorso_ppc_eh2"
+                ],
+				[
+                    "chrPrfWeap_javelin_righttorso_lrm10_mh2",
+                    "chrPrfWeap_javelin_righttorso_narc_mh2",
+                    "chrPrfWeap_javelin_righttorso_srm2_mh2",
+                    "chrPrfWeap_javelin_righttorso_srm4_mh2"
+                ],
+				[
                     "chrPrfWeap_javelin_righttorso_lrm10_mh2",
                     "chrPrfWeap_javelin_righttorso_lrm5_mh2",
-                    "chrPrfWeap_javelin_righttorso_narc_mh2",
-                    "chrPrfWeap_javelin_righttorso_ppc_eh2",
-                    "chrPrfWeap_javelin_righttorso_srm2_mh2",
-                    "chrPrfWeap_javelin_righttorso_srm4_mh2",
                     "chrPrfWeap_javelin_righttorso_srm6_mh2"
-                ],
+                ],	
                 [
                     "chrPrfWeap_javelin_righttorso_lrm5_mh3",
                     "chrPrfWeap_javelin_righttorso_narc_mh3",

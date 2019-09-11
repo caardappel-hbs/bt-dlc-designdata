@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "Rescue",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -199,6 +198,7 @@
                 "EncounterObjectGuid" : "a4e9541a-082c-491f-bb80-2f1241b0c349"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -207,6 +207,7 @@
                 "EncounterObjectGuid" : "a9394ab3-13a6-4c6a-9a03-1b0b89127b17"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -362,7 +363,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Commander, I'm looking at this data, and this bunker\u2026 is commanded by Lieutenant Colonel Song. They're a crack shot with their Awesome's PPCs\u2014best in the CCAF, I've heard.",
+                    "words" : "Commander, I'm looking at this data, and this bunker… is commanded by Lieutenant Colonel Song. They're a crack shot with their Awesome's PPCs—best in the CCAF, I've heard.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -378,7 +379,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "If they take the field against us\u2026 well, let's hope they don't.",
+                    "words" : "If they take the field against us… well, let's hope they don't.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -571,6 +572,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -1138,5 +1140,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "Rescue",
+    "contractTypeID" : "Rescue"
 }

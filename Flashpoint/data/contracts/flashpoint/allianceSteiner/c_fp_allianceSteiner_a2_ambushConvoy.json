@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "AmbushConvoy",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -201,6 +200,7 @@
                 "EncounterObjectGuid" : "2e0d2e69-6335-49ae-b2bb-61ff3185306b"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -612,6 +612,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_allianceSteiner_a2_ambushConvoy",
     "disableNegotations" : true,
@@ -1337,5 +1338,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "AmbushConvoy",
+    "contractTypeID" : "AmbushConvoy"
 }

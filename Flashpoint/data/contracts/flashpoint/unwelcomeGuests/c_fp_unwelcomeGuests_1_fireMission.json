@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "FireMission",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -360,6 +359,7 @@
                 "EncounterObjectGuid" : "fe7acedd-7d10-4632-bd5b-2abd9fd12372"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -368,6 +368,7 @@
                 "EncounterObjectGuid" : "80c67186-d629-4cba-9145-288724cc0718"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -376,6 +377,7 @@
                 "EncounterObjectGuid" : "eedc9ce0-5262-452b-b367-72d4e02defaf"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -384,6 +386,7 @@
                 "EncounterObjectGuid" : "efb53005-cf39-4754-9ff1-8b0c81ee8760"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -392,6 +395,7 @@
                 "EncounterObjectGuid" : "01b0e9ab-f953-475b-b744-c44d890cc4c6"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -400,6 +404,7 @@
                 "EncounterObjectGuid" : "44bfa8ef-bc6d-4f29-adbf-10ad78fc8d4b"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -408,6 +413,7 @@
                 "EncounterObjectGuid" : "1e0489a7-ff44-44a0-b16f-2ff8dc08267f"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -416,6 +422,7 @@
                 "EncounterObjectGuid" : "04f0e24a-0540-4078-9627-1f593b1d7d89"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -424,6 +431,7 @@
                 "EncounterObjectGuid" : "a8910d4c-761b-4479-9a4f-a1c725d763ec"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -540,7 +548,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "This is a target acquisition run, Commander\u2014we're going to mark House Steiner's unauthorized military base for destruction, and Marik artillery will handle the rest.",
+                    "words" : "This is a target acquisition run, Commander—we're going to mark House Steiner's unauthorized military base for destruction, and Marik artillery will handle the rest.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -588,7 +596,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "You'll be on a short timetable, so splitting your lance is recommended. The OpFor will also have you badly outgunned. Thankfully, our employer has sent in Gwydion Company to assist\u2026 what's your ETA, Gwydion Actual?",
+                    "words" : "You'll be on a short timetable, so splitting your lance is recommended. The OpFor will also have you badly outgunned. Thankfully, our employer has sent in Gwydion Company to assist… what's your ETA, Gwydion Actual?",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -620,7 +628,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Roger that, Carronade\u2026 we've got you. Oliveira out.",
+                    "words" : "Roger that, Carronade… we've got you. Oliveira out.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -702,7 +710,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Attention, Force Commander Singh\u2014our {COMPANY.CompanyName} lance is down! We're going to have to scrub the mission. Gwydion Actual out.",
+                    "words" : "Attention, Force Commander Singh—our {COMPANY.CompanyName} lance is down! We're going to have to scrub the mission. Gwydion Actual out.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1073,7 +1081,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "I'm sorry, Commander. These Lyrans are animals. They're hitting way harder than we can handle. Our lance is shattered\u2014we can't go on.",
+                    "words" : "I'm sorry, Commander. These Lyrans are animals. They're hitting way harder than we can handle. Our lance is shattered—we can't go on.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1130,7 +1138,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Heads up, Commander\u2014I've got a Steiner DropShip coming in on my long-range sensors.",
+                    "words" : "Heads up, Commander—I've got a Steiner DropShip coming in on my long-range sensors.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1345,6 +1353,7 @@
             "dialogueContent" : []
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -2692,5 +2701,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "FireMission",
+    "contractTypeID" : "FireMission"
 }

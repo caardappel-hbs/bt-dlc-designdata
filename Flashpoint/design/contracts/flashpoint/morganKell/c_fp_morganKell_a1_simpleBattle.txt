@@ -1,7 +1,7 @@
 // Contract c_fp_morganKell_a1_simpleBattle
 
 [ID]c_fp_morganKell_a1_simpleBattle
-[Name]The Braying of Hounds III
+[Name]The Baying of Hounds III
 [Template]SimpleBattle
 
 // Difficulty is one of Easy, Medium, or Hard

@@ -40,5 +40,5 @@
     "UnitDropTonnageHint" : "Light",
     "LanceDropTonnageHint" : "None",
     "FlashpointShortDescription" : "Commander {COMMANDER.LastName}. You don't know me, but me and my associates have a job for you. A real <i>nice</i> one, with a big payout at the end. If you wanna talk about it, come meet me at Glentworth. I'll be waiting.",
-    "FlashpointDescriberCastDefId" : "castDef_ViewscreenDefault"
+    "FlashpointDescriberCastDefId" : "castDef_MysteryClient"
 }

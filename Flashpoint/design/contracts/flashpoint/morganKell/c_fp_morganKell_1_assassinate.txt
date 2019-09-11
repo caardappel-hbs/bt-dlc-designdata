@@ -2,7 +2,7 @@
 
 
 [ID]c_fp_morganKell_1_assassinate
-[Name]The Braying of Hounds
+[Name]The Baying of Hounds
 [Template]Assassinate
 
 // Difficulty is one of Easy, Medium, or Hard

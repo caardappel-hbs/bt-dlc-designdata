@@ -11,13 +11,12 @@
     "missionSuccessStatementOverride" : null,
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
-    "shortDescription" : "You dare take up arms against the Galedon Regulars?! Your hubris will destroy you, mercenary dog\u2014and I will personally put your broken corpse into the ground!",
+    "shortDescription" : "You dare take up arms against the Galedon Regulars?! Your hubris will destroy you, mercenary dog—and I will personally put your broken corpse into the ground!",
     "longDescription" : "He sounded awfully sure of himself. Let's wipe the smile off of that smug son of a bitch's face.",
     "salvagePotential" : 12,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -203,6 +202,7 @@
                 "EncounterObjectGuid" : "a47386d9-3d67-4e83-ac45-ab438af31f4c"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -211,6 +211,7 @@
                 "EncounterObjectGuid" : "2ffe52ba-8dbe-4893-8161-4f33a01d4335"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -330,7 +331,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Good job, Commander. We've got Hironaka right where we want him\u2026 and speak of the devil, he's hailing us now.",
+                    "words" : "Good job, Commander. We've got Hironaka right where we want him… and speak of the devil, he's hailing us now.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -362,7 +363,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Says the man who just humiliated himself and the DCMS on the battlefield. You're in a lot more trouble than we are, Chu-i Hironaka\u2026 but you've got more immediate worries.",
+                    "words" : "Says the man who just humiliated himself and the DCMS on the battlefield. You're in a lot more trouble than we are, Chu-i Hironaka… but you've got more immediate worries.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -569,7 +570,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "That's good, Commander\u2014we've got eyes on Hironaka's safe house.",
+                    "words" : "That's good, Commander—we've got eyes on Hironaka's safe house.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -585,7 +586,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Keep your eyes open when you engage. The Galedon Regulars have been fighting since the time of the Star League\u2014they're experienced and dangerous.",
+                    "words" : "Keep your eyes open when you engage. The Galedon Regulars have been fighting since the time of the Star League—they're experienced and dangerous.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -603,6 +604,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : true,
@@ -1328,5 +1330,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "CaptureBase",
+    "contractTypeID" : "CaptureBase"
 }

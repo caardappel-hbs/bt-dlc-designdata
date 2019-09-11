@@ -12,12 +12,11 @@
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "I'm pleased we could agree that the direct approach is likely to be the most effective. The facility that the ISF believes Nephrite is hiding in is in a god-awful frozen wasteland. It shouldn't be too heavily defended, but there will probably be turrets. Remember that we need that facility <i>flattened</i>. Once the place is nothing but rubble, my people will search the ruins for our Rasalhague friend and confirm the kill. And then we can all go home, and honestly, I cannot wait. This place is wretched.",
-    "longDescription" : "This whole mission makes my skin crawl, Commander. We're attacking a civilian facility on the say-so of the Kurita spy network. Just\u2026 just keep your eyes open, okay?",
+    "longDescription" : "This whole mission makes my skin crawl, Commander. We're attacking a civilian facility on the say-so of the Kurita spy network. Just… just keep your eyes open, okay?",
     "salvagePotential" : 24,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "DestroyBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -150,6 +149,7 @@
                 "EncounterObjectGuid" : "a5257151-5269-4222-9a0d-31001a70fe22"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -457,6 +457,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_allianceKurita_b1_destroyBase",
     "disableNegotations" : false,
@@ -1182,5 +1183,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "DestroyBase",
+    "contractTypeID" : "DestroyBase"
 }

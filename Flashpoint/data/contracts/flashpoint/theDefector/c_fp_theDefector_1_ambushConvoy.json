@@ -11,13 +11,12 @@
     "missionSuccessStatementOverride" : null,
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
-    "shortDescription" : "Your lance will be dropping directly in the path of Yoshito Okada's convoy. Smash it flat\u2014there can be no survivors. When the defector's death has been confirmed, you will receive your reward.",
+    "shortDescription" : "Your lance will be dropping directly in the path of Yoshito Okada's convoy. Smash it flat—there can be no survivors. When the defector's death has been confirmed, you will receive your reward.",
     "longDescription" : "This seems relatively straightforward, {COMMANDER.FirstName}. Let's get in there and get it done.",
     "salvagePotential" : 12,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "AmbushConvoy",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -149,6 +148,7 @@
                 "EncounterObjectGuid" : "2e0d2e69-6335-49ae-b2bb-61ff3185306b"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -512,6 +512,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_theDefector_1_ambushConvoy",
     "disableNegotations" : false,
@@ -1245,5 +1246,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "AmbushConvoy",
+    "contractTypeID" : "AmbushConvoy"
 }

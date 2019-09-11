@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "Assassinate",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -407,7 +406,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "It's over, Commander\u2014you've lost. But I am not without sympathy. As a courtesy, I'll allow you to pick up the pieces of your lance as you go.",
+                    "words" : "It's over, Commander—you've lost. But I am not without sympathy. As a courtesy, I'll allow you to pick up the pieces of your lance as you go.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1325,5 +1324,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "Assassinate",
+    "contractTypeID" : "Assassinate"
 }

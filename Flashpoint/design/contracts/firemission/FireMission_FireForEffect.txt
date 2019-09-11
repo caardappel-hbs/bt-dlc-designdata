@@ -172,7 +172,7 @@
 		[Emote]Default
 		[Audio]NONE
 		[Focus]Region_Occupy_Beacon_1
-	[Content]I won't lie, our window of oppurtunity for this strike is small and time is limited. You will likely have to split your lance in order to blace all the beacons in time.
+	[Content]I won't lie, our window of oppurtunity for this strike is small and time is limited. You will likely have to split your lance in order to place all the beacons in time.
 		[Color]1|1|1|1
 		[Cast]castDef_YangDefault
 		[Emote]Default
@@ -192,7 +192,7 @@
 		[Focus]Region_Escape
 
 [Dialogue]Dialogue_MissionSuccess
-	[Content]WThe target is destroyed. Pack it in, Commander. We're done here. 
+	[Content]The target is destroyed. Pack it in, Commander. We're done here. 
 		[Color]1|1|1|1
 		[Cast]castDef_YangDefault
 		[Emote]Default
@@ -322,7 +322,7 @@
 		[Focus]
 
 [Dialogue]Dialogue_Interrupt_MissionTimerWarning
-	[Content]Commander, our window of oppurtunity for this strike is closing. At least half of our time has expired. You'll need to move quickly if you're to accomplish this.
+	[Content]Commander, our window of opportunity for this strike is closing. At least half of our time has expired. You'll need to move quickly if you're to accomplish this.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default

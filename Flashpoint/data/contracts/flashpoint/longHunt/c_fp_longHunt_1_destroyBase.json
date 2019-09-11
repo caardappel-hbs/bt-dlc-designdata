@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "DestroyBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -202,6 +201,7 @@
                 "EncounterObjectGuid" : "a5257151-5269-4222-9a0d-31001a70fe22"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -268,7 +268,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I want you to go in with guns blazing and pull the whole structure down on top of Lees. Bury that rat bastard under a ton of rubble\u2014he's more than earned it.",
+                    "words" : "I want you to go in with guns blazing and pull the whole structure down on top of Lees. Bury that rat bastard under a ton of rubble—he's more than earned it.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -341,7 +341,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "What? But\u2026 he should be dead! Buried in a mountain of scrap!",
+                    "words" : "What? But… he should be dead! Buried in a mountain of scrap!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -357,7 +357,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Damn it. Nothing's ever as easy as it should be. All right, Sumire\u2014keep the bastard on hold. When our people are all present and accounted for, we'll have words with him. Shugo Yamaguchi, I suggest that you stay on the line as well.",
+                    "words" : "Damn it. Nothing's ever as easy as it should be. All right, Sumire—keep the bastard on hold. When our people are all present and accounted for, we'll have words with him. Shugo Yamaguchi, I suggest that you stay on the line as well.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -541,6 +541,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_longHunt_1_destroyBase",
     "disableNegotations" : false,
@@ -1266,5 +1267,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "DestroyBase",
+    "contractTypeID" : "DestroyBase"
 }

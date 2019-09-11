@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "SimpleBattle",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 1,
     "lanceMinTonnage" : -1,
@@ -86,6 +85,7 @@
                 "EncounterObjectGuid" : "181d617b-02bc-4fd3-be25-d6d5cffb78de"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -291,6 +291,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -761,5 +762,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "SimpleBattle",
+    "contractTypeID" : "SimpleBattle"
 }

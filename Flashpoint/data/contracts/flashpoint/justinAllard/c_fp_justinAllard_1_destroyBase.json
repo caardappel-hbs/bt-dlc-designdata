@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "DestroyBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -202,6 +201,7 @@
                 "EncounterObjectGuid" : "a5257151-5269-4222-9a0d-31001a70fe22"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -373,7 +373,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I just got word that Garrilac wasn't in it. Sumire's got him on tight beam\u2026 the call will be on your viewscreen when you're ready.",
+                    "words" : "I just got word that Garrilac wasn't in it. Sumire's got him on tight beam… the call will be on your viewscreen when you're ready.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -541,6 +541,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_justinAllard_1_destroyBase",
     "disableNegotations" : false,
@@ -1268,5 +1269,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "DestroyBase",
+    "contractTypeID" : "DestroyBase"
 }

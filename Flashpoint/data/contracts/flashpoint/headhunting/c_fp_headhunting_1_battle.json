@@ -11,13 +11,12 @@
     "missionSuccessStatementOverride" : null,
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
-    "shortDescription" : "Descend on the Flak Jackals and punch a hole in their lines. Make them pay for the Federation citizens they've killed, Commander\u2014it is imperative that this pirate filth learn the cost of crossing the Federated Suns.",
+    "shortDescription" : "Descend on the Flak Jackals and punch a hole in their lines. Make them pay for the Federation citizens they've killed, Commander—it is imperative that this pirate filth learn the cost of crossing the Federated Suns.",
     "longDescription" : "Let's make some noise, {COMMANDER.Callsign}. Do as much damage as you can. When the Zhao siblings scatter, we'll choose our target and finish this.",
     "salvagePotential" : 16,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "SimpleBattle",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -86,6 +85,7 @@
                 "EncounterObjectGuid" : "181d617b-02bc-4fd3-be25-d6d5cffb78de"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -175,7 +175,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Nicely done, Commander\u2014you've just sent the Zhao siblings a hell of a message. When they cut and run, we'll deliver the postscript.",
+                    "words" : "Nicely done, Commander—you've just sent the Zhao siblings a hell of a message. When they cut and run, we'll deliver the postscript.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -200,7 +200,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Apparently these Flak Jackals are more of a threat than we'd anticipated. Stand by for evac\u2014I'm getting your lance out of there.",
+                    "words" : "Apparently these Flak Jackals are more of a threat than we'd anticipated. Stand by for evac—I'm getting your lance out of there.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -243,6 +243,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -814,5 +815,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "SimpleBattle",
+    "contractTypeID" : "SimpleBattle"
 }

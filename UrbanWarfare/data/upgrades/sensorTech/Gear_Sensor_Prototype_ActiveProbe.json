@@ -3,9 +3,9 @@
     "RelativeModifier" : 0,
     "AbsoluteModifier" : 0,
     "Description" : {
-        "Cost" : 8000000,
+        "Cost" : 2000000,
         "Rarity" : 99,
-        "Purchasable" : false,
+        "Purchasable" : true,
         "Manufacturer" : "Ceres Arms",
         "Model" : "Gen 1 Probe",
         "UIName" : "X-1 AP Equipment",

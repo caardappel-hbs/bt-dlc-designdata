@@ -10,6 +10,7 @@
 [LongDesc]I'm guessing these 'civilians' are some kind of covert operatives, for this much metal to be put on the field to extract them.
 [Salvage]24
 [FOW]Surveyed
+[DifficultyUIMod]1
 
 [Requirement]StarSystem|notag|planet_other_empty
 [Requirement]StarSystem|stat|Employer.AuriganPirates|eq|0
@@ -131,8 +132,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag indicating that the Silent Timer is ready to go.
@@ -145,8 +144,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces.
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Wait for reinforcement warning
@@ -155,8 +152,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag indicating that the Silent Timer is ready to go.
@@ -193,8 +188,6 @@
 	// Optional Objective
 	[Objective]Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Hostile to All Drop Timer.
@@ -223,8 +216,6 @@
 	// Optional Objective
 	[Objective]Destroy Enemy Allied {TEAM_TAR_ALLY.FactionDef.Demonym} Forces.
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Destroy Reinforcement Wave 1
@@ -329,20 +320,14 @@
 	// Optional Objective
 	[Objective]Ensure Entire Player Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Unit One of Player Lance Must Survive
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Ensure Unit One of Player Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Primary Objective
 	[Objective]Friendly {TEAM_EMP.FactionDef.Demonym} Lance Must Survive
@@ -351,8 +336,6 @@
 	// Optional Objective
 	[Objective]Ensure Friendly {TEAM_EMP.FactionDef.Demonym} Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag to determine if all primaries are complete.
@@ -409,10 +392,10 @@
 [OptionalChunk]Chunk_ReinforcementTimers_Medium (Optional)|off
 
 // The three waves drop after 9, 13, and 16 rounds.
-[OptionalChunk]Chunk_ReinforcementTimers_Heavy (Optional)|on
+[OptionalChunk]Chunk_ReinforcementTimers_Heavy (Optional)|off
 
 // The three waves drop after 11, 15, and 18 rounds.
-[OptionalChunk]Chunk_ReinforcementTimers_Assault (Optional)|off
+[OptionalChunk]Chunk_ReinforcementTimers_Assault (Optional)|on
 
 // Chunk_EnsureEntirePlayerLanceSurvives (Primary/Secondary): An optional objective to ensure that all units in the player lance survive.
 [OptionalChunk]Chunk_EnsureEntirePlayerLanceSurvives_Primary (Optional)|off
@@ -1099,7 +1082,7 @@
 		// Tagged: lance def will be randomly chosen using tags field
 		[Tags]lance_type_turret
 		[ExcludedTags]
-		[SpawnEffects]
+		[SpawnEffects]spawn_poorly_maintained_50
 		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Turret
@@ -1136,7 +1119,7 @@
 		[Tags]
 		[ExcludedTags]lance_type_turret|lance_type_convoy|lance_type_vehicle
 		[SpawnEffects]
-		[DifficultyAdjustment]0
+		[DifficultyAdjustment]-1
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
 			[UnitDef]mechDef_InheritLance
@@ -1172,7 +1155,7 @@
 		[Tags]lance_type_defense|lance_type_dynamic_difficulty
 		[ExcludedTags]
 		[SpawnEffects]
-		[DifficultyAdjustment]1
+		[DifficultyAdjustment]-1
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
 			[UnitDef]mechDef_InheritLance

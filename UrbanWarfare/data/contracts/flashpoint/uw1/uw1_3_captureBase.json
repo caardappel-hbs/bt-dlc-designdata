@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -530,7 +529,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, a word of warning\u2014we've got reports this base may have gun emplacements for point defense.",
+                    "words" : "Commander, a word of warning—we've got reports this base may have gun emplacements for point defense.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -571,7 +570,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "There it is, Boss\u2014we've found the Black Caldera armory. This is where we'll find the Raven\u2014assuming we can get to it, that is.",
+                    "words" : "There it is, Boss—we've found the Black Caldera armory. This is where we'll find the Raven—assuming we can get to it, that is.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1313,5 +1312,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "CaptureBase",
+    "contractTypeID" : "CaptureBase"
 }

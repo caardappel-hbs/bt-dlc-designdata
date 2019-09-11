@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "Rescue",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -199,6 +198,7 @@
                 "EncounterObjectGuid" : "a4e9541a-082c-491f-bb80-2f1241b0c349"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -207,6 +207,7 @@
                 "EncounterObjectGuid" : "a9394ab3-13a6-4c6a-9a03-1b0b89127b17"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -305,7 +306,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "This complicates matters. Commander, if you have the opportunity, I'd take it as a personal favor if you would pick up my agent at the secondary facility, but\u2026 the data must come first.",
+                    "words" : "This complicates matters. Commander, if you have the opportunity, I'd take it as a personal favor if you would pick up my agent at the secondary facility, but… the data must come first.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -355,7 +356,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "We've lost Jawad\u2014and his data. I have to scrub the operation, Commander.",
+                    "words" : "We've lost Jawad—and his data. I have to scrub the operation, Commander.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -521,7 +522,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Friendly down! It's\u2026 it's Jawad, Force Commander. He's gone.",
+                    "words" : "Friendly down! It's… it's Jawad, Force Commander. He's gone.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -537,7 +538,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "\u2026",
+                    "words" : "…",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -571,6 +572,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -1138,5 +1140,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "Rescue",
+    "contractTypeID" : "Rescue"
 }

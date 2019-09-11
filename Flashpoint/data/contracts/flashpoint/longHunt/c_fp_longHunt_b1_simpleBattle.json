@@ -12,12 +12,11 @@
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "My people on the ground have picked up a lance of Davion BattleMechs on their sensors, Commander. If you move on Lees without dealing with them, they'll be in position to outflank you.",
-    "longDescription" : "This is a bit of a Catch-22 situation, Commander\u2026 we can't afford to leave these jokers standing, but I'll bet you anything that Lees sent them here to soften us up before our attack on the base.",
+    "longDescription" : "This is a bit of a Catch-22 situation, Commander… we can't afford to leave these jokers standing, but I'll bet you anything that Lees sent them here to soften us up before our attack on the base.",
     "salvagePotential" : 16,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "SimpleBattle",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -86,6 +85,7 @@
                 "EncounterObjectGuid" : "181d617b-02bc-4fd3-be25-d6d5cffb78de"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -259,6 +259,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : true,
@@ -826,5 +827,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "SimpleBattle",
+    "contractTypeID" : "SimpleBattle"
 }

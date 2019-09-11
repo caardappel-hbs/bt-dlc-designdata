@@ -99,7 +99,7 @@
                             "value" : "5b92f7d1623035e40f0000e0",
                             "valueConstant" : null,
                             "additionalValues" : [
-                                "The Braying of Hounds",
+                                "The Baying of Hounds",
                                 "High Orbit \u2014 Viribium",
                                 "Conference",
                                 null
@@ -290,7 +290,7 @@
                             "value" : "5b92f7ea623035e40f0000ea",
                             "valueConstant" : null,
                             "additionalValues" : [
-                                "The Braying of Hounds II",
+                                "The Baying of Hounds II",
                                 "High Orbit \u2014 Viribium",
                                 "Conference",
                                 null
@@ -546,8 +546,10 @@
                             "value" : "5b92fb3e623035e40f0000f4",
                             "valueConstant" : null,
                             "additionalValues" : [
-                                "The Braying of Hounds III",
-                                "High Orbit \u2014 Viribium"
+                                "The Baying of Hounds III",
+                                "High Orbit \u2014 Viribium",
+                                null,
+                                null
                             ]
                         },
                         {
@@ -774,8 +776,10 @@
                             "value" : "5b92fb3e623035e40f0000f4",
                             "valueConstant" : null,
                             "additionalValues" : [
-                                "The Braying of Hounds III",
-                                "High Orbit \u2014 Viribium"
+                                "The Baying of Hounds III",
+                                "High Orbit \u2014 Viribium",
+                                null,
+                                null
                             ]
                         },
                         {

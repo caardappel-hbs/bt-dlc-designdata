@@ -14,9 +14,9 @@
         "Scope" : "StarSystem",
         "RequirementTags" : {
             "items" : [
-                "planet_name_bellerophon"
+                "planet_bellerophon_fp_whitelies"
             ],
-            "tagSetSourceFile" : "Tags/PlanetNameTags"
+            "tagSetSourceFile" : "Tags/PlanetTags"
         },
         "ExclusionTags" : {
             "items" : [],

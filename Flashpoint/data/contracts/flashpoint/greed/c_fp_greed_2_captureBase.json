@@ -12,12 +12,11 @@
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "The intel you got from the Iron Sparrow's courier points here, to the warehouse you'll find just ahead. Take it for House Liao until the Liao Reserves arrive to relieve you.",
-    "longDescription" : "According to Subcommander Tianyu, the warehouse should be full of mining equipment\u2026 generators, churn drills, that sort of thing. Nothing we'd be interested in, but worth a lot to the right people.",
+    "longDescription" : "According to Subcommander Tianyu, the warehouse should be full of mining equipment… generators, churn drills, that sort of thing. Nothing we'd be interested in, but worth a lot to the right people.",
     "salvagePotential" : 12,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -203,6 +202,7 @@
                 "EncounterObjectGuid" : "a47386d9-3d67-4e83-ac45-ab438af31f4c"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -211,6 +211,7 @@
                 "EncounterObjectGuid" : "2ffe52ba-8dbe-4893-8161-4f33a01d4335"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -1348,5 +1349,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "CaptureBase",
+    "contractTypeID" : "CaptureBase"
 }

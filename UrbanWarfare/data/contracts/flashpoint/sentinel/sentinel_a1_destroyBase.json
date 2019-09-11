@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "DestroyBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -374,7 +373,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "None of us do. But we all agreed\u2014",
+                    "words" : "None of us do. But we all agreed—",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1298,5 +1297,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "DestroyBase",
+    "contractTypeID" : "DestroyBase"
 }

@@ -31,13 +31,13 @@
 // End Miscellaneous Values
 			
 // Contract Objectives
-[ContractObjective]Destroy Emerald Dawn Units
+[ContractObjective]Destroy All Hostile Units
 	[Description]
 
 // Battle Objectives
 
 	// Primary Objective
-	[Objective]Destroy {TEAM_TAR.FactionDef.Demonym} Forces
+	[Objective]Destroy Emerald Dawn Forces
 		[Description]
 
 	// Primary Objective
@@ -159,7 +159,7 @@
 		[Description]
 
 	// Optional Objective
-	[Objective]Destroy Additional Enemy Allied Reinforcements
+	[Objective]Destroy Sian Triumphant Reinforcements
 		[Description]
 		[OnSuccess]
 			[Result]Company|Stat|ContractBonusRewardPct|0.1

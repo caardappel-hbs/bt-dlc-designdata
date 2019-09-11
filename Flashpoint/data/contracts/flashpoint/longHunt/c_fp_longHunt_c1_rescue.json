@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "Rescue",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -199,6 +198,7 @@
                 "EncounterObjectGuid" : "a4e9541a-082c-491f-bb80-2f1241b0c349"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -207,6 +207,7 @@
                 "EncounterObjectGuid" : "a9394ab3-13a6-4c6a-9a03-1b0b89127b17"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -394,7 +395,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Well said, Doctor Murad. Meet with me in orbit, Commander\u2026 I want to celebrate our victory, and there are matters of compensation to discuss.",
+                    "words" : "Well said, Doctor Murad. Meet with me in orbit, Commander… I want to celebrate our victory, and there are matters of compensation to discuss.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -569,7 +570,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "This objective is a lost cause, Commander. Focus on Colonel Lees\u2014he's the only thing that matters!",
+                    "words" : "This objective is a lost cause, Commander. Focus on Colonel Lees—he's the only thing that matters!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -587,6 +588,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : "DialogBucketDef_c_fp_longHunt_c1_rescue",
     "disableNegotations" : true,
@@ -1154,5 +1156,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "Rescue",
+    "contractTypeID" : "Rescue"
 }

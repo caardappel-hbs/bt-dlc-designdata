@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -203,6 +202,7 @@
                 "EncounterObjectGuid" : "a47386d9-3d67-4e83-ac45-ab438af31f4c"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -211,6 +211,7 @@
                 "EncounterObjectGuid" : "2ffe52ba-8dbe-4893-8161-4f33a01d4335"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -305,7 +306,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I am, am I? Go on, then\u2014take your shot. Let's see how far it gets you.",
+                    "words" : "I am, am I? Go on, then—take your shot. Let's see how far it gets you.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -346,7 +347,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Already done, XO\u2014we are clear to turn tail and run. I'll bet that Lees is having a good laugh at our expense.",
+                    "words" : "Already done, XO—we are clear to turn tail and run. I'll bet that Lees is having a good laugh at our expense.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -362,7 +363,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "He can laugh all he likes. If we live through this, I'm counting it a win. Now buckle in, everyone\u2014I'm getting us the hell out of here!",
+                    "words" : "He can laugh all he likes. If we live through this, I'm counting it a win. Now buckle in, everyone—I'm getting us the hell out of here!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -387,7 +388,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "This contest is over, Commander\u2026 you were outmatched from the start. Now go. Slink away from this world and never return.",
+                    "words" : "This contest is over, Commander… you were outmatched from the start. Now go. Slink away from this world and never return.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -569,7 +570,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "This is an automated facility, Commander\u2014there are no active personnel on site, but we do have turrets to worry about.",
+                    "words" : "This is an automated facility, Commander—there are no active personnel on site, but we do have turrets to worry about.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -603,6 +604,7 @@
             ]
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : true,
@@ -1329,5 +1331,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "CaptureBase",
+    "contractTypeID" : "CaptureBase"
 }

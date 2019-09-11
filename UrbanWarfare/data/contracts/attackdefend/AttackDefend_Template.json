@@ -23,7 +23,6 @@
     "OnContractFailureResults" : [
         
     ],
-    "contractType" : "AttackDefend",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -1182,7 +1181,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Destroy Lance Attackers Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1195,7 +1194,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Destroy Lance Attackers Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1247,7 +1246,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Destroy Lance Defenders Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1260,7 +1259,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Destroy Lance Defenders Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1273,7 +1272,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Additional Enemy Force Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1286,7 +1285,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Additional Enemy Force Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1299,7 +1298,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Hostile To All Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1312,7 +1311,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Hostile To All Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1325,7 +1324,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Enemy Ally Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1338,7 +1337,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Enemy Ally Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1390,7 +1389,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Entire Player Lance Surivive Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1403,7 +1402,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Entire Player Lance Surivive Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1416,7 +1415,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Ensure Player Unit Surivies Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1429,7 +1428,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Ensure Player Unit Surivies Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1442,7 +1441,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Ensure Employer Units Survive Chunk Group"
             ],
             "requirementList" : [
                 
@@ -1455,7 +1454,7 @@
             },
             "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
-                
+                "Ensure Employer Units Survive Chunk Group"
             ],
             "requirementList" : [
                 
@@ -6867,5 +6866,7 @@
             
         ]
     },
-    "contract" : null
+    "contract" : null,
+    "contractType" : "INVALID_UNSET",
+    "contractTypeID" : "AttackDefend"
 }

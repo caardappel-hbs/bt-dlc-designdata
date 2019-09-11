@@ -131,8 +131,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag indicating that the Silent Timer is ready to go.
@@ -145,8 +143,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces.
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Wait for reinforcement warning
@@ -155,8 +151,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag indicating that the Silent Timer is ready to go.
@@ -329,20 +323,14 @@
 	// Optional Objective
 	[Objective]Ensure Entire Player Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Unit One of Player Lance Must Survive
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Ensure Unit One of Player Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Primary Objective
 	[Objective]Friendly {TEAM_EMP.FactionDef.Demonym} Lance Must Survive
@@ -351,8 +339,6 @@
 	// Optional Objective
 	[Objective]Ensure Friendly {TEAM_EMP.FactionDef.Demonym} Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag to determine if all primaries are complete.
@@ -1132,7 +1118,7 @@
 		[Tags]
 		[ExcludedTags]lance_type_turret|lance_type_convoy|lance_type_vehicle
 		[SpawnEffects]
-		[DifficultyAdjustment]0
+		[DifficultyAdjustment]-1
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
 			[UnitDef]mechDef_InheritLance
@@ -1168,7 +1154,7 @@
 		[Tags]
 		[ExcludedTags]lance_type_turret|lance_type_convoy|lance_type_vehicle
 		[SpawnEffects]
-		[DifficultyAdjustment]0
+		[DifficultyAdjustment]-1
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
 			[UnitDef]mechDef_InheritLance

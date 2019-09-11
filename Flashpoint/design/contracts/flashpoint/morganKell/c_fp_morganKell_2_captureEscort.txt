@@ -2,7 +2,7 @@
 
 		
 [ID]c_fp_morganKell_2_captureEscort
-[Name]The Braying of Hounds II
+[Name]The Baying of Hounds II
 [Template]CaptureEscort
 
 // Difficulty is one of Easy, Medium, or Hard

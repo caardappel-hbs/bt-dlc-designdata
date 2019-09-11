@@ -11,6 +11,7 @@
 [LongDesc]Commander, this mission is... insane. And I don't say that lightly. We're going to take a serious beating on this one.
 [Salvage]32
 [FOW]Surveyed
+[DifficultyUIMod]1
 
 [Requirement]StarSystem|notag|planet_other_empty
 [Requirement]StarSystem|stat|Employer.AuriganPirates|eq|0
@@ -133,8 +134,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag indicating that the Silent Timer is ready to go.
@@ -147,8 +146,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces.
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Wait for reinforcement warning
@@ -157,8 +154,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag indicating that the Silent Timer is ready to go.
@@ -195,8 +190,6 @@
 	// Optional Objective
 	[Objective]Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Hostile to All Drop Timer.
@@ -225,8 +218,6 @@
 	// Optional Objective
 	[Objective]Destroy Enemy Allied {TEAM_TAR_ALLY.FactionDef.Demonym} Forces.
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Destroy Reinforcement Wave 1
@@ -332,20 +323,14 @@
 	// Optional Objective
 	[Objective]Ensure Entire Player Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Unit One of Player Lance Must Survive
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Ensure Unit One of Player Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Primary Objective
 	[Objective]Friendly {TEAM_EMP.FactionDef.Demonym} Lance Must Survive
@@ -354,8 +339,6 @@
 	// Optional Objective
 	[Objective]Ensure Friendly {TEAM_EMP.FactionDef.Demonym} Lance Survives
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// HIDDEN Objective
 	[Objective]HIDDEN - Flag to determine if all primaries are complete.
@@ -1095,7 +1078,7 @@
 		// Tagged: lance def will be randomly chosen using tags field
 		[Tags]lance_type_turret
 		[ExcludedTags]
-		[SpawnEffects]
+		[SpawnEffects]spawn_poorly_maintained_50
 		[DifficultyAdjustment]3
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Turret
@@ -1132,7 +1115,7 @@
 		[Tags]
 		[ExcludedTags]lance_type_turret|lance_type_convoy|lance_type_vehicle
 		[SpawnEffects]
-		[DifficultyAdjustment]0
+		[DifficultyAdjustment]-1
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
 			[UnitDef]mechDef_InheritLance
@@ -1168,7 +1151,7 @@
 		[Tags]lance_type_dynamic_difficulty|lance_type_battle
 		[ExcludedTags]
 		[SpawnEffects]
-		[DifficultyAdjustment]2
+		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
 			[UnitDef]mechDef_InheritLance

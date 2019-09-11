@@ -12,12 +12,11 @@
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
     "shortDescription" : "I approve of your choice of 'Mechs for this mission, Commander. This ought to be just the show of force that Margrave Joss was hoping for. Also, I have additional support to provide, thanks to Kommandant General Plath; you'll need to clear the antiair defenses before the support lance can land, though. Remember: <i>Gungnir</i>, our DropShip, can remain on station to fire at the planet only for a limited time. Move quickly, Commander.",
-    "longDescription" : "Move quickly\u2026 with assault-class 'Mechs. Commander, this is absurd. I hope they're paying well.",
+    "longDescription" : "Move quickly… with assault-class 'Mechs. Commander, this is absurd. I hope they're paying well.",
     "salvagePotential" : 28,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "FireMission",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : 320,
@@ -360,6 +359,7 @@
                 "EncounterObjectGuid" : "fe7acedd-7d10-4632-bd5b-2abd9fd12372"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -368,6 +368,7 @@
                 "EncounterObjectGuid" : "80c67186-d629-4cba-9145-288724cc0718"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -376,6 +377,7 @@
                 "EncounterObjectGuid" : "eedc9ce0-5262-452b-b367-72d4e02defaf"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -384,6 +386,7 @@
                 "EncounterObjectGuid" : "efb53005-cf39-4754-9ff1-8b0c81ee8760"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -392,6 +395,7 @@
                 "EncounterObjectGuid" : "01b0e9ab-f953-475b-b744-c44d890cc4c6"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -400,6 +404,7 @@
                 "EncounterObjectGuid" : "44bfa8ef-bc6d-4f29-adbf-10ad78fc8d4b"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -408,6 +413,7 @@
                 "EncounterObjectGuid" : "1e0489a7-ff44-44a0-b16f-2ff8dc08267f"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -416,6 +422,7 @@
                 "EncounterObjectGuid" : "04f0e24a-0540-4078-9627-1f593b1d7d89"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -424,6 +431,7 @@
                 "EncounterObjectGuid" : "a8910d4c-761b-4479-9a4f-a1c725d763ec"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -843,7 +851,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "This is Base CO Donovan to all Claybrooke units! They're\u2026 they're attacking the base with assault-class 'Mechs! Focus your fire and bring them down!",
+                    "words" : "This is Base CO Donovan to all Claybrooke units! They're… they're attacking the base with assault-class 'Mechs! Focus your fire and bring them down!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1265,6 +1273,7 @@
             "dialogueContent" : []
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -2615,5 +2624,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "FireMission",
+    "contractTypeID" : "FireMission"
 }

@@ -157,7 +157,7 @@
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_AddContract",
-                            "value" : "",
+                            "value" : "mapGeneral_theMine_aDes",
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "",
@@ -167,6 +167,8 @@
                                 "MasonsMarauders",
                                 "6",
                                 "ms_fp_justinAllard_004_TalkChoice",
+                                null,
+                                null,
                                 null,
                                 null,
                                 null
@@ -413,7 +415,7 @@
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_AddContract",
-                            "value" : "",
+                            "value" : "mapGeneral_highPlateaus_aDes",
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "",
@@ -423,6 +425,8 @@
                                 "MasonsMarauders",
                                 "6",
                                 "ms_fp_justinAllard_101_A-Talk",
+                                null,
+                                null,
                                 null,
                                 null,
                                 null

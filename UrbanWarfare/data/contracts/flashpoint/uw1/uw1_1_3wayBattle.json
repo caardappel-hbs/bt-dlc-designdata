@@ -17,7 +17,6 @@
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "ThreeWayBattle",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -1225,7 +1224,9 @@
                 "EncounterObjectGuid" : "8c5cfff4-066b-44be-9a28-c462461a757a"
             },
             "enableChunkFromContract" : true,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Hostile to All Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1234,7 +1235,9 @@
                 "EncounterObjectGuid" : "823304d4-356b-42e4-a804-90c957ee3416"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Hostile to All Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1243,7 +1246,10 @@
                 "EncounterObjectGuid" : "2cf7c676-93a5-416c-9f27-58f4d9493aff"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Target Additional Dropped Forces Chunk Group",
+                "Enemy Ally Additional Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1252,7 +1258,10 @@
                 "EncounterObjectGuid" : "7b19fb59-bccc-4c75-aa2a-e4fe53b1a3bf"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Target Additional Dropped Forces Chunk Group",
+                "Enemy Ally Additional Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1261,7 +1270,9 @@
                 "EncounterObjectGuid" : "1edf7529-a68a-4cc6-a14f-40d2ce2f8810"
             },
             "enableChunkFromContract" : true,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Target Additional Dropped Forces Two Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1270,7 +1281,9 @@
                 "EncounterObjectGuid" : "5e66f0a6-7853-4795-99ba-d5026a5456cd"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Target Additional Dropped Forces Two Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1279,7 +1292,10 @@
                 "EncounterObjectGuid" : "cad290bc-8a58-4db3-accb-41e89a8d827f"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Enemy Ally Additional Forces Chunk Group",
+                "Target Additional Dropped Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1288,7 +1304,10 @@
                 "EncounterObjectGuid" : "b848dd5c-9d8a-486b-9cc5-450ef12ffef9"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Enemy Ally Additional Forces Chunk Group",
+                "Target Additional Dropped Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1297,7 +1316,9 @@
                 "EncounterObjectGuid" : "7f7e150a-d8e3-4587-9d79-3c2dfe928855"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Enemy Ally Landed Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1306,7 +1327,9 @@
                 "EncounterObjectGuid" : "86c5484f-388c-4e37-ab02-a06e3f9acff6"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Enemy Ally Landed Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1315,7 +1338,9 @@
                 "EncounterObjectGuid" : "885ba4c2-9faf-44eb-b59c-2a42cef684e5"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Whole Player Lance Survives Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1324,7 +1349,9 @@
                 "EncounterObjectGuid" : "e4022a79-4a26-46a6-98b3-4308b697f407"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Whole Player Lance Survives Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1333,7 +1360,9 @@
                 "EncounterObjectGuid" : "3bca4c6f-4cd7-42aa-a95e-6414fa1983f8"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Ensure Player Unit in Slot One Surivives Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1342,7 +1371,9 @@
                 "EncounterObjectGuid" : "32a5c141-e23f-4587-a884-5955a1a63a36"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Ensure Player Unit in Slot One Surivives Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1351,7 +1382,9 @@
                 "EncounterObjectGuid" : "1c3ad7ab-e81f-46af-a926-96b42fd171bd"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Employer Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1360,7 +1393,9 @@
                 "EncounterObjectGuid" : "889ff9a0-067e-4fc5-bb85-99c2ee9e9e81"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Employer Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1369,7 +1404,9 @@
                 "EncounterObjectGuid" : "50cd3833-4da1-41d1-a5cf-856611a55102"
             },
             "enableChunkFromContract" : true,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Employer Ally Forces Chunk Group"
+            ],
             "requirementList" : []
         },
         {
@@ -1378,7 +1415,9 @@
                 "EncounterObjectGuid" : "b5d81bde-22d8-46a6-afe7-44cfd6aadbe6"
             },
             "enableChunkFromContract" : false,
-            "controlledByContractChunkGroupList" : [],
+            "controlledByContractChunkGroupList" : [
+                "Employer Ally Forces Chunk Group"
+            ],
             "requirementList" : []
         }
     ],
@@ -1567,7 +1606,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Here we are, XO\u2014scenic New Jakobstad, the shiniest combat zone on Fagerholm. I've got Bravo Lance on the comms, and their Drop Pods are prepared to launch. Are you reading us, Ombra?",
+                    "words" : "Here we are, XO—scenic New Jakobstad, the shiniest combat zone on Fagerholm. I've got Bravo Lance on the comms, and their Drop Pods are prepared to launch. Are you reading us, Ombra?",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1704,7 +1743,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Thank the gods for that. What a shitshow this is! First House Liao kicks in our door, then House Steiner comes flying in\u2026 what's next, the damned FedRats?",
+                    "words" : "Thank the gods for that. What a shitshow this is! First House Liao kicks in our door, then House Steiner comes flying in… what's next, the damned FedRats?",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1777,7 +1816,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "That's it, Commander\u2014we're done here. I'm ordering a full retreat.",
+                    "words" : "That's it, Commander—we're done here. I'm ordering a full retreat.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2114,7 +2153,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "I don't care what your mission is, Lyran. You aren't welcome here. Bravo Lance\u2014light 'em up!",
+                    "words" : "I don't care what your mission is, Lyran. You aren't welcome here. Bravo Lance—light 'em up!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2698,7 +2737,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Heads up, Commander\u2014we've got incoming Drop Pods. I've tracked their trajectory and marked their LZ on your screen.",
+                    "words" : "Heads up, Commander—we've got incoming Drop Pods. I've tracked their trajectory and marked their LZ on your screen.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -5849,5 +5888,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "INVALID_UNSET",
+    "contractTypeID" : "ThreeWayBattle"
 }

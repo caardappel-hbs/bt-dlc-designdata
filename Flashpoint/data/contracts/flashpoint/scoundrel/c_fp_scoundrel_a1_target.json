@@ -11,13 +11,12 @@
     "missionSuccessStatementOverride" : null,
     "badFaithStatementOverride" : null,
     "goodFaithStatementOverride" : null,
-    "shortDescription" : "I'm glad that you decided to listen to reason, Commander\u2014you'd be surprised how many so-called mercenaries lack the savvy to jump on an opportunity like this when it presents itself. Now, the LosTech cache that I'm sending you after is close to our location, but there's a catch: it's sealed away in a defunct mineshaft. I've got a way in, though. Follow my instructions, and we'll all get rich.",
-    "longDescription" : "I don't trust Hadley\u2014or Sweeney, or whatever her name really is\u2014for a second, but she should be secure enough in the repair bay's makeshift brig. My advice? Let's go in expecting a double cross, and let's monitor Hadley's cell. At the first sign of trouble, we double back and get her to Lady Cunningham.",
+    "shortDescription" : "I'm glad that you decided to listen to reason, Commander—you'd be surprised how many so-called mercenaries lack the savvy to jump on an opportunity like this when it presents itself. Now, the LosTech cache that I'm sending you after is close to our location, but there's a catch: it's sealed away in a defunct mineshaft. I've got a way in, though. Follow my instructions, and we'll all get rich.",
+    "longDescription" : "I don't trust Hadley—or Sweeney, or whatever her name really is—for a second, but she should be secure enough in the repair bay's makeshift brig. My advice? Let's go in expecting a double cross, and let's monitor Hadley's cell. At the first sign of trouble, we double back and get her to Lady Cunningham.",
     "salvagePotential" : 16,
     "requirementList" : [],
     "OnContractSuccessResults" : [],
     "OnContractFailureResults" : [],
-    "contractType" : "FireMission",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
@@ -360,6 +359,7 @@
                 "EncounterObjectGuid" : "fe7acedd-7d10-4632-bd5b-2abd9fd12372"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -368,6 +368,7 @@
                 "EncounterObjectGuid" : "80c67186-d629-4cba-9145-288724cc0718"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -376,6 +377,7 @@
                 "EncounterObjectGuid" : "eedc9ce0-5262-452b-b367-72d4e02defaf"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -384,6 +386,7 @@
                 "EncounterObjectGuid" : "efb53005-cf39-4754-9ff1-8b0c81ee8760"
             },
             "enableChunkFromContract" : true,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -392,6 +395,7 @@
                 "EncounterObjectGuid" : "01b0e9ab-f953-475b-b744-c44d890cc4c6"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -400,6 +404,7 @@
                 "EncounterObjectGuid" : "44bfa8ef-bc6d-4f29-adbf-10ad78fc8d4b"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -408,6 +413,7 @@
                 "EncounterObjectGuid" : "1e0489a7-ff44-44a0-b16f-2ff8dc08267f"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -416,6 +422,7 @@
                 "EncounterObjectGuid" : "04f0e24a-0540-4078-9627-1f593b1d7d89"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
         {
@@ -424,6 +431,7 @@
                 "EncounterObjectGuid" : "a8910d4c-761b-4479-9a4f-a1c725d763ec"
             },
             "enableChunkFromContract" : false,
+            "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         }
     ],
@@ -702,7 +710,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Uh\u2026 hi.",
+                    "words" : "Uh… hi.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1098,7 +1106,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Hey, uh, Boss\u2026 just a heads-up. I'm picking up a DropShip on the Leopard's long-range sensors. Looks to me like the bad guys just called in the cavalry.",
+                    "words" : "Hey, uh, Boss… just a heads-up. I'm picking up a DropShip on the Leopard's long-range sensors. Looks to me like the bad guys just called in the cavalry.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1155,7 +1163,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Oh, come on. They're vehicles! How much trouble could they be? Just step on them and keep going\u2014you're nearly there!",
+                    "words" : "Oh, come on. They're vehicles! How much trouble could they be? Just step on them and keep going—you're nearly there!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1297,6 +1305,7 @@
             "dialogueContent" : []
         }
     ],
+    "extractionOverrideList" : [],
     "overwriteMissionCompleteWhenAutoComplete" : true,
     "overrideAutoCompleteDialogueId" : null,
     "disableNegotations" : false,
@@ -2649,5 +2658,7 @@
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
         "lanceOverrideList" : []
-    }
+    },
+    "contractType" : "FireMission",
+    "contractTypeID" : "FireMission"
 }
