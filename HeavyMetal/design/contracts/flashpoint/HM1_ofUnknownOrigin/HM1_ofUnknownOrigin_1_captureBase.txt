@@ -1,0 +1,378 @@
+﻿// Contract HM1_ofUnknownOrigin_1_captureBase 
+
+		
+[ID]HM1_ofUnknownOrigin_1_captureBase
+[Name]Of Unknown Origin
+[Template]CaptureBase
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]According to ISF intelligence, Captain Gaku Magorian is being held prisoner in one of a dozen safe houses within the boundaries of Alamedo Province. Obviously, we can't rely on trial and error to find him, so we're going to have to narrow down the list. Our unidentified syndicate is known to maintain a forward base in this AO. Capture it so that Dr. Murad can scour the OpFor's mainframe for confirmation of Captain Magorian's whereabouts.
+[LongDesc]I still can't believe that we don't even know who we're fighting against. It is what it is, I guess.
+[Salvage]24
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center 
+[ContractDisplayStyle]HeavyMetalFlashpointCampaign
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]false
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]-1
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0.5
+[NegotiatedSalvage]0.5
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+			
+// Contract Objectives
+[ContractObjective]Capture the Unidentified Syndicate Base
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Scout the Unidentified Syndicate Base
+		[Description]The objective to scout the base that is being captured. Must be completed before the actual capture of the base.
+
+	// Optional Objective
+	[Objective]Eliminate Unidentified Syndicate Defenses
+		[Description]The objective to optionally destroy the defenders of the base.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective
+	[Objective]Capture the Unidentified Syndicate Base with Friendly 'Mechs
+		[Description]The objective for the player to move into and capture the base.
+		[OnSuccessDialogueGUID]Dialogue_BaseReached
+
+	// Primary Objective
+	[Objective]Hold Out as Combat Drones Counterattack
+		[Description]HIDDEN TIMER, NO NEED TO EDIT: This is the hidden timer objective that will trigger the enemy reinforcements.
+
+	// Primary Objective
+	[Objective]Pacify the Syndicate Base
+		[Description]This is a general objective to indicate the player must keep playing and eliminate enemies as they come.
+
+	// Primary Objective
+	[Objective]Eliminate Syndicate Reinforcements
+		[Description]The primary objective to destroy the force that tries to remove the player from the captured base.
+
+	// Optional Objective
+	[Objective]Eliminate Base Turrets
+		[Description]The chunk controlled objective to destroy the turrets for the base, if the chunk is active.
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+			
+// Optional Chunks
+[OptionalChunk]Chunk_DestroyLance_Defenders (Bonus)|on
+[OptionalChunk]Chunk_BaseDefense_Turrets (Bonus)|off
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		Spawner_PlayerLance
+//		Lance_Enemy_BaseDefenders
+//		Lance_Enemy_Reinforcements
+//		Lance_Enemy_BaseTurrets
+//		Region_GoTo
+//		Region_Occupy
+//		chrPrfVhcl_leopard-MANAGED
+//		chrPrfVhcl_union-MANAGED
+			
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]Okay, Commander. Our unidentified crime syndicate's forward base should lie somewhere up ahead. Stick your neck out far enough and you're bound to find it.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Yeah, and who knows what else. I probably don't have to remind you of this, Boss, but Shugo Yamaguchi couldn't tell us who these criminals are or what kind of firepower they're packing. Could just be vehicles and turrets, but I'll bet dollars to donuts they're stomping around in BattleMechs.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]They were able to hijack a derelict spacecraft en route to its location, so it's a given that they've got resources. Go into this situation with your eyes open, {COMMANDER.FirstName}… keep your finger on the trigger, and tell your lance to do the same.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]That's done it, Commander. The base is ours, and I'm bringing Farah around to get a look at their mainframe.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Nice job, kids. Never seen a company dig its own grave as enthusiastically as you just did.\r\n\r\nYou're all dead now, by the way. When Notker Baumann gets wind of what you've done—
+		[Color]1|1|1|1
+		[Cast]castDef_HM_unknownOrigin_GangsterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Yeah, yeah, we get it. Just give me a second to block your transmission, aaand… done. There, that's better.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Blessed silence.\r\n\r\nWell. For my part, I'm looking forward to getting my hands on this Baumann Group's computer systems. Anyone feel like placing bets on what I'll find in there?
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Just focus on recovering Captain Magorian's coordinates, Doctor. Shugo Yamaguchi isn't paying us by the hour.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You're no fun, XO. But yes, of course, I'll get right on it. Murad out.
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]I reached out to you for this job because I believed that your company was up to the task. I can see now that I was mistaken.
+		[Color]1|1|1|1
+		[Cast]castDef_KuritaRepDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropshipLanding
+	[Content]Leopard inbound, Commander. I'll be touching down directly.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_TurretWarning
+	[Content]Careful, Boss. The syndicate just brought a bunch of turrets online.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Enemy_BaseTurrets
+
+[Dialogue]Dialogue_Interrupt_GoToComplete
+	[Content]I've got eyes on the base, Commander. Take it, and we'll get this show on the road.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Occupy
+		
+[Dialogue]Dialogue_BaseReached|Dialogue_BaseReached
+	[Content]We've got new hostile contacts on the field, Commander. They're heading your way.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]INCOMING TRANSMISSION.
+		[Color]1|1|1|1
+		[Cast]castDef_Computer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Hey. Mercs. I don't know who you are, but I'd get the hell out of here if I were in your shoes. You don't know who you're messing with.
+		[Color]1|1|1|1
+		[Cast]castDef_HM_unknownOrigin_GangsterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]You're right, we don't. Wanna be a good sport and clue us in?
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]This whole operation is being overseen by the Baumann Group. Me and my associates, we're just pirates. Little fish in a big pond. But you take it from me: if you cross Notker Baumann, you are <i>done</i>.
+		[Color]1|1|1|1
+		[Cast]castDef_HM_unknownOrigin_GangsterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Appreciate the warning, but we'll take our chances.\r\n\r\nSecure the base, Commander. Take down anyone that stands in your way.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_BaseDefenders
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]spawn_poorly_maintained_50
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Reinforcements
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_BaseTurrets
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_turret
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Turret
+			[UnitDef]turretDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+

@@ -1,0 +1,1404 @@
+// Contract HM7_showdown_2_3wayBattle 
+
+		
+[ID]HM7_showdown_2_3wayBattle
+[Name]Standoff II
+[Template]ThreeWayBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Easy
+[ShortDesc]This is it—the final confrontation between ourselves, the Black Widow, and the Bounty Hunter. Succeed in this, and the Moderbjörn will have all the time it needs to harvest the <i>Dobrev</i>'s navigation logs. The secrets of the Star League lie within our grasp, Commander. I know we can do this, so let's get to it.
+[LongDesc]We're up against legends. Again. But the hell with it, {COMMANDER.FirstName}. Let's go make a legend of our own.
+[Salvage]32
+[FOW]Surveyed
+			
+// Misc - Flashpoint CMD Center - No Pay
+[ContractDisplayStyle]HeavyMetalFlashpointCampaign
+[ContractScope]MID_CAMPAIGN
+[DisableNegotations]true
+[DisableLanceConfiguration]false
+[DisableCancelButton]false
+[DisableAfterAction]false
+[ContractRewardOverride]0
+[TravelOnly]false
+[UseTravelCostPenalty]false
+[UsesExpiration]false
+[ExpirationTimeOverride]-1
+[NegotiatedSalary]0
+[NegotiatedSalvage]1
+[ExcludedFromProceduralGeneration]true
+[OverwriteMissionCompleteWhenAutoComplete]false
+// End Miscellaneous Values
+			
+			
+[MapMood]JumbledKarstMood	
+			
+			
+// Contract Objectives
+[ContractObjective]Defeat the Black Widow and the Bounty Hunter
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective 1
+	[Objective]Defeat the Black Widow Company
+		[Description]
+		[OnSuccessDialogueGUID]Dialogue_Interrupt_BlackWidowDown
+
+	// Primary Objective 2
+	[Objective]Defeat the Bounty Hunters
+		[Description]
+		[OnSuccessDialogueGUID]Dialogue_Interrupt_BountyHunterDown
+
+	// Optional Objective 3
+	[Objective]Objective_Empty_HiddenFlag_HostileToAllChunkActive
+		[Description]
+
+	// Optional Objective 4
+	[Objective]Hidden Hostile to All Drop Timer
+		[Description]
+
+	// Optional Objective 5
+	[Objective]Hidden Hostile to ALL AI Timer
+		[Description]
+
+	// Optional Objective 6
+	[Objective]Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective 7
+	[Objective]Objective_Empty_HostileToAll_Flag_Secondary
+		[Description]
+
+
+	// Optional Objective 8
+	[Objective]Hidden Hostile to All Drop Timer
+		[Description]
+
+	// Optional Objective 9
+	[Objective]Hidden Hostile to ALL AI Timer
+		[Description]
+
+	// Primary Objective 10
+	[Objective]Destroy Additional Enemy Forces
+		[Description]
+
+	// Optional Objective 11
+	[Objective]Hidden Target Primary Drop Timer
+		[Description]
+
+	// Optional Objective 12
+	[Objective]Hidden Target Primary AI Swap Timer
+		[Description]
+
+	// Optional Objective 13
+	[Objective]Empty Do Additonal Forces Primary Autocomplete Flag
+		[Description]
+
+	// Optional Objective 14
+	[Objective]Destroy Additional Enemy Forces
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective 15
+	[Objective]Hidden Target Primary Drop Timer
+		[Description]
+
+	// Optional Objective 16
+	[Objective]Hidden Target Primary AI Swap Timer
+		[Description]
+
+	// Optional Objective 17
+	[Objective]Empty Do Additonal Forces Secondary Autocomplete Flag
+		[Description]
+
+	// Primary Objective 18
+	[Objective]Destroy Additional Enemy Reinforcements
+		[Description]
+
+	// Optional Objective 19
+	[Objective]Hidden Target Primary Drop Timer
+		[Description]
+
+	// Optional Objective 20
+	[Objective]Hidden Target Primary AI Swap Timer
+		[Description]
+
+	// Optional Objective 21
+	[Objective]Empty Do Additonal Forces 2 Primary Autocomplete Flag
+		[Description]
+
+	// Optional Objective 22
+	[Objective]Destroy Additional Enemy Reinforcements
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective 23
+	[Objective]Hidden Target Primary Drop Timer
+		[Description]
+
+	// Optional Objective 24
+	[Objective]Hidden Target Primary AI Swap Timer
+		[Description]
+
+	// Optional Objective 25
+	[Objective]Empty Do Additonal Forces 2 Secondary Autocomplete Flag
+		[Description]
+
+	// Primary Objective 26
+	[Objective]Destroy Additional Enemy Allied Reinforcements
+		[Description]
+
+	// Optional Objective 27
+	[Objective]Hidden Target Primary Drop Timer
+		[Description]
+
+	// Optional Objective 28
+	[Objective]Hidden Target Primary AI Swap Timer
+		[Description]
+
+	// Optional Objective 29
+	[Objective]Empty Do Additonal Forces Primary Autocomplete Flag
+		[Description]
+
+	// Optional Objective 30
+	[Objective]Destroy Additional Enemy Allied Reinforcements
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective 31
+	[Objective]Hidden Target Primary Drop Timer
+		[Description]
+
+	// Optional Objective 32
+	[Objective]Hidden Target Primary AI Swap Timer
+		[Description]
+
+	// Optional Objective 33
+	[Objective]Empty Do Additonal Forces Secondary Autocomplete Flag
+		[Description]
+
+	// Primary Objective 34
+	[Objective]Destroy the Enemy Allied Forces
+		[Description]
+
+
+	// Optional Objective 35
+	[Objective]Objective_Empty_HasSeenEnemyAllyLance_Primary
+		[Description]
+
+	// Optional Objective 36
+	[Objective]Destroy the Enemy Allied Forces
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective 37
+	[Objective]Objective_Empty_HasSeenEnemyAllyLance_Secondary
+		[Description]
+
+	// Primary Objective 38
+	[Objective]All of {COMPANY.CompanyName} Lance must survive
+		[Description]
+
+	// Optional Objective 39
+	[Objective]All of {COMPANY.CompanyName} Lance must survive
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective 40
+	[Objective]Unit one of {COMPANY.CompanyName} must survive
+		[Description]
+
+	// Optional Objective 41
+	[Objective]Unit one of {COMPANY.CompanyName} must survive
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Primary Objective 42
+	[Objective]Get to the evac zone
+		[Description]
+
+	// Optional Objective 43
+	[Objective]Objective_Empty_FirstContractFlag
+		[Description]
+
+	// Optional Objective 44
+	[Objective]Hidden Open Player Evac Objective
+		[Description]
+
+	// Optional Objective 45
+	[Objective]OFF
+		[Description]
+
+	// Primary Objective 46
+	[Objective]Ensure combat drones survive
+		[Description]
+
+	// Primary Objective 47
+	[Objective]The {TEAM_EMP.FactionDef.Demonym} lance must reach the evac zone
+		[Description]
+
+	// Optional Objective 48
+	[Objective]Empty_Employer_IsActiveFlag_Primary
+		[Description]
+
+	// Optional Objective 49
+	[Objective]OFF
+		[Description]
+
+	// Optional Objective 50
+	[Objective]Ensure combat drones survive
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective 51
+	[Objective]The {TEAM_EMP.FactionDef.Demonym} lance must reach the evac zone
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective 52
+	[Objective]Empty_Employer_IsActiveFlag_Secondary
+		[Description]
+
+	// Optional Objective 53
+	[Objective]OFF
+		[Description]
+
+	// Primary Objective 54
+	[Objective]Ensure {TEAM_EMP_ALLY.FactionDef.Demonym} Lance safely evacs.
+		[Description]
+
+	// Primary Objective 55
+	[Objective]Escort friendlies to evac point
+		[Description]
+
+	// Optional Objective 56
+	[Objective]Empty_EmployerAlly_IsActiveFlag_Primary
+		[Description]
+
+	// Optional Objective 57
+	[Objective]OFF
+		[Description]
+
+	// Optional Objective 58
+	[Objective]Surviving combat drones
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective 59
+	[Objective]Escort friendlies to evac point
+		[Description]
+
+	// Optional Objective 60
+	[Objective]Empty_EmployerAlly_IsActiveFlag_Secondary
+		[Description]
+
+	// Optional Objective 61
+	[Objective]AllPrimaryTargetsDestroyedFlag
+		[Description]
+
+	// Optional Objective 62
+	[Objective]TimerObjective_HostileToAll_Primary
+		[Description]
+
+	// Optional Objective 63
+	[Objective]TimerObjective_HostileToAll_Secondary
+		[Description]
+
+	// Optional Objective 64
+	[Objective]TimerObjective_1RoundSafety_AddForces_Primary
+		[Description]
+
+	// Optional Objective 65
+	[Objective]TimerObjective_1RoundSafety_AddForces_Secondary
+		[Description]
+
+	// Optional Objective 66
+	[Objective]TimerObjective_1RoundSafety_AddForces2_Primary
+		[Description]
+
+	// Optional Objective 67
+	[Objective]TimerObjective_1RoundSafety_AddForces2_Secondary
+		[Description]
+
+	// Optional Objective 68
+	[Objective]TimerObjective_1RoundSafety_AddForces_EnemyAlly_Primary
+		[Description]
+
+	// Optional Objective 69 (nice)
+	[Objective]TimerObjective_1RoundSafety_AddForces_EnemyAlly_Secondary
+		[Description]
+			
+// Optional Chunks
+[OptionalChunk]Chunk_HostileAll_Lance_Primary|on
+[OptionalChunk]Chunk_HostileAll_Lance_Secondary|off
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_Primary (Optional)|off
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_Secondary (Optional)|off
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_2_Primary (Optional)|off
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_2_Secondary (Optional)|off
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_EnemyAlly_Primary (Optional)|off
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary (Optional)|off
+[OptionalChunk]Chunk_EnemyAlly_Destroy_Primary (Optional)|off
+[OptionalChunk]Chunk_EnemyAlly_Destroy_Secondary (Optional)|off
+[OptionalChunk]Chunk_EnsureEntirePlayerLanceSurvives_Primary (Optional)|off
+[OptionalChunk]Chunk_EnsureEntirePlayerLanceSurvives_Secondary (Optional)|off
+[OptionalChunk]Chunk_EnsurePlayerUnitSlot1Survives_Primary (Optional)|off
+[OptionalChunk]Chunk_EnsurePlayerUnitSlot1Survives_Secondary (Optional)|off
+[OptionalChunk]Chunk_DefendLanceWithEscape_Employer_Primary (Optional)|off
+[OptionalChunk]Chunk_DefendLanceWithEscape_Employer_Secondary (Optional)|off
+[OptionalChunk]Chunk_DefendLanceWithEscape_EmployerAlly_Primary (Optional)|off
+[OptionalChunk]Chunk_DefendLanceWithEscape_EmployerAlly_Secondary (Optional)|on
+
+// Camera Focus Aliases
+// Usable in the [Focus] field for a dialogue item
+//		PlayerLanceSpawner_Battle+
+//		Lance_Target_EnemyForce
+//		Lance_HostileAll_Primary
+//		Lance_HostileAll_Secondary
+//		DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
+//		DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
+//		DestroyLanceSpawner_Tarqet_AdditionalForces_2_Primary (Optional)
+//		DestroyLanceSpawner_Tarqet_AdditionalForces_2_Secondary (Optional)
+//		DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Primary (Optional)
+//		DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Secondary (Optional)
+//		Enemy Ally Optional LanceSpawner Primary
+//		Enemy Ally Optional LanceSpawner Secondary
+//		Lance_Employer_Primary
+//		Lance_Employer_Secondary
+//		Lance_EmployerAlly_Primary
+//		Lance_EmployerAlly_Secondary
+//		Region_HostileToAllDrop_Primary
+//		Region_HostileToAllDrop_Secondary
+//		Region_Tarqet_AdditionalDroppedForces_Primary
+//		Region_Tarqet_AdditionalDroppedForces_Secondary
+//		Region_Tarqet_AdditionalDroppedForces_2_Primary
+//		Region_Tarqet_AdditionalDroppedForces_2_Secondary
+//		Region_AdditionalDroppedForces_EnemyAlly_Primary
+//		Region_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary
+//		Region_PlayerEscape_Battle+
+//		Region_Escape_Employer_Primary
+//		Region_Escape_Employer_Secondary
+//		Region_Escape_EmployerAlly_Primary
+//		Region_Escape_EmployerAlly_Secondary
+			
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]Well, here we are again. Facing off against a certified badass, with another on the way. And they're both spoiling for a fight.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]PlayerLanceSpawner_Battle+
+	[Content]INCOMING TRANSMISSION.
+		[Color]1|1|1|1
+		[Cast]castDef_Computer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Target_EnemyForce		
+	[Content]I commend your bravery, Commander. But we both know how this is going to end.
+		[Color]1|1|1|1
+		[Cast]castDef_HM_BlackWidowDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Yes, we do. We're going to defeat you, Kerensky. {COMPANY.CompanyName} will send you running with your tail between your legs.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Is that what you think? How adorable.\r\n\r\nLet's get this over with, {COMMANDER.LastName}. I promise I'll make it quick.
+		[Color]1|1|1|1
+		[Cast]castDef_HM_BlackWidowDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]Holy shit, we did it! We actually won!
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Didn't hurt that our OpFors put as much effort into killing each other as they did into fighting us.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]If you want to put an asterisk by our victory, be my guest! I, for one, intend to celebrate!
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I'd suggest holding off until we're back on the <i>Argo</i>. Our OpFors are probably already getting suited in fresh 'Mechs. If we don't get a move on, they'll be comin' back around for a rematch.
+		[Color]1|1|1|1
+		[Cast]castDef_YangDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]I don't intend to give them that chance. Doctor, is the Moderbjörn finished yet? Tell me the answer is yes.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Just finished! Come pick us up, and we’ll get the hell out of here!
+		[Color]1|1|1|1
+		[Cast]castDef_FarahDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	
+
+[Dialogue]Dialog_MissionFailure
+	[Content]////Our cause is lost, Commander. I advise you to salvage what you can and go.////
+		[Color]1|1|1|1
+		[Cast]castDef_HM_SLDFCompDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_NewContactsWarning
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_FriendlyForcesAdvisory_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Employer_Primary
+
+[Dialogue]Dialogue_Interrupt_FriendlyForcesAdvisory_Secondary
+	[Content]////These are the last of my combat drones. May they serve you well in the battle to come.////
+		[Color]1|1|1|1
+		[Cast]castDef_HM_SLDFCompDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_EmployerAlly_Secondary
+
+[Dialogue]Dialogue_Interrupt_FriendlyForcesAllyAdvisory_Primary
+	[Content]////These are the last of my combat drones. May they serve you well in the battle to come.////
+		[Color]1|1|1|1
+		[Cast]castDef_HM_SLDFCompDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_EmployerAlly_Primary
+
+[Dialogue]Dialogue_Interrupt_FriendlyForcesAllyAdvisory_Secondary
+	[Content]////These are the last of my combat drones. May they serve you well in the battle to come.////
+		[Color]1|1|1|1
+		[Cast]castDef_HM_SLDFCompDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_EmployerAlly_Secondary
+
+[Dialogue]Dialogue_Interrupt_EmployerForcesCasualty_PrimaryAndSecondary
+	[Content]////The OpFor has eliminated one of my combat drones. I will attempt to hold out with the remainder.////
+		[Color]1|1|1|1
+		[Cast]castDef_HM_SLDFCompDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerAllyForcesCasualty_PrimaryAndSecondary
+	[Content]////The OpFor has eliminated one of my combat drones. I will attempt to hold out with the remainder.////
+		[Color]1|1|1|1
+		[Cast]castDef_HM_SLDFCompDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceDestroyed_PrimaryAndSecondary
+	[Content]////Attrition has claimed the last of my combat drones, Commander. From this point on, your lance is on its own.////
+		[Color]1|1|1|1
+		[Cast]castDef_HM_SLDFCompDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerAllyLanceDestroyed_PrimaryAndSecondary
+	[Content]////Attrition has claimed the last of my combat drones, Commander. From this point on, your lance is on its own.////
+		[Color]1|1|1|1
+		[Cast]castDef_HM_SLDFCompDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EnemyAllyAppears_Primary (Optional)
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EnemyAllyAppears_Secondary (Optional)
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_GameLogic_PlayerEscapeOpen
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_HostileToAllLanceDropsIn_Primary
+    [Content]The gang's all here, Commander. Things are about to get interesting.
+        [Color]1|1|1|1
+        [Cast]castDef_SumireDefault
+        [Emote]Default
+        [Audio]NONE
+        [Focus]Lance_HostileAll_Primary
+    [Content]INCOMING TRANSMISSION.
+        [Color]1|1|1|1
+        [Cast]castDef_Computer
+        [Emote]Default
+        [Audio]NONE
+        [Focus]Lance_HostileAll_Primary
+    [Content]{COMMANDER.LastName}! Y'know, you really should've looked that gift horse in the mouth.\r\n\r\nWait. Is that who I think it is? Is there a goddamned <i>arachnid</i> on the field?!
+        [Color]1|1|1|1
+        [Cast]castDef_HM_BountyHunterDefault
+        [Emote]Default
+        [Audio]NONE
+        [Focus]Lance_HostileAll_Primary
+    [Content]Bounty Hunter.\r\n\r\nYou betrayed me on Nova Roma. Murdered my MechWarriors on Le Blanc. You've earned yourself a slow death twice over—and this time, I'm going to deliver.
+        [Color]1|1|1|1
+        [Cast]castDef_HM_BlackWidowDefault
+        [Emote]Default
+        [Audio]NONE
+        [Focus]
+    [Content]You said something just like that on Le Blanc. Didn't stop me from kicking your friends' teeth down their damned throats, did it?\r\n\r\n"Most dangerous MechWarrior alive," my ass. You're a punk, Kerensky. And you're cluttering up <i>my</i> AO.
+        [Color]1|1|1|1
+        [Cast]castDef_HM_BountyHunterDefault
+        [Emote]Default
+        [Audio]NONE
+        [Focus]
+    [Content]The smallest dog barks the loudest. I'll quiet you down soon enough.\r\n\r\nBlack Widow Company, you have a new target. Spare the metal, but kill the meat. Kerensky out.
+        [Color]1|1|1|1
+        [Cast]castDef_HM_BlackWidowDefault
+        [Emote]Default
+        [Audio]NONE
+        [Focus]
+
+[Dialogue]Dialogue_Interrupt_HostileToAllLanceDropsIn_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_HostileAll_Secondary
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceGoesToEvac_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceGoesToEvac_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceDustsOff_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_Employer_Primary
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceDustsOff_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_Employer_Secondary
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceAllyGoesToEvac_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceAllyGoesToEvac_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerAllyLanceDustsOff_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_EmployerAlly_Primary
+
+[Dialogue]Dialogue_Interrupt_EmployerAllyLanceDustsOff_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_EmployerAlly_Secondary
+
+[Dialogue]Dialogue_Interrupt_AdditionalEnemyAllyForcesDropIn_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Primary (Optional)
+
+[Dialogue]Dialogue_Interrupt_AdditionalEnemyAllyForcesDropIn_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Secondary (Optional)
+
+[Dialogue]Dialogue_Interrupt_AdditionalTargetForces2DropIn_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Primary (Optional)
+
+[Dialogue]Dialogue_Interrupt_AdditionalTargetForces2DropIn_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Secondary (Optional)
+
+[Dialogue]Dialogue_Interrupt_AdditionalTargetForcesDropIn_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AdditionalTargetForcesDropIn_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
+
+[Dialogue]Dialogue_Interrupt_DropWarning_HostileToAll_Primary
+    [Content]I've got a DropShip on my sensors, Commander. It's the Bounty Hunter, and he's coming in fast. I'm marking his projected LZ on your map.
+        [Color]1|1|1|1
+        [Cast]castDef_SumireDefault
+        [Emote]Default
+        [Audio]NONE
+        [Focus]Region_HostileToAllDrop_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_HostileToAll_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_HostileToAllDrop_Secondary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_Secondary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_2_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_2_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_2_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_2_Secondary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_EnemyAlly_Primary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_AdditionalDroppedForces_EnemyAlly_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary
+	[Content]NYI
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary
+
+[Dialogue]Dialogue_Interrupt_BlackWidowDown|Dialogue_Interrupt_BlackWidowDown
+	[Content]You're good, {COMMANDER.LastName}. Better than I'd thought. [electric crackling sound] You've bought yourself a temporary reprieve. But I'll be back for you soon enough.
+		[Color]1|1|1|1
+		[Cast]castDef_HM_BlackWidowDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+		
+[Dialogue]Dialogue_Interrupt_BountyHunterDown|Dialogue_Interrupt_BountyHunterDown
+	[Content]Son of a— [series of muffled explosions][static]
+		[Color]1|1|1|1
+		[Cast]castDef_HM_BountyHunterDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]PlayerLanceSpawner_Battle+
+		[LanceDef]Manual
+		// Manual: spawns will be determined by the unit defs below
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]UNDEFINED
+			[UnitDef]
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+	[Lance]Lance_Employer_Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_mech
+		[ExcludedTags]lance_type_convoy|lance_type_turret
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Employer_Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_mech
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+[Team]employersAllyTeam
+	[Lance]Lance_EmployerAlly_Primary
+		[LanceDef]Manual
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_mech
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		[OverrideSpawnMethod]DropPod
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Vehicle
+			[UnitDef]vehicledef_HM_SLDFDroneHeavy
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_story_SLDFAI
+		[Unit]Vehicle
+			[UnitDef]vehicledef_HM_SLDFDroneHeavy
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_story_SLDFAI
+		[Unit]Vehicle
+			[UnitDef]vehicledef_HM_SLDFDroneMedium
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_story_SLDFAI
+		[Unit]Vehicle
+			[UnitDef]vehicledef_HM_SLDFDroneMedium
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_story_SLDFAI
+	[Lance]Lance_EmployerAlly_Secondary
+		[LanceDef]Manual
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_mech
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		[OverrideSpawnMethod]DropPod
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Vehicle
+			[UnitDef]vehicledef_HM_SLDFDroneHeavy
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_story_SLDFAI
+		[Unit]Vehicle
+			[UnitDef]vehicledef_HM_SLDFDroneHeavy
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_story_SLDFAI
+		[Unit]Vehicle
+			[UnitDef]vehicledef_HM_SLDFDroneMedium
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_story_SLDFAI
+		[Unit]Vehicle
+			[UnitDef]vehicledef_HM_SLDFDroneMedium
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_story_SLDFAI
+
+[Team]targetTeam
+	[Lance]Lance_Target_EnemyForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_warhammer_WHM-BW
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_BW_NatashaKerensky
+		[Unit]Mech
+			[UnitDef]mechdef_marauder_MAD-CM
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_BW_ColinMaclaren
+		[Unit]Mech
+			[UnitDef]mechdef_annihilator_ANH-JH
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_BW_JohnHayes
+		[Unit]Mech
+			[UnitDef]mechdef_archer_ARC-LS
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_BW_LynnSheridan
+	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Primary (Optional)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Secondary (Optional)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Primary (Optional)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Secondary (Optional)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Enemy Ally Optional LanceSpawner Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Enemy Ally Optional LanceSpawner Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_notallvehicles
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam
+	[Lance]Lance_HostileAll_Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_notallvehicles
+		[ExcludedTags]lance_type_convoy|lance_type_turret
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechdef_marauder_MAD-BH
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_BH_BountyHunter
+		[Unit]Mech
+			[UnitDef]mechdef_atlas_AS7-GG
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_BH_Geist
+		[Unit]Mech
+			[UnitDef]mechdef_archer_ARC-XO
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_BH_Geronimo
+		[Unit]Mech
+			[UnitDef]mechdef_rifleman_RFL-RIP
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilot_fp_BH_Reaper
+	[Lance]Lance_HostileAll_Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_fire|lance_type_notallvehicles
+		[ExcludedTags]lance_type_convoy|lance_type_turret
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+

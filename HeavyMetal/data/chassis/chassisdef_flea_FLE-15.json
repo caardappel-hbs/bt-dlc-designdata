@@ -1,0 +1,238 @@
+{
+    "Description": {
+        "Cost": 1500000,
+        "Rarity": 2,
+        "Purchasable": true,
+        "Manufacturer": "",
+        "Model": "",
+        "UIName": "Flea",
+        "Id": "chassisdef_flea_FLE-15",
+        "Name": "Flea",
+        "Details": "The Flea FLE-15 is a diminutive 'Mech with good close-in firepower for its size. It moves fast and is very hard to hit, even compared to other lighter 'Mechs. Of course, its armor leaves a lot to be desired.",
+        "Icon": "uixTxrIcon_flea"
+    },
+    "MovementCapDefID": "movedef_flea_FLE-15",
+    "PathingCapDefID": "pathingdef_light",
+    "HardpointDataDefID": "hardpointdatadef_flea",
+    "PrefabIdentifier": "chrPrfMech_fleaBase-001",
+    "PrefabBase": "flea",
+    "Tonnage": 20,
+    "InitialTonnage": 11,
+    "weightClass": "LIGHT",
+    "Heatsinks": 0,
+    "MaxJumpjets": 6,
+    "Stability": 100,
+    "StabilityDefenses": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "SpotterDistanceMultiplier": 1,
+    "VisibilityMultiplier": 1,
+    "SensorRangeMultiplier": 1,
+    "Signature": 0,
+    "Radius": 4,
+    "PunchesWithLeftArm": false,
+    "MeleeDamage": 15,
+    "MeleeInstability": 20,
+    "MeleeToHitModifier": 0,
+    "DFADamage": 25,
+    "DFAToHitModifier": 0,
+    "DFASelfDamage": 25,
+    "DFAInstability": 25,
+    "Locations": [
+        {
+            "Location": "Head",
+            "Hardpoints": [],
+            "Tonnage": 0,
+            "InventorySlots": 1,
+            "MaxArmor": 45,
+            "MaxRearArmor": -1,
+            "InternalStructure": 16
+        },
+        {
+            "Location": "LeftArm",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "Ballistic",
+                    "Omni": false
+                },
+                {
+                    "WeaponMount": "Energy",
+                    "Omni": false
+                },
+                {
+                    "WeaponMount": "AntiPersonnel",
+                    "Omni": false
+                }
+            ],
+            "Tonnage": 0,
+            "InventorySlots": 8,
+            "MaxArmor": 30,
+            "MaxRearArmor": -1,
+            "InternalStructure": 15
+        },
+        {
+            "Location": "LeftTorso",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "AntiPersonnel",
+                    "Omni": false
+                }
+            ],
+            "Tonnage": 0,
+            "InventorySlots": 10,
+            "MaxArmor": 50,
+            "MaxRearArmor": 25,
+            "InternalStructure": 25
+        },
+        {
+            "Location": "CenterTorso",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "AntiPersonnel",
+                    "Omni": false
+                }
+            ],
+            "Tonnage": 0,
+            "InventorySlots": 4,
+            "MaxArmor": 60,
+            "MaxRearArmor": 30,
+            "InternalStructure": 30
+        },
+        {
+            "Location": "RightTorso",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "AntiPersonnel",
+                    "Omni": false
+                }
+            ],
+            "Tonnage": 0,
+            "InventorySlots": 10,
+            "MaxArmor": 50,
+            "MaxRearArmor": 25,
+            "InternalStructure": 25
+        },
+        {
+            "Location": "RightArm",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "Ballistic",
+                    "Omni": false
+                },
+                {
+                    "WeaponMount": "Energy",
+                    "Omni": false
+                },
+                {
+                    "WeaponMount": "AntiPersonnel",
+                    "Omni": false
+                }
+            ],
+            "Tonnage": 0,
+            "InventorySlots": 8,
+            "MaxArmor": 30,
+            "MaxRearArmor": -1,
+            "InternalStructure": 15
+        },
+        {
+            "Location": "LeftLeg",
+            "Hardpoints": [],
+            "Tonnage": 0,
+            "InventorySlots": 4,
+            "MaxArmor": 40,
+            "MaxRearArmor": -1,
+            "InternalStructure": 20
+        },
+        {
+            "Location": "RightLeg",
+            "Hardpoints": [],
+            "Tonnage": 0,
+            "InventorySlots": 4,
+            "MaxArmor": 40,
+            "MaxRearArmor": -1,
+            "InternalStructure": 20
+        }
+    ],
+    "LOSSourcePositions": [
+        {
+            "x": 0,
+            "y": 6.5,
+            "z": 0
+        },
+        {
+            "x": 2,
+            "y": 6.5,
+            "z": -0.5
+        },
+        {
+            "x": -2,
+            "y": 6.5,
+            "z": -0.5
+        }
+    ],
+    "LOSTargetPositions": [
+        {
+            "x": 0,
+            "y": 6.5,
+            "z": 0
+        },
+        {
+            "x": 2,
+            "y": 6.5,
+            "z": -0.5
+        },
+        {
+            "x": -2,
+            "y": 6.5,
+            "z": -0.5
+        },
+        {
+            "x": 1.25,
+            "y": 3.5,
+            "z": 0
+        },
+        {
+            "x": -1.25,
+            "y": 3.5,
+            "z": 0
+        }
+    ],
+    "VariantName": "FLE-15",
+    "ChassisTags": {
+        "items": [],
+        "tagSetSourceFile": ""
+    },
+    "StockRole": "Light Striker & Scout",
+    "YangsThoughts": "The Flea FLE-15 is a diminutive 'Mech with good close-in firepower for its size. It moves fast and is very hard to hit, even compared to other lighter 'Mechs. Of course, its armor leaves a lot to be desired.",
+    "FixedEquipment" : [
+        {
+            "MountedLocation" : "LeftTorso",
+            "ComponentDefID" : "Gear_General_Targeting_Baffle",
+            "SimGameUID" : "",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "IsFixed" : true,
+            "GUID" : null,
+            "DamageLevel" : "Functional",
+            "prefabName" : null,
+            "hasPrefabName" : false
+        },
+        {
+            "MountedLocation" : "RightTorso",
+            "ComponentDefID" : "Gear_General_Targeting_Baffle",
+            "SimGameUID" : "",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "IsFixed" : true,
+            "GUID" : null,
+            "DamageLevel" : "Functional",
+            "prefabName" : null,
+            "hasPrefabName" : false
+        }
+    ]
+}
