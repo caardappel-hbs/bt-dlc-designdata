@@ -11,8 +11,6 @@
 [LongDesc]Obviously, this deployment is gonna be a little fraught. It's on us to handle it anyway.
 [Salvage]24
 [FOW]Surveyed
-
-[MissionSuccessStatementOverride]Nicely done, pal! You just pulled my feet out of the fire, big time!
 			
 // Misc - Flashpoint CMD Center - No Pay
 [ContractDisplayStyle]HeavyMetalFlashpointCampaign

@@ -358,7 +358,7 @@
 [OptionalChunk]Chunk_DefendLanceWithEscape_Employer_Primary (Optional)|off
 [OptionalChunk]Chunk_DefendLanceWithEscape_Employer_Secondary (Optional)|off
 [OptionalChunk]Chunk_DefendLanceWithEscape_EmployerAlly_Primary (Optional)|off
-[OptionalChunk]Chunk_DefendLanceWithEscape_EmployerAlly_Secondary (Optional)|on
+[OptionalChunk]Chunk_DefendLanceWithEscape_EmployerAlly_Secondary (Optional)|off
 
 // Camera Focus Aliases
 // Usable in the [Focus] field for a dialogue item

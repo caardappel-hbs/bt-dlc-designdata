@@ -595,7 +595,7 @@
                         },
                         {
                             "Type" : "System_PauseNotification",
-                            "value" : "We're legends, Commander! Check out our reputation in your Captain's Quarters!",
+                            "value" : "We're legends, Commander! Check out our MRB rating in your Captain's Quarters!",
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "Legendary",
@@ -655,7 +655,7 @@
                         {
                             "typeString" : "System.Int32",
                             "name" : "Reputation.MercenaryReviewBoard",
-                            "value" : "50",
+                            "value" : "250",
                             "set" : false,
                             "valueConstant" : null
                         },

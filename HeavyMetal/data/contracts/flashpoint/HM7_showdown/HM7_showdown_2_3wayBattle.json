@@ -1362,7 +1362,7 @@
             "encounterChunk" : {
                 "EncounterObjectGuid" : "b5d81bde-22d8-46a6-afe7-44cfd6aadbe6"
             },
-            "enableChunkFromContract" : true,
+            "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [
                 "Employer Ally Forces Chunk Group"
             ],
