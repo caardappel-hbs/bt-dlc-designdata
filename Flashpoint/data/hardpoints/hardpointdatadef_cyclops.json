@@ -81,7 +81,6 @@
                     "chrPrfWeap_cyclops_lefttorso_ac20_bh1",
                     "chrPrfWeap_cyclops_lefttorso_ac2_bh1",
                     "chrPrfWeap_cyclops_lefttorso_ac5_bh1",
-                    "chrPrfWeap_cyclops_lefttorso_ams_ah1",
                     "chrPrfWeap_cyclops_lefttorso_gauss_bh1",
                     "chrPrfWeap_cyclops_lefttorso_lbx10_bh1",
                     "chrPrfWeap_cyclops_lefttorso_lrm10_mh1",
@@ -118,7 +117,10 @@
                     "chrPrfWeap_cyclops_lefttorso_srm2_mh3",
                     "chrPrfWeap_cyclops_lefttorso_srm4_mh3",
                     "chrPrfWeap_cyclops_lefttorso_srm6_mh3"
-                ]
+                ],
+				[
+					"chrPrfWeap_cyclops_lefttorso_ams_ah1"
+				]
             ],
             "blanks" : [
                 
@@ -160,7 +162,6 @@
                     "chrPrfWeap_cyclops_righttorso_ac20_bh1",
                     "chrPrfWeap_cyclops_righttorso_ac2_bh1",
                     "chrPrfWeap_cyclops_righttorso_ac5_bh1",
-                    "chrPrfWeap_cyclops_righttorso_ams_ah1",
                     "chrPrfWeap_cyclops_righttorso_flamer_eh1",
                     "chrPrfWeap_cyclops_righttorso_gauss_bh1",
                     "chrPrfWeap_cyclops_righttorso_laser_eh1",
@@ -206,7 +207,10 @@
                     "chrPrfWeap_cyclops_righttorso_srm4_mh3",
                     "chrPrfWeap_cyclops_righttorso_srm6_mh3",
                     "chrPrfWeap_cyclops_righttorso_uac5_bh3"
-                ]
+                ],
+				[
+					"chrPrfWeap_cyclops_righttorso_ams_ah1"
+				]
             ],
             "blanks" : [
                 

@@ -5,7 +5,7 @@
         "Details" : "Template for Initial choice.",
         "Icon" : ""
     },
-    "Weight" : 200,
+    "Weight" : 10,
     "InternalName" : "longRoad",
     "PublishState" : "PUBLISHED",
     "Difficulty" : 5,
@@ -40,5 +40,11 @@
     "UnitDropTonnageHint" : "None",
     "LanceDropTonnageHint" : "None",
     "FlashpointShortDescription" : "House Steiner requires your assistance in leading a Davion-Steiner convoy across a broad swathe of hostile terrain. Payment will be remitted upon the safe delivery of the convoy's payload.",
-    "FlashpointDescriberCastDefId" : "castDef_SteinerRepDefault"
+    "FlashpointDescriberCastDefId" : "castDef_SteinerRepDefault",
+	"Tags" : {
+        "items" : [
+			"StartingFlashpoint"
+        ],
+        "tagSetSourceFile" : "tags/FlashpointTags"
+    }
 }

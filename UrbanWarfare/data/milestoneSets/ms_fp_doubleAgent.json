@@ -968,7 +968,7 @@
                         {
                             "typeString" : "System.Int32",
                             "name" : "Reputation.Liao",
-                            "value" : "-3",
+                            "value" : "-9",
                             "set" : false,
                             "valueConstant" : null
                         },
@@ -1214,7 +1214,7 @@
                         {
                             "typeString" : "System.Int32",
                             "name" : "Reputation.Liao",
-                            "value" : "-3",
+                            "value" : "-9",
                             "set" : false,
                             "valueConstant" : null
                         },

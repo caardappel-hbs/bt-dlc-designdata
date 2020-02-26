@@ -1,0 +1,241 @@
+{
+    "Description" : {
+        "Cost" : 5000000,
+        "Rarity" : 1,
+        "Purchasable" : true,
+        "Manufacturer" : "",
+        "Model" : "",
+        "UIName" : "Raven",
+        "Id" : "chassisdef_raven_RVN-3X",
+        "Name" : "Raven",
+        "Details" : "In addition to its electronic warfare suite, the RVN-3X has been outfitted with experimental Triple Strength Myomer. This greatly increases the 3X's movement speed without increasing its weight, but the advanced myomer bundles can react violently if damaged by weapons fire.",
+        "Icon" : "uixTxrIcon_raven"
+    },
+    "MovementCapDefID" : "movedef_raven_RVN-3X",
+    "PathingCapDefID" : "pathingdef_light",
+    "HardpointDataDefID" : "hardpointdatadef_raven",
+    "PrefabIdentifier" : "chrPrfMech_ravenBase-001",
+    "PrefabBase" : "raven",
+    "VariantName" : "RVN-3X",
+    "StockRole" : "Recon & Electronic Warfare",
+    "YangsThoughts" : "In addition to its electronic warfare suite, the RVN-3X has been outfitted with experimental Triple Strength Myomer. This greatly increases the 3X's movement speed without increasing its weight, but the advanced myomer bundles can react violently if damaged by weapons fire.",
+    "Tonnage" : 35,
+    "InitialTonnage" : 15.5,
+    "weightClass" : "LIGHT",
+    "Heatsinks" : 0,
+    "TopSpeed" : 80,
+    "TurnRadius" : 90,
+    "MaxJumpjets" : 5,
+    "Stability" : 100,
+    "StabilityDefenses" : [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "SpotterDistanceMultiplier" : 1,
+    "VisibilityMultiplier" : 1,
+    "SensorRangeMultiplier" : 1,
+    "Signature" : 0,
+    "Radius" : 4,
+    "PunchesWithLeftArm" : false,
+    "MeleeDamage" : 55,
+    "MeleeInstability" : 35,
+    "MeleeToHitModifier" : 0,
+    "DFADamage" : 45,
+    "DFAToHitModifier" : 0,
+    "DFASelfDamage" : 45,
+    "DFAInstability" : 45,
+    "ChassisTags" : {
+        "items" : [
+            
+        ],
+        "tagSetSourceFile" : ""
+    },
+    "Locations" : [
+        {
+            "Location" : "Head",
+            "Hardpoints" : [
+                
+            ],
+            "Tonnage" : 0,
+            "InventorySlots" : 1,
+            "MaxArmor" : 45,
+            "MaxRearArmor" : -1,
+            "InternalStructure" : 16
+        },
+        {
+            "Location" : "LeftArm",
+            "Hardpoints" : [
+                {
+                    "WeaponMount" : "Missile",
+                    "Omni" : false
+                }                
+            ],
+            "Tonnage" : 0,
+            "InventorySlots" : 8,
+            "MaxArmor" : 60,
+            "MaxRearArmor" : -1,
+            "InternalStructure" : 30
+        },
+        {
+            "Location" : "LeftTorso",
+            "Hardpoints" : [
+                {
+                    "WeaponMount" : "AntiPersonnel",
+                    "Omni" : false
+                },
+                {
+                    "WeaponMount" : "AntiPersonnel",
+                    "Omni" : false
+                }
+            ],
+            "Tonnage" : 0,
+            "InventorySlots" : 10,
+            "MaxArmor": 80,
+            "MaxRearArmor": 40,
+            "InternalStructure": 40
+        },
+        {
+            "Location" : "CenterTorso",
+            "Hardpoints" : [
+                
+            ],
+            "Tonnage" : 0,
+            "InventorySlots" : 4,
+            "MaxArmor": 110,
+            "MaxRearArmor": 55,
+            "InternalStructure": 55
+        },
+        {
+            "Location" : "RightTorso",
+            "Hardpoints" : [
+                {
+                    "WeaponMount" : "Energy",
+                    "Omni" : false
+                },
+                {
+                    "WeaponMount" : "Missile",
+                    "Omni" : false
+                }
+            ],
+            "Tonnage" : 0,
+            "InventorySlots" : 10,
+            "MaxArmor": 80,
+            "MaxRearArmor": 40,
+            "InternalStructure": 40
+        },
+        {
+            "Location" : "RightArm",
+            "Hardpoints" : [
+                {
+                    "WeaponMount" : "Energy",
+                    "Omni" : false
+                },
+                {
+                    "WeaponMount" : "Energy",
+                    "Omni" : false
+                }
+            ],
+            "Tonnage" : 0,
+            "InventorySlots" : 8,
+            "MaxArmor": 60,
+            "MaxRearArmor": -1,
+            "InternalStructure": 30
+        },
+        {
+            "Location" : "LeftLeg",
+            "Hardpoints" : [
+                
+            ],
+            "Tonnage" : 0,
+            "InventorySlots" : 4,
+            "MaxArmor": 80,
+            "MaxRearArmor": -1,
+            "InternalStructure": 40
+        },
+        {
+            "Location" : "RightLeg",
+            "Hardpoints" : [
+                
+            ],
+            "Tonnage" : 0,
+            "InventorySlots" : 4,
+            "MaxArmor": 80,
+            "MaxRearArmor": -1,
+            "InternalStructure": 40
+        }
+    ],
+    "LOSSourcePositions" : [
+        {
+            "x" : 0,
+            "y" : 10,
+            "z" : 3
+        },
+        {
+            "x" : 1,
+            "y" : 9,
+            "z" : -2
+        },
+        {
+            "x" : -1,
+            "y" : 9,
+            "z" : -2
+        }
+    ],
+    "LOSTargetPositions" : [
+        {
+            "x" : 0,
+            "y" : 10,
+            "z" : 3
+        },
+        {
+            "x" : 1,
+            "y" : 9,
+            "z" : -2
+        },
+        {
+            "x" : -1,
+            "y" : 9,
+            "z" : -2
+        },
+        {
+            "x" : 1,
+            "y" : 5,
+            "z" : -1
+        },
+        {
+            "x" : -1,
+            "y" : 5,
+            "z" : -1
+        }
+    ],
+    "FixedEquipment" : [
+        {
+            "MountedLocation" : "LeftTorso",
+            "ComponentDefID" : "Gear_Sensor_Prototype_EWE",
+            "SimGameUID" : "",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "IsFixed" : true,
+            "GUID" : null,
+            "DamageLevel" : "Functional",
+            "prefabName" : null,
+            "hasPrefabName" : false
+        },
+        {
+            "MountedLocation" : "CenterTorso",
+            "ComponentDefID" : "Gear_Structure_Prototype_TSM",
+            "SimGameUID" : "",
+            "ComponentDefType" : "Upgrade",
+            "HardpointSlot" : -1,
+            "IsFixed" : true,
+            "GUID" : null,
+            "DamageLevel" : "Functional",
+            "prefabName" : null,
+            "hasPrefabName" : false
+        }
+    ]
+}

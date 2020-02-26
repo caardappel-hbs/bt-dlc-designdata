@@ -178,6 +178,7 @@
     ],
     "ComponentTags" : {
         "items" : [
+			"BUILT-IN",
         ],
         "tagSetSourceFile" : ""
     }

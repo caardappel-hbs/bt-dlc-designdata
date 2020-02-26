@@ -1,0 +1,81 @@
+{
+   "Version" : 1,
+   "Description" : {
+      "Id" : "vehicledef_SCHREK_SPPC",
+      "Name" : "Schrek SPPC Carrier",
+      "Details" : "",
+      "Icon" : "",
+      "Cost" : 993,
+      "Rarity" : 0,
+      "Purchasable" : false
+   },
+   "ChassisID" : "vehiclechassisdef_SCHREK_SPPC",
+   "VehicleTags": {
+      "items": [
+         "unit_vehicle",
+         "unit_assault",
+         "unit_tracks"
+      ],
+      "tagSetSourceFile": ""
+   },
+   "Locations" : [
+		{
+			"Location" : "Front",
+			"CurrentArmor" :125,
+			"CurrentInternalStructure" : 40,
+			"AssignedArmor" : 125,
+			"DamageLevel" : "Functional"
+		},
+		{
+			"Location" : "Left",
+			"CurrentArmor" : 110,
+			"CurrentInternalStructure" : 40,
+			"AssignedArmor" : 110,
+			"DamageLevel" : "Functional"
+		},
+		{
+			"Location" : "Right",
+			"CurrentArmor" : 110,
+			"CurrentInternalStructure" : 40,
+			"AssignedArmor" : 110,
+			"DamageLevel" : "Functional"
+		},
+		{
+			"Location" : "Rear",
+			"CurrentArmor" : 105,
+			"CurrentInternalStructure" : 40,
+			"AssignedArmor" : 105,
+			"DamageLevel" : "Functional"
+		},
+		{
+			"Location" : "Turret",
+			"CurrentArmor" : 150,
+			"CurrentInternalStructure" : 40,
+			"AssignedArmor" : 150,
+			"DamageLevel" : "Functional"
+		}
+   ],
+   "inventory" : [
+      {
+         "ComponentDefID" : "Weapon_PPC_PPCSnub_0-STOCK",
+         "ComponentDefType" : "Weapon",
+         "MountedLocation" : "Turret",
+		 "HardpointSlot" : 0,
+		 "DamageLevel" : "Functional"
+      },
+      {
+         "ComponentDefID" : "Weapon_PPC_PPCSnub_0-STOCK",
+         "ComponentDefType" : "Weapon",
+         "MountedLocation" : "Turret",
+		 "HardpointSlot" : 1,
+		 "DamageLevel" : "Functional"
+      },
+      {
+         "ComponentDefID" : "Weapon_PPC_PPCSnub_0-STOCK",
+         "ComponentDefType" : "Weapon",
+         "MountedLocation" : "Turret",
+		 "HardpointSlot" : 2,
+		 "DamageLevel" : "Functional"
+      },
+   ]
+}

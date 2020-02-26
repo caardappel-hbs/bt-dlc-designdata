@@ -24,6 +24,20 @@
                 "chrPrfWeap_hatchetman_leftarm_hardpoint_eh1"
             ]
         },
+                {
+            "location" : "centertorso",
+            "weapons" : [
+                [
+                    "chrPrfWeap_hatchetman_centertorso_ams_ah1"
+                ]
+            ],
+            "blanks" : [
+                
+            ],
+            "mountingPoints" : [
+                
+            ]
+        },
         {
             "location" : "lefttorso",
             "weapons" : [

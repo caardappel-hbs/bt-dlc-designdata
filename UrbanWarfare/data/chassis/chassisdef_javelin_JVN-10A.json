@@ -1,0 +1,202 @@
+{
+    "Description": {
+        "Cost": 2500000,
+        "Rarity": 1,
+        "Purchasable": true,
+        "Manufacturer": "",
+        "Model": "",
+        "UIName": "Javelin",
+        "Id": "chassisdef_javelin_JVN-10A",
+        "Name": "Javelin",
+        "Details": "The Javelin 10A has strong jumping capabilities and can pump out considerable damage with its LRMs. Taken together, these qualities make the 10A a superb harasser and fire support unit, though it is prone to running out of ammo.",
+        "Icon": "uixTxrIcon_javelin"
+    },
+    "MovementCapDefID": "movedef_javelin_JVN-10A",
+    "PathingCapDefID": "pathingdef_light",
+    "HardpointDataDefID": "hardpointdatadef_javelin",
+    "PrefabIdentifier": "chrPrfMech_javelinBase-001",
+    "PrefabBase": "javelin",
+    "Tonnage": 30,
+    "InitialTonnage": 15.0,
+    "weightClass": "LIGHT",
+    "BattleValue": 2500000,
+    "Heatsinks": 0,
+    "TopSpeed": 85,
+    "TurnRadius": 90,
+    "MaxJumpjets": 6,
+    "Stability": 100,
+    "StabilityDefenses": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "SpotterDistanceMultiplier": 1,
+    "VisibilityMultiplier": 1,
+    "SensorRangeMultiplier": 1,
+    "Signature": 0,
+    "Radius": 4,
+    "PunchesWithLeftArm": false,
+    "MeleeDamage": 40,
+    "MeleeInstability": 30,
+    "MeleeToHitModifier": 0,
+    "DFADamage": 40,
+    "DFAToHitModifier": 0,
+    "DFASelfDamage": 40,
+    "DFAInstability": 40,
+    "Locations": [
+        {
+            "Location": "Head",
+            "Hardpoints": [],
+            "Tonnage": 0,
+            "InventorySlots": 1,
+            "MaxArmor": 45,
+            "MaxRearArmor": -1,
+            "InternalStructure": 16
+        },
+        {
+            "Location": "LeftArm",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "Energy",
+                    "Omni": false
+                }
+            ],
+            "Tonnage": 0,
+            "InventorySlots": 8,
+            "MaxArmor": 50,
+            "MaxRearArmor": -1,
+            "InternalStructure": 25
+        },
+        {
+            "Location": "LeftTorso",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "AntiPersonnel",
+                    "Omni": false
+                },
+                {
+                    "WeaponMount": "AntiPersonnel",
+                    "Omni": false
+                }                
+			],
+            "Tonnage": 0,
+            "InventorySlots": 10,
+            "MaxArmor": 70,
+            "MaxRearArmor": 35,
+            "InternalStructure": 35
+        },
+        {
+            "Location": "CenterTorso",
+            "Hardpoints": [],
+            "Tonnage": 0,
+            "InventorySlots": 4,
+            "MaxArmor": 100,
+            "MaxRearArmor": 50,
+            "InternalStructure": 50
+        },
+        {
+            "Location": "RightTorso",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "Missile",
+                    "Omni": false
+                },
+                {
+                    "WeaponMount": "Missile",
+                    "Omni": false
+                } 
+			],
+            "Tonnage": 0,
+            "InventorySlots": 10,
+            "MaxArmor": 70,
+            "MaxRearArmor": 35,
+            "InternalStructure": 35
+        },
+        {
+            "Location": "RightArm",
+            "Hardpoints": [
+                {
+                    "WeaponMount": "Energy",
+                    "Omni": false
+                }
+            ],
+            "Tonnage": 0,
+            "InventorySlots": 8,
+            "MaxArmor": 50,
+            "MaxRearArmor": -1,
+            "InternalStructure": 25
+        },
+        {
+            "Location": "LeftLeg",
+            "Hardpoints": [],
+            "Tonnage": 0,
+            "InventorySlots": 4,
+            "MaxArmor": 70,
+            "MaxRearArmor": -1,
+            "InternalStructure": 35
+        },
+        {
+            "Location": "RightLeg",
+            "Hardpoints": [],
+            "Tonnage": 0,
+            "InventorySlots": 4,
+            "MaxArmor": 70,
+            "MaxRearArmor": -1,
+            "InternalStructure": 35
+        }
+    ],
+    "LOSSourcePositions": [
+        {
+            "x": 0,
+            "y": 11,
+            "z": 0
+        },
+        {
+            "x": -2.5,
+            "y": 10.5,
+            "z": -0.5
+        },
+        {
+            "x": 2.5,
+            "y": 10.5,
+            "z": -0.5
+        }
+    ],
+    "LOSTargetPositions": [
+        {
+            "x": 0,
+            "y": 11,
+            "z": 0
+        },
+        {
+            "x": -2.5,
+            "y": 10.5,
+            "z": -0.5
+        },
+        {
+            "x": 2.5,
+            "y": 10.5,
+            "z": -0.5
+        },
+        {
+            "x": -2,
+            "y": 4,
+            "z": 0.5
+        },
+        {
+            "x": 2,
+            "y": 4,
+            "z": 0.5
+        }
+    ],
+    "VariantName": "JVN-10A",
+    "ChassisTags": {
+        "items": [],
+        "tagSetSourceFile": ""
+    },
+    "StockRole": "Cavalry & Fire Support",
+    "YangsThoughts": "The Javelin 10A has strong jumping capabilities and can pump out considerable damage with its LRMs. Taken together, these qualities make the 10A a superb harasser and fire support unit, though it is prone to running out of ammo."
+}

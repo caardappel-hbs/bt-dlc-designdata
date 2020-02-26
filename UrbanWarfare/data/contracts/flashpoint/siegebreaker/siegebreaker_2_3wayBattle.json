@@ -7,10 +7,10 @@
     "weight" : 1,
     "scope" : "MID_CAMPAIGN",
     "finalDifficulty" : 0,
-    "representativeCastDefIDOverride" : null,
-    "missionSuccessStatementOverride" : null,
-    "badFaithStatementOverride" : null,
-    "goodFaithStatementOverride" : null,
+    "representativeCastDefIDOverride" : "",
+    "missionSuccessStatementOverride" : "",
+    "badFaithStatementOverride" : "",
+    "goodFaithStatementOverride" : "",
     "shortDescription" : "Your next objective is in Jessup Downs, on the far side of Gauthier. Your point of contact, a former militia member and paroled felon who operates under the callsign \"Jailbird,\" has been holding the Downs with no outside support for nearly a month. She has reported signs of a heavy Steiner patrol lance moving through the area. I need you to assist her in bringing down that patrol.",
     "longDescription" : "\"Former militia member and paroled felon.\" I think I'm getting why Cheval doesn't trust her.",
     "salvagePotential" : 12,
@@ -33,7 +33,7 @@
         75,
         75
     ],
-    "mapMood" : null,
+    "mapMood" : "",
     "startingFogOfWarVisibility" : "Surveyed",
     "contractObjectiveList" : [
         {
@@ -3205,7 +3205,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -3238,8 +3238,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3271,8 +3271,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3304,8 +3304,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3337,8 +3337,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             }
@@ -3387,7 +3387,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -3420,8 +3420,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3453,8 +3453,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3486,8 +3486,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3519,8 +3519,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -3548,7 +3548,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -3581,8 +3581,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3614,8 +3614,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3647,8 +3647,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -3680,330 +3680,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    }
-                ]
-            },
-            {
-                "lanceSpawner" : {
-                    "EncounterObjectGuid" : "ecaf6a4d-d3b1-43bc-bb17-0711e700d44a"
-                },
-                "name" : "Lance_EmployerAlly_Primary",
-                "lanceDefId" : "Tagged",
-                "lanceTagSet" : {
-                    "items" : [
-                        "lance_type_mech"
-                    ],
-                    "tagSetSourceFile" : "tags/LanceTags"
-                },
-                "lanceExcludedTagSet" : {
-                    "items" : [
-                        "lance_type_turret",
-                        "lance_type_convoy"
-                    ],
-                    "tagSetSourceFile" : "tags/LanceTags"
-                },
-                "spawnEffectTags" : {
-                    "items" : [],
-                    "tagSetSourceFile" : "tags/SpawnEffectTags"
-                },
-                "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
-                "selectedLanceDifficulty" : 0,
-                "unitSpawnPointOverrideList" : [
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "81090596-df1f-46ef-9a34-25fa5d824787"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "",
-                        "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    },
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "72cd61ff-cdaa-49f5-bb93-76f34986cef5"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "",
-                        "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    },
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "0c4f46f2-4b99-4e45-9723-eda7df1a79bd"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "",
-                        "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    },
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "c832dbd1-775c-48fa-b9dc-092190b4f565"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "",
-                        "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    }
-                ]
-            },
-            {
-                "lanceSpawner" : {
-                    "EncounterObjectGuid" : "8fa00d6a-7f24-4efc-9c7f-3c704c77768a"
-                },
-                "name" : "Lance_EmployerAlly_Secondary",
-                "lanceDefId" : "Tagged",
-                "lanceTagSet" : {
-                    "items" : [
-                        "lance_type_mech"
-                    ],
-                    "tagSetSourceFile" : "tags/LanceTags"
-                },
-                "lanceExcludedTagSet" : {
-                    "items" : [
-                        "lance_type_turret",
-                        "lance_type_convoy"
-                    ],
-                    "tagSetSourceFile" : "tags/LanceTags"
-                },
-                "spawnEffectTags" : {
-                    "items" : [],
-                    "tagSetSourceFile" : "tags/SpawnEffectTags"
-                },
-                "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
-                "selectedLanceDifficulty" : 0,
-                "unitSpawnPointOverrideList" : [
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "5804416a-73d0-4ab1-a18b-1b464b4617b8"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "",
-                        "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    },
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "7309f8bb-ea6d-4c84-9bac-cb17441b487f"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "",
-                        "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    },
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "6cfac32b-a8d0-4864-8572-b5723d0a5d7d"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "",
-                        "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
-                    },
-                    {
-                        "unitSpawnPoint" : {
-                            "EncounterObjectGuid" : "55787ae1-57b7-401f-88b2-c767e7280f99"
-                        },
-                        "customUnitName" : "",
-                        "customHeraldryDefId" : "",
-                        "unitType" : "Mech",
-                        "unitDefId" : "mechDef_InheritLance",
-                        "unitTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "unitExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/UnitTags"
-                        },
-                        "spawnEffectTags" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/SpawnEffectTags"
-                        },
-                        "pilotDefId" : "pilotDef_InheritLance",
-                        "pilotTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "pilotExcludedTagSet" : {
-                            "items" : [],
-                            "tagSetSourceFile" : "tags/PilotTags"
-                        },
-                        "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             }
@@ -4042,7 +3720,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -4075,8 +3753,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4108,8 +3786,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4141,8 +3819,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4174,8 +3852,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -4203,7 +3881,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -4236,8 +3914,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4269,8 +3947,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4302,8 +3980,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4335,8 +4013,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -4364,7 +4042,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -4397,8 +4075,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4430,8 +4108,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4463,8 +4141,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4496,8 +4174,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -4525,7 +4203,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -4558,8 +4236,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4591,8 +4269,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4624,8 +4302,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4657,8 +4335,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -4686,7 +4364,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -4719,8 +4397,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4752,8 +4430,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4785,8 +4463,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4818,8 +4496,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             }
@@ -4858,7 +4536,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -4891,8 +4569,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4924,8 +4602,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4957,8 +4635,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -4990,8 +4668,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -5019,7 +4697,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -5052,8 +4730,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5085,8 +4763,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5118,8 +4796,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5151,8 +4829,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -5180,7 +4858,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -5213,8 +4891,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5246,8 +4924,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5279,8 +4957,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5312,8 +4990,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -5341,7 +5019,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -5374,8 +5052,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5407,8 +5085,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5440,8 +5118,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5473,8 +5151,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             }
@@ -5524,7 +5202,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -5557,8 +5235,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5590,8 +5268,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5623,8 +5301,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5656,8 +5334,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             },
@@ -5686,7 +5364,7 @@
                     "tagSetSourceFile" : "tags/SpawnEffectTags"
                 },
                 "lanceDifficultyAdjustment" : 0,
-                "selectedLanceDefId" : null,
+                "selectedLanceDefId" : "",
                 "selectedLanceDifficulty" : 0,
                 "unitSpawnPointOverrideList" : [
                     {
@@ -5719,8 +5397,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5752,8 +5430,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5785,8 +5463,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     },
                     {
                         "unitSpawnPoint" : {
@@ -5818,8 +5496,8 @@
                             "tagSetSourceFile" : "tags/PilotTags"
                         },
                         "selectedUnitType" : "UNDEFINED",
-                        "selectedUnitDefId" : null,
-                        "selectedPilotDefId" : null
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
                     }
                 ]
             }
@@ -5833,7 +5511,330 @@
         "teamName" : "EmployersAllyTeam",
         "faction" : "INVALID_UNSET",
         "teamLeaderCastDefId" : "castDef_TeamLeader_Current",
-        "lanceOverrideList" : []
+        "lanceOverrideList" : [
+            {
+                "lanceSpawner" : {
+                    "EncounterObjectGuid" : "ecaf6a4d-d3b1-43bc-bb17-0711e700d44a"
+                },
+                "name" : "Lance_EmployerAlly_Primary",
+                "lanceDefId" : "Tagged",
+                "lanceTagSet" : {
+                    "items" : [
+                        "lance_type_mech"
+                    ],
+                    "tagSetSourceFile" : "tags/LanceTags"
+                },
+                "lanceExcludedTagSet" : {
+                    "items" : [
+                        "lance_type_turret",
+                        "lance_type_convoy"
+                    ],
+                    "tagSetSourceFile" : "tags/LanceTags"
+                },
+                "spawnEffectTags" : {
+                    "items" : [],
+                    "tagSetSourceFile" : "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment" : 0,
+                "selectedLanceDefId" : "",
+                "selectedLanceDifficulty" : 0,
+                "unitSpawnPointOverrideList" : [
+                    {
+                        "unitSpawnPoint" : {
+                            "EncounterObjectGuid" : "81090596-df1f-46ef-9a34-25fa5d824787"
+                        },
+                        "customUnitName" : "",
+                        "customHeraldryDefId" : "",
+                        "unitType" : "Mech",
+                        "unitDefId" : "mechDef_InheritLance",
+                        "unitTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "spawnEffectTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "selectedUnitType" : "UNDEFINED",
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
+                    },
+                    {
+                        "unitSpawnPoint" : {
+                            "EncounterObjectGuid" : "72cd61ff-cdaa-49f5-bb93-76f34986cef5"
+                        },
+                        "customUnitName" : "",
+                        "customHeraldryDefId" : "",
+                        "unitType" : "Mech",
+                        "unitDefId" : "mechDef_InheritLance",
+                        "unitTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "spawnEffectTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "selectedUnitType" : "UNDEFINED",
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
+                    },
+                    {
+                        "unitSpawnPoint" : {
+                            "EncounterObjectGuid" : "0c4f46f2-4b99-4e45-9723-eda7df1a79bd"
+                        },
+                        "customUnitName" : "",
+                        "customHeraldryDefId" : "",
+                        "unitType" : "Mech",
+                        "unitDefId" : "mechDef_InheritLance",
+                        "unitTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "spawnEffectTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "selectedUnitType" : "UNDEFINED",
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
+                    },
+                    {
+                        "unitSpawnPoint" : {
+                            "EncounterObjectGuid" : "c832dbd1-775c-48fa-b9dc-092190b4f565"
+                        },
+                        "customUnitName" : "",
+                        "customHeraldryDefId" : "",
+                        "unitType" : "Mech",
+                        "unitDefId" : "mechDef_InheritLance",
+                        "unitTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "spawnEffectTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "selectedUnitType" : "UNDEFINED",
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
+                    }
+                ]
+            },
+            {
+                "lanceSpawner" : {
+                    "EncounterObjectGuid" : "8fa00d6a-7f24-4efc-9c7f-3c704c77768a"
+                },
+                "name" : "Lance_EmployerAlly_Secondary",
+                "lanceDefId" : "Tagged",
+                "lanceTagSet" : {
+                    "items" : [
+                        "lance_type_mech"
+                    ],
+                    "tagSetSourceFile" : "tags/LanceTags"
+                },
+                "lanceExcludedTagSet" : {
+                    "items" : [
+                        "lance_type_turret",
+                        "lance_type_convoy"
+                    ],
+                    "tagSetSourceFile" : "tags/LanceTags"
+                },
+                "spawnEffectTags" : {
+                    "items" : [],
+                    "tagSetSourceFile" : "tags/SpawnEffectTags"
+                },
+                "lanceDifficultyAdjustment" : 0,
+                "selectedLanceDefId" : "",
+                "selectedLanceDifficulty" : 0,
+                "unitSpawnPointOverrideList" : [
+                    {
+                        "unitSpawnPoint" : {
+                            "EncounterObjectGuid" : "5804416a-73d0-4ab1-a18b-1b464b4617b8"
+                        },
+                        "customUnitName" : "",
+                        "customHeraldryDefId" : "",
+                        "unitType" : "Mech",
+                        "unitDefId" : "mechDef_InheritLance",
+                        "unitTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "spawnEffectTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "selectedUnitType" : "UNDEFINED",
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
+                    },
+                    {
+                        "unitSpawnPoint" : {
+                            "EncounterObjectGuid" : "7309f8bb-ea6d-4c84-9bac-cb17441b487f"
+                        },
+                        "customUnitName" : "",
+                        "customHeraldryDefId" : "",
+                        "unitType" : "Mech",
+                        "unitDefId" : "mechDef_InheritLance",
+                        "unitTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "spawnEffectTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "selectedUnitType" : "UNDEFINED",
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
+                    },
+                    {
+                        "unitSpawnPoint" : {
+                            "EncounterObjectGuid" : "6cfac32b-a8d0-4864-8572-b5723d0a5d7d"
+                        },
+                        "customUnitName" : "",
+                        "customHeraldryDefId" : "",
+                        "unitType" : "Mech",
+                        "unitDefId" : "mechDef_InheritLance",
+                        "unitTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "spawnEffectTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "selectedUnitType" : "UNDEFINED",
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
+                    },
+                    {
+                        "unitSpawnPoint" : {
+                            "EncounterObjectGuid" : "55787ae1-57b7-401f-88b2-c767e7280f99"
+                        },
+                        "customUnitName" : "",
+                        "customHeraldryDefId" : "",
+                        "unitType" : "Mech",
+                        "unitDefId" : "mechDef_InheritLance",
+                        "unitTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "unitExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/UnitTags"
+                        },
+                        "spawnEffectTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/SpawnEffectTags"
+                        },
+                        "pilotDefId" : "pilotDef_InheritLance",
+                        "pilotTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "pilotExcludedTagSet" : {
+                            "items" : [],
+                            "tagSetSourceFile" : "tags/PilotTags"
+                        },
+                        "selectedUnitType" : "UNDEFINED",
+                        "selectedUnitDefId" : "",
+                        "selectedPilotDefId" : ""
+                    }
+                ]
+            }
+        ]
     },
     "contractType" : "INVALID_UNSET",
     "contractTypeID" : "ThreeWayBattle"

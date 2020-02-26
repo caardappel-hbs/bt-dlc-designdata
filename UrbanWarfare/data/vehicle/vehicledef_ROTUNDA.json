@@ -9,7 +9,12 @@
     "Rarity": 0,
     "Purchasable": false
   },
-  "MinAppearanceDate" : "3026-01-01T00:00:00Z",    
+  "RequiredToSpawnCompanyTags" : {
+        "items" : [
+            "flashpoint_uw1_complete"
+        ],
+        "tagSetSourceFile" : ""
+    },    
    "ChassisID" : "vehiclechassisdef_ROTUNDA",
    "VehicleTags": {
       "items": [

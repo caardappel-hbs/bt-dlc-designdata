@@ -74,7 +74,7 @@
 		[Focus]
 	[Content]Roger that, Force Commander Singh—consecutive deployments it is. We'll adjust our tactics accordingly.
 		[Color]1|1|1|1
-		[Cast]castDef_MarikRepDefault
+		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]

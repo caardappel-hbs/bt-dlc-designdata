@@ -60,8 +60,9 @@
                 "useActivationsOfTarget" : false,
                 "ticksOnEndOfRound" : false,
                 "ticksOnMovements" : false,
-                "stackLimit" : 0,
-                "clearedWhenAttacked" : false
+                "stackLimit" : 1,
+                "clearedWhenAttacked" : false,
+				"activeTrackedEffect" : true
             },
             "targetingData" : {
                 "effectTriggerType" : "OnHit",
@@ -77,7 +78,7 @@
             },
             "effectType" : "StatisticEffect",
             "Description" : {
-                "Id" : "StatusEffect-TAG-BallisticDmgBonus10",
+                "Id" : "StatusEffect-TAG-BallisticDmgBonus",
                 "Name" : "TAG MARKED",
                 "Details" : "This unit will take [AMT] more damage from Ballistic and Energy attacks.",
                 "Icon" : "uixSvgIcon_statusMarked"
@@ -104,8 +105,9 @@
                 "useActivationsOfTarget" : false,
                 "ticksOnEndOfRound" : false,
                 "ticksOnMovements" : false,
-                "stackLimit" : 0,
-                "clearedWhenAttacked" : false
+                "stackLimit" : 1,
+                "clearedWhenAttacked" : false,
+				"activeTrackedEffect" : true
             },
             "targetingData" : {
                 "effectTriggerType" : "OnHit",
@@ -122,7 +124,7 @@
             },
             "effectType" : "StatisticEffect",
             "Description" : {
-                "Id" : "StatusEffect-TAG-EnergyDmgBonus10",
+                "Id" : "StatusEffect-TAG-EnergyDmgBonus",
                 "Name" : "TAG MARKED",
                 "Details" : "This unit will take [AMT] more damage from Ballistic and Energy attacks.",
                 "Icon" : "uixSvgIcon_statusMarked"
@@ -149,8 +151,9 @@
                 "useActivationsOfTarget" : false,
                 "ticksOnEndOfRound" : false,
                 "ticksOnMovements" : false,
-                "stackLimit" : 0,
-                "clearedWhenAttacked" : false
+                "stackLimit" : 1,
+                "clearedWhenAttacked" : false,
+				"activeTrackedEffect" : true
             },
 			"targetingData" : {
                 "effectTriggerType" : "OnHit",

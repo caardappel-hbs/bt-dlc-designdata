@@ -1020,6 +1020,7 @@
 			[Tags]
 			[SpawnEffects]
 			[PilotDef]pilotDef_InheritLance
+[Team]employersAllyTeam
 	[Lance]Lance_EmployerAlly_Primary
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field

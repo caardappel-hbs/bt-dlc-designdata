@@ -65,7 +65,7 @@
 		[Description]
 
 	// Primary Objective
-	[Objective]Extract before additional Enemy Reinforcments Arrive
+	[Objective]Safely Extract Lance
 		[Description]
 
 	// Optional Objective
@@ -119,7 +119,29 @@
 	// Artillery Objective (ArtilleryShellSingle, ArtilleryShellBarrage, Explosion, OrbitalPPC)
 	// ... OrbitalPPC and ArtilleryShellBarrage are reccomended for most cases.
 	[ArtilleryObjective]OrbitalPPC
-		
+	
+	// Optional Objective
+	[Objective]Defeat Enemy Kill Team
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Kill Team 1 Spawner Time
+		[Description]
+		[OnSuccess]			
+
+	// Optional Objective
+	[Objective]Defeat Enemy Kill Team
+		[Description]
+		[OnSuccess]
+			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Kill Team 2 Spawner Time
+		[Description]
+		[OnSuccess]			
+				
 // Optional Chunks
 [OptionalChunk]Chunk_Nothing (Optional)|on
 [OptionalChunk]Chunk_Dropship (Optional)|off
@@ -597,6 +619,78 @@
 			[Tags]unit_light|unit_turret
 			[SpawnEffects]
 			[PilotDef]pilot_d4_turret
+	[Lance]Lance_Enemy_KillTeam_1
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]lance_type_turret
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_KillTeam_2
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle
+		[ExcludedTags]lance_type_turret
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance							  
 
 [Team]targetsAllyTeam
 	[Lance]Lance_EnemyAlly_SpecialReinforcements

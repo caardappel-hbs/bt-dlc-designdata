@@ -66,7 +66,7 @@
 		[Description]
 
 	// Primary Objective
-	[Objective]Extract before additional Enemy Reinforcments Arrive
+	[Objective]Safely Extract Lance
 		[Description]
 
 	// Optional Objective
@@ -425,7 +425,7 @@
 		[Tags]lance_type_battle
 		[ExcludedTags]lance_type_turret
 		[SpawnEffects]
-		[DifficultyAdjustment]0
+		[DifficultyAdjustment]-1
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
 			[UnitDef]mechDef_InheritLance
@@ -533,7 +533,7 @@
 		[Tags]lance_type_vehicle
 		[ExcludedTags]
 		[SpawnEffects]
-		[DifficultyAdjustment]0
+		[DifficultyAdjustment]-1
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Vehicle
 			[UnitDef]vehicleDef_InheritLance

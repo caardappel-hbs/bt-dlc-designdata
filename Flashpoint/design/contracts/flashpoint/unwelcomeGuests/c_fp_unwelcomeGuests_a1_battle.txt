@@ -7,7 +7,7 @@
 
 // Difficulty is one of Easy, Medium, or Hard
 [Difficulty]Medium
-[ShortDesc]Thank you, Commander {COMMANDER.LastName}—you're doing us a solid that a lot of other mercenary commands wouldn't. My people have taken shelter in a subterranean bunker; we're safe for the time being, but the Lyrans have us penned in, and our water supply isn't going to hold out for much longer. Get us through this and we'll be in your debt.
+[ShortDesc]Carronade sends her thanks for the assist, Commander—we're doing Gwydion Company a solid that a lot of other mercenary commands wouldn't. Our friends have taken shelter in a subterranean bunker, and a Steiner kill team has them penned in. Carronade needs us to engage and destroy the Lyrans so that she and her people can escape.
 [LongDesc]You know the drill, Commander. Get in there, take down the kill team, and rescue Gwydion Company. I'll call out targets for you as I see 'em.
 [Salvage]16
 [FOW]Surveyed

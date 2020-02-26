@@ -66,7 +66,7 @@
 		[Description]
 
 	// Primary Objective
-	[Objective]Extract before additional Enemy Reinforcments Arrive
+	[Objective]Safely Extract Lance
 		[Description]
 
 	// Optional Objective

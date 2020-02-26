@@ -1,0 +1,89 @@
+{
+   "Version" : 1,
+   "Description" : {
+      "Id" : "vehicledef_STRIKER_Narc",
+      "Name" : "Striker Narc",
+      "Details" : "",
+      "Icon" : "",
+      "Cost" : 564,
+      "Rarity" : 0,
+      "Purchasable" : false
+   },
+   "ChassisID" : "vehiclechassisdef_STRIKER_Narc",
+   "VehicleTags": {
+      "items": [
+         "unit_vehicle",
+         "unit_medium",
+         "unit_wheels",
+		 "unit_release"
+      ],
+      "tagSetSourceFile": ""
+   },
+   "Locations" : [
+		{
+			"Location" : "Front",
+			"CurrentArmor" : 120,
+			"CurrentInternalStructure" : 10,
+			"AssignedArmor" : 120,
+			"DamageLevel" : "Functional"
+		},
+		{
+			"Location" : "Left",
+			"CurrentArmor" : 100,
+			"CurrentInternalStructure" : 10,
+			"AssignedArmor" : 100,
+			"DamageLevel" : "Functional"
+		},
+		{
+			"Location" : "Right",
+			"CurrentArmor" : 100,
+			"CurrentInternalStructure" : 10,
+			"AssignedArmor" : 100,
+			"DamageLevel" : "Functional"
+		},
+		{
+			"Location" : "Rear",
+			"CurrentArmor" : 90,
+			"CurrentInternalStructure" : 10,
+			"AssignedArmor" : 90,
+			"DamageLevel" : "Functional"
+		},
+		{
+			"Location" : "Turret",
+			"CurrentArmor" : 120,
+			"CurrentInternalStructure" : 10,
+			"AssignedArmor" : 120,
+			"DamageLevel" : "Functional"
+		}
+   ],
+   "inventory" : [
+      {
+         "ComponentDefID" : "Weapon_Narc_Standard_2-Kali_Yama",
+         "ComponentDefType" : "Weapon",
+         "MountedLocation" : "Turret",
+		 "HardpointSlot" : 0,
+		 "DamageLevel" : "Functional"
+      },
+      {
+         "ComponentDefID" : "Weapon_LRM_LRM10_0-STOCK",
+         "ComponentDefType" : "Weapon",
+         "MountedLocation" : "Turret",
+		 "HardpointSlot" : 1,
+		 "DamageLevel" : "Functional"
+      },
+      {
+         "ComponentDefID" : "Ammo_AmmunitionBox_Generic_Narc",
+         "ComponentDefType" : "AmmunitionBox",
+         "MountedLocation" : "Front",
+		 "HardpointSlot" : -1,
+		 "DamageLevel" : "Functional"
+      },
+      {
+         "ComponentDefID" : "Ammo_AmmunitionBox_Generic_LRM",
+         "ComponentDefType" : "AmmunitionBox",
+         "MountedLocation" : "Front",
+		 "HardpointSlot" : -1,
+		 "DamageLevel" : "Functional"
+      }
+   ]
+}

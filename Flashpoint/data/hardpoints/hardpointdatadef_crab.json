@@ -60,11 +60,13 @@
             "location" : "lefttorso",
             "weapons" : [
                 [
-                    "chrPrfWeap_crab_lefttorso_ams_ah1",
                     "chrPrfWeap_crab_lefttorso_flamer_eh1",
                     "chrPrfWeap_crab_lefttorso_laser_eh1",
                     "chrPrfWeap_crab_lefttorso_ppc_eh1"
-                ]
+                ],
+				[
+					"chrPrfWeap_crab_lefttorso_ams_ah1"
+				]
             ],
             "blanks" : [
                 
@@ -98,11 +100,13 @@
             "location" : "righttorso",
             "weapons" : [
                 [
-                    "chrPrfWeap_crab_righttorso_ams_ah1",
                     "chrPrfWeap_crab_righttorso_flamer_eh1",
                     "chrPrfWeap_crab_righttorso_laser_eh1",
                     "chrPrfWeap_crab_righttorso_ppc_eh1"
-                ]
+                ],
+				[
+					"chrPrfWeap_crab_righttorso_ams_ah1"
+				]
             ],
             "blanks" : [
                 

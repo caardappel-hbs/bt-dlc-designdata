@@ -96,9 +96,6 @@
         }
     ],
     "inventory": [
-
-
-
         {
             "MountedLocation": "LeftTorso",
             "ComponentDefID": "Weapon_Laser_MediumLaser_0-STOCK",
@@ -143,8 +140,6 @@
             "prefabName": null,
             "hasPrefabName": false
         },
-
-
         {
             "MountedLocation": "LeftTorso",
             "ComponentDefID": "Weapon_LRM_LRM5_0-STOCK",
@@ -189,9 +184,6 @@
             "prefabName": null,
             "hasPrefabName": false
         },
-
-
-
         {
             "MountedLocation": "RightTorso",
             "ComponentDefID": "Ammo_AmmunitionBox_Generic_LRM",
@@ -224,10 +216,7 @@
             "DamageLevel": "Functional",
             "prefabName": null,
             "hasPrefabName": false
-        }
-
-
-
+        },
         {
             "MountedLocation": "LeftArm",
             "ComponentDefID": "Weapon_Autocannon_AC5_0-STOCK",
@@ -272,9 +261,6 @@
             "prefabName": null,
             "hasPrefabName": false
         },
-
-
-
         {
             "MountedLocation": "LeftLeg",
             "ComponentDefID": "Ammo_AmmunitionBox_Generic_AC10",

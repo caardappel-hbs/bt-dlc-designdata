@@ -30,11 +30,7 @@
 [OverwriteMissionCompleteWhenAutoComplete]false
 // End Miscellaneous Values
 
-// Tonnage
-[LanceMinTonnage]-1
-[LanceMaxTonnage]240
-[MechMinTonnages]-1|-1|-1|-1
-[MechMaxTonnages]75|75|75|75
+
 
 [MaxNumberOfPlayerUnits]4
 			

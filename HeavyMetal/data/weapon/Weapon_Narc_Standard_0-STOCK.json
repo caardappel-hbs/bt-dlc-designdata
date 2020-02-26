@@ -37,7 +37,7 @@
         "UIName" : "Narc Beacon",
         "Id" : "Weapon_Narc_Standard_0-STOCK",
         "Name" : "Narc Missile Beacon",
-        "Details" : "The Narc Missile Beacon launcher is designed to fire a single, highly specialized missile that deploys a homing beacon upon impact. The attached beacon transmits data to allied units, causing the linked target to receive increased damage from subsequent Missile weaponry attacks.",
+        "Details" : "The Narc Missile Beacon launcher is designed to fire a single, highly specialized missile that deploys a homing beacon upon impact. The attached beacon transmits data to allied units, causing the linked target to receive increased damage from subsequent Missile weaponry attacks. Narc launchers are inherently very accurate.",
         "Icon" : "uixSvgIcon_weapon_Missile"
     },
     "BonusValueA" : "+ 25% Dmg. Mark",
@@ -60,8 +60,9 @@
                 "useActivationsOfTarget" : false,
                 "ticksOnEndOfRound" : false,
                 "ticksOnMovements" : false,
-                "stackLimit" : 0,
-                "clearedWhenAttacked" : false
+                "stackLimit" : 1,
+                "clearedWhenAttacked" : false,
+				"activeTrackedEffect" : true
             },
             "targetingData" : {
                 "effectTriggerType" : "OnHit",
@@ -77,7 +78,7 @@
             },
             "effectType" : "StatisticEffect",
             "Description" : {
-                "Id" : "StatusEffect-NARC-MissileDmgBonus25",
+                "Id" : "StatusEffect-NARC-MissileDmgBonus",
                 "Name" : "NARC ATTACHED",
                 "Details" : "This unit will take [AMT] more damage from Missile attacks.",
                 "Icon" : "uixSvgIcon_statusMarked"
@@ -104,8 +105,9 @@
                 "useActivationsOfTarget" : false,
                 "ticksOnEndOfRound" : false,
                 "ticksOnMovements" : false,
-                "stackLimit" : 0,
-                "clearedWhenAttacked" : false
+                "stackLimit" : 1,
+                "clearedWhenAttacked" : false,
+				"activeTrackedEffect" : true
             },
 			"targetingData" : {
                 "effectTriggerType" : "OnHit",
